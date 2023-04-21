@@ -7,7 +7,7 @@ class Home extends CI_Controller {
 	{
 		parent::__construct();
 		// is_logged_in2();
-		// $this->load->model('CalonSiswa_Model', 'calonsiswa');
+		$this->load->model('Technological_Model', 'technological');
 		// $this->load->model('PendaftaranCalonSiswa_Model', 'pendaftaran');
 		// $this->load->model('Pembayaran_Model', 'pembayaran');
 		// $this->load->model('Auth_Model','calon');
