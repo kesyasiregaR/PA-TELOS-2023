@@ -66,7 +66,7 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('');?>">
+                <a class="nav-link" href="<?=site_url('User/economic');?>">
                     <i class="fas fa-fw fa-calculator"></i>
                     <span>Economic</span></a>
             </li>

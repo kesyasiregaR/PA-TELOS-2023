@@ -28,7 +28,7 @@
                         <div class="form-group">
                             <label for="item">Item</label>
                             <input name="item" type="text" value="<?= set_value('item'); ?>"
-                                class="form-control" id="item" placeholder="descriptions ">
+                                class="form-control" id="item" placeholder="item ">
                             <?= form_error('item', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">

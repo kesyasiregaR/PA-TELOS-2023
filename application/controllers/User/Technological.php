@@ -12,7 +12,7 @@ class technological extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['judul']="Halaman Data Project";
+		$data['judul']="Halaman Data Technological";
 		$data['technological']=$this->technological->get();
 		$this->load->view('user/header');
 		$this->load->view('user/technological/vw_technological',$data);
@@ -103,7 +103,7 @@ class technological extends CI_Controller {
 				'id_technologic' => $this->input->post('id_technologic')
 			];
 
-			$this->technological->update($data,$data ['id_technologic']);
+			$this->technological->update($data,$data ['id_technological']);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data technological Berhasil Diubah!</div>');
 			redirect('user/technological');
 		}
