@@ -20,7 +20,7 @@
 				</div>
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
-						<input type="hidden" name="id_technologic" value="<?= $technological['id_technologic']; ?>">
+						<input type="hidden" name="id_technological" value="<?= $technological['id_technological']; ?>">
 						<div class="form-group">
 							<label for="category">Category</label>
 							<input name="category" value="<?= $technological['category']; ?>" type="text" class="form-control" id="category" placeholder="category ">

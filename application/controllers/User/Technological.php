@@ -101,10 +101,10 @@ class technological extends CI_Controller
                 'specification' => $this->input->post('specification'),
                 'price' => $this->input->post('price'),
                 'source' => $this->input->post('source'),
-                'id_technologic' => $this->input->post('id_technologic')
+                'id_technological' => $this->input->post('id_technological')
             ];
 
-            $this->technological->update($data, $data['id_technologic']);
+            $this->technological->update($data, $data['id_technological']);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Technological Berhasil Diubah!</div>');
             redirect('user/technological');
         }
