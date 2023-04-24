@@ -70,12 +70,8 @@
             </li>
 
             <li class="nav-item active">
-<<<<<<< HEAD
-                <a class="nav-link" href="<?= site_url('User/Legal'); ?>">
-=======
-                <a class="nav-link" href="<?=site_url('User/legal');?>">
->>>>>>> aa88a709185dcd7e46e29d2b29dce14cba2e5ee4
-                    <i class="fas fa-fw fa-home"></i>
+                <a class="nav-link" href="<?= site_url('User/legal'); ?>">
+                    <i class="fas fa-fw fa-calculator"></i>
                     <span>Legal</span></a>
             </li>
 
