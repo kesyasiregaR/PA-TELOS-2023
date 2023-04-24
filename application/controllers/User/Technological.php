@@ -73,16 +73,16 @@ class technological extends CI_Controller {
 		$this->form_validation->set_rules('category', 'Category technological', 'required', [
 			'required' => 'Category technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('item', 'Item technological', 'required', [
+		$this->form_validation->set_rules('item', 'item technological', 'required', [
 			'required' => 'Item technological Wajib di isi'
 		]);
 		$this->form_validation->set_rules('specification', 'Specification technological', 'required', [
-			'required' => 'Specification technological Wajib di isi'
+			'required' => 'Spesification technological Wajib di isi'
 		]);
 		$this->form_validation->set_rules('price', 'Price technological', 'required', [
 			'required' => 'Price technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('Source', 'Source technological', 'required', [
+		$this->form_validation->set_rules('source', 'Source technological', 'required', [
 			'required' => 'Source technological Wajib di isi'
 		]);
 
