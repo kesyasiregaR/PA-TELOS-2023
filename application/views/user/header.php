@@ -72,7 +72,7 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('');?>">
+                <a class="nav-link" href="<?=site_url('User/legal');?>">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Legal</span></a>
             </li>
