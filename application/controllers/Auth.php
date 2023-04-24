@@ -6,8 +6,6 @@ class Auth extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Calon_model', 'calon_model');
-		$this->load->model('Konfigurasi_Model', 'konfigurasi');
 	}
 	public function index()
 	{
