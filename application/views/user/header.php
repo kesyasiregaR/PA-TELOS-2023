@@ -12,16 +12,14 @@
     <title>TELOS | FEASIBILITY TEST</title>
 
     <!-- Custom fonts for this template-->
-    <link href=<?=base_url("assets2/vendor/fontawesome-free/css/all.min.css")?> rel="stylesheet" type="text/css">
-    <link
-        href=https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href=<?= base_url("assets2/vendor/fontawesome-free/css/all.min.css") ?> rel="stylesheet" type="text/css">
+    <link href=https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href=<?=base_url("assets2/css/sb-admin-2.min.css")?> rel="stylesheet">
+    <link href=<?= base_url("assets2/css/sb-admin-2.min.css") ?> rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href=<?=base_url("assets2/vendor/datatables/dataTables.bootstrap4.min.css")?> rel="stylesheet">
+    <link href=<?= base_url("assets2/vendor/datatables/dataTables.bootstrap4.min.css") ?> rel="stylesheet">
 
 </head>
 
@@ -47,48 +45,52 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('');?>">
-                <i class="fas fa-fw fa-home"></i>
+                <a class="nav-link" href="<?= site_url(''); ?>">
+                    <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('User/DataProjek');?>">
+                <a class="nav-link" href="<?= site_url('User/DataProjek'); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Data Project</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item active"> 
-                <a class="nav-link" href="<?=site_url('User/technological');?>">
-                <i class="fa-solid fa-desktop"></i>
+            <li class="nav-item active">
+                <a class="nav-link" href="<?= site_url('User/technological'); ?>">
+                    <i class="fa-solid fa-desktop"></i>
                     <span>Technological</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('User/economic');?>">
+                <a class="nav-link" href="<?= site_url('User/economic'); ?>">
                     <i class="fas fa-fw fa-calculator"></i>
                     <span>Economic</span></a>
             </li>
 
             <li class="nav-item active">
+<<<<<<< HEAD
+                <a class="nav-link" href="<?= site_url('User/Legal'); ?>">
+=======
                 <a class="nav-link" href="<?=site_url('User/legal');?>">
+>>>>>>> aa88a709185dcd7e46e29d2b29dce14cba2e5ee4
                     <i class="fas fa-fw fa-home"></i>
                     <span>Legal</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('');?>">
+                <a class="nav-link" href="<?= site_url('User/Operational'); ?>">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Operational</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('');?>">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <a class="nav-link" href="<?= site_url('User/Schedule'); ?>">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Schedule</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?=site_url('');?>">
+                <a class="nav-link" href="<?= site_url(''); ?>">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Summary</span></a>
             </li>
@@ -116,18 +118,14 @@
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
-                                            aria-describedby="basic-addon2">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
@@ -143,14 +141,12 @@
 
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= ucwords($this->session->userdata('nama_pengguna'))?></span> -->
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <!-- <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= ucwords($this->session->userdata('nama_pengguna')) ?></span> -->
                                 <img class="img-profile rounded-circle" src="<?= base_url('assets/img/'); ?>user.png">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal">
