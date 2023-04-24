@@ -44,9 +44,9 @@
                             <td><?= $us['source'];?></td>
 
                             <td>
-                                <a href="<?= base_url('User/technological/hapus/').$us['id_technological'];?>"
+                                <a href="<?= base_url('User/technological/hapus/').$us['id_technologic'];?>"
                                     class="badge badge-danger">Hapus</a>
-                                <a href="<?= base_url('User/technological/edit/').$us['id_technological'];?>"
+                                <a href="<?= base_url('User/technological/edit/').$us['id_technologic'];?>"
                                     class="badge badge-warning">Edit</a>
                             </td>
                         </tr>

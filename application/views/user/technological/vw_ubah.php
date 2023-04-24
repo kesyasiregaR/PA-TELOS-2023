@@ -1,29 +1,29 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-	 <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a href="<?= site_url('user/home'); ?>">Dashboard</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a href="<?= site_url('user/technological'); ?>">Data Technological</a>
-        </li>
-        <li class="breadcrumb-item active">
-            Ubah Data Technological
-        </li>
-    </ol>
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a href="<?= site_url('user/home'); ?>">Dashboard</a>
+		</li>
+		<li class="breadcrumb-item">
+			<a href="<?= site_url('user/technological'); ?>">Technoloogical</a>
+		</li>
+		<li class="breadcrumb-item active">
+			Ubah Data Technologi
+		</li>
+	</ol>
 	<h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
 	<div class="row justify-content-center">
 		<div class="col-md-12 ">
 			<div class="card">
 				<div class="card-header">
-					Form Ubah Data Technological
+					Form Ubah Data Technologi
 				</div>
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
-						<input type="hidden" name="id_technological" value="<?= $technological['id_technological']; ?>">
+						<input type="hidden" name="id_technologic" value="<?= $technological['id_technologic']; ?>">
 						<div class="form-group">
 							<label for="category">Category</label>
-							<input category="category" value="<?= $technological['category']; ?>" type="text" class="form-control" id="category" placeholder="category ">
+							<input name="category" value="<?= $technological['category']; ?>" type="text" class="form-control" id="category" placeholder="category ">
 							<?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
