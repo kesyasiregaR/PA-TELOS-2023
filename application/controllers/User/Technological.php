@@ -22,29 +22,28 @@ class technological extends CI_Controller {
 	public function hapus($id){
 		$this->technological->delete($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-			Data data projek Berhasil dihapus!</div>');
+			Data data Technological Berhasil dihapus!</div>');
 		redirect('User/technological');
 	}
 	function tambah()
 	{
-		$data['judul'] = "Halaman Tambah Data Technology";
+		$data['judul'] = "Halaman Tambah Data Technological";
 
-		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('category', 'Category', 'required', [
-			'required' => 'category Wajib diisi'
+		$this->form_validation->set_rules('category', 'Category technological', 'required', [
+			'required' => 'Category technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('item', 'Item', 'required', [
-			'required' => 'Item Wajib diisi'
+		$this->form_validation->set_rules('item', 'item technological', 'required', [
+			'required' => 'Item technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('specification', 'Specification', 'required', [
-			'required' => 'Specification Wajib diisi'
+		$this->form_validation->set_rules('specification', 'Specification technological', 'required', [
+			'required' => 'Spesification technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('price', 'Price', 'required', [
-			'required' => 'Price Wajib diisi'
+		$this->form_validation->set_rules('price', 'Price technological', 'required', [
+			'required' => 'Price technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('source', 'Source', 'required', [
-			'required' => 'Source Wajib diisi'
+		$this->form_validation->set_rules('source', 'Source technological', 'required', [
+			'required' => 'Source technological Wajib di isi'
 		]);
 	
 	
@@ -62,7 +61,7 @@ class technological extends CI_Controller {
 		
 			];
 			$this->technological->insert($data);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data data projek Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Technological Berhasil Ditambah!</div>');
 			redirect('user/technological');
 		}
 	}
@@ -70,25 +69,23 @@ class technological extends CI_Controller {
 	{
 		$data['judul'] = "Halaman Ubah";
 		$data['technological'] = $this->technological->getById($id);
-		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('category', 'Category', 'required', [
-			'required' => 'category Wajib diisi'
+		$this->form_validation->set_rules('category', 'Category technological', 'required', [
+			'required' => 'Category technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('item', 'Item', 'required', [
-			'required' => 'Item Wajib diisi'
+		$this->form_validation->set_rules('item', 'Item technological', 'required', [
+			'required' => 'Item technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('specification', 'Specification', 'required', [
-			'required' => 'Specification Wajib diisi'
+		$this->form_validation->set_rules('specification', 'Specification technological', 'required', [
+			'required' => 'Specification technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('price', 'Price', 'required', [
-			'required' => 'Price Wajib diisi'
+		$this->form_validation->set_rules('price', 'Price technological', 'required', [
+			'required' => 'Price technological Wajib di isi'
 		]);
-		$this->form_validation->set_rules('source', 'Source', 'required', [
-			'required' => 'Source Wajib diisi'
+		$this->form_validation->set_rules('Source', 'Source technological', 'required', [
+			'required' => 'Source technological Wajib di isi'
 		]);
-		
-	
+
 		if ($this->form_validation->run() == false) {
 			$this->load->view("user/header", $data);
 			$this->load->view("user/technological/vw_ubah", $data);
@@ -100,7 +97,7 @@ class technological extends CI_Controller {
 				'specification' => $this->input->post('specification'),
 				'price' => $this->input->post('price'),
 				'source' => $this->input->post('source'),
-				'id_technologic' => $this->input->post('id_technologic')
+				'id_technological' => $this->input->post('id_technological')
 			];
 
 			$this->technological->update($data,$data ['id_technological']);
