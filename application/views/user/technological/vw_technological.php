@@ -15,7 +15,7 @@
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
-            <a href=<?=base_url('user/technological/tambah');?> class="btn btn-primary">Tambah Data</a>
+            <a href=<?=base_url('user/Technological/tambah');?> class="btn btn-primary">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -44,9 +44,9 @@
                             <td><?= $us['source'];?></td>
 
                             <td>
-                                <a href="<?= base_url('User/technological/hapus/').$us['id_technologic'];?>"
+                                <a href="<?= base_url('User/technological/hapus/').$us['id_technological'];?>"
                                     class="badge badge-danger">Hapus</a>
-                                <a href="<?= base_url('User/technological/edit/').$us['id_technologic'];?>"
+                                <a href="<?= base_url('User/technological/edit/').$us['id_technological'];?>"
                                     class="badge badge-warning">Edit</a>
                             </td>
                         </tr>

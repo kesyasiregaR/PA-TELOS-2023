@@ -9,6 +9,7 @@
         </li>
         <li class="breadcrumb-item active">
             Tambah Data Technological
+        </li>
     </ol>
     <h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
     <div class="row justify-content-center">
@@ -21,18 +22,18 @@
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="category">Category</label>
-                            <input category="category" type="text" value="<?= set_value('category'); ?>" class="form-control"
-                                id="category" placeholder="category ">
+                            <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control"
+                                id="category" placeholder="category technology ">
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="item">Item</label>
                             <input name="item" type="text" value="<?= set_value('item'); ?>"
-                                class="form-control" id="item" placeholder="item ">
+                                class="form-control" id="item" placeholder="items ">
                             <?= form_error('item', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="specification">specification</label>
+                            <label for="specification">Specification</label>
                             <input name="specification" type="text" value="<?= set_value('specification'); ?>"
                                 class="form-control" id="specification" placeholder="specification ">
                             <?= form_error('specification', '<small class="text-danger pl-3">', '</small>'); ?>

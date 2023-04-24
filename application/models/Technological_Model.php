@@ -3,7 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Technological_Model extends CI_Model
 {
     public $table = 'technological';
-    public $id = 'technological.id_technologic';
+    public $id = 'technological.id_technological';
     public function __construct()
     {
         parent::__construct();
@@ -17,13 +17,13 @@ class Technological_Model extends CI_Model
     public function getById($id)
     {
         $this->db->from($this->table);
-        $this->db->where('id_technologic',$id);
+        $this->db->where('id_technological',$id);
         $query = $this->db->get();
         return $query->row_array();
     }
     public function update($data, $where)
     {
-        $this->db->update($this->table, $data, array ('id_technologic' => $where));
+        $this->db->update($this->table, $data, array ('id_technological' => $where));
         return $this->db->affected_rows();
     }
     public function insert($data)

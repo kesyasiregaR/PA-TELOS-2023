@@ -38,7 +38,7 @@ class dataprojek extends CI_Controller {
 			'required' => 'Deskripsi dataproject Wajib di isi'
 		]);
 		$this->form_validation->set_rules('team_name', 'Team Name dataproject', 'required', [
-			'required' => 'Deskripsi dataproject Wajib di isi'
+			'required' => 'Team name Wajib di isi'
 		]);
 	
 	
