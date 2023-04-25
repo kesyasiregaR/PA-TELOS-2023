@@ -21,15 +21,15 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="cost_benefit_type">Cost Benefit Type</label>
-                            <input cost_benefit_type="cost_benefit_type" type="text" value="<?= set_value('cost_benefit_type'); ?>" class="form-control"
-                                id="cost_benefit_type" placeholder="cost_benefit_type">
+                            <label for="cost_benefit_type">	Cost Benefit Type</label>
+                            <input name="cost_benefit_type" type="text" value="<?= set_value('cost_benefit_type'); ?>" class="form-control"
+                                id="cost_benefit_type" placeholder="cost_benefit_type technology ">
                             <?= form_error('cost_benefit_type', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="cost_type">Cost Type</label>
+                            <label for="cost_type">	Cost Type</label>
                             <input name="cost_type" type="text" value="<?= set_value('cost_type'); ?>"
-                                class="form-control" id="cost_type" placeholder="cost_types ">
+                                class="form-control" id="cost_type" placeholder="cost_type">
                             <?= form_error('cost_type', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
@@ -63,8 +63,9 @@
                             <?= form_error('tco', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
+
                        
-                        <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data Economic</button>
+                        <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data economic</button>
                     </form>
                 </div>
             </div>

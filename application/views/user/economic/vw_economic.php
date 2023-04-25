@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/home'); ?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">
-            Data Economic
+            Economic
         </li>
     </ol>
     <h2 class="h3 mb-2 text-gray-800"><?=$judul;?></h2>
@@ -15,7 +15,7 @@
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
-            <a href=<?=base_url('user/Economic/tambah');?> class="btn btn-primary">Tambah Data</a>
+            <a href=<?=base_url('user/economic/tambah');?> class="btn btn-primary">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -25,10 +25,11 @@
                             <th>No</th>
                             <th>Cost Benefit Type</th>
                             <th>Cost Type</th>
+                            <th>Cost Component	</th>
                             <th>Item Type</th>
                             <th>Qty</th>
                             <th>Price</th>
-                            <th></th>
+                            <th>TCO</th> 
                             <th>Action</th>
 
                         </tr>
