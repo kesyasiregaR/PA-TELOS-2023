@@ -40,10 +40,8 @@
                             <td><?= $us['team_name'];?></td>
 
                             <td>
-                                <a href="<?= base_url('User/DataProjek/hapus/').$us['id_dataproject'];?>"
-                                    class="badge badge-danger">Hapus</a>
-                                <a href="<?= base_url('User/DataProjek/edit/').$us['id_dataproject'];?>"
-                                    class="badge badge-warning">Edit</a>
+                            <a href="<?= base_url('User/dataprojek/hapus/').$us['id_dataproject'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url('User/dataprojek/edit/').$us['id_dataproject'];?>" class="btn btn-xs btn-primary btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
                         <?php $i++;?>

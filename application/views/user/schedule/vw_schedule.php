@@ -40,8 +40,8 @@
                                 <td><?= $us['end_date']; ?></td>
 
                                 <td>
-                                    <a href="<?= base_url('User/Schedule/hapus/') . $us['id_schedule']; ?>" class="badge badge-danger">Hapus</a>
-                                    <a href="<?= base_url('User/Schedule/edit/') . $us['id_schedule']; ?>" class="badge badge-warning">Edit</a>
+                                <a href="<?= base_url('User/schedule/hapus/').$us['id_schedule'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url('User/schedule/edit/').$us['id_schedule'];?>" class="btn btn-xs btn-primary btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                             <?php $i++; ?>

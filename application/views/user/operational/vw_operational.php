@@ -42,8 +42,8 @@
                                 <td><?= $us['improvement']; ?></td>
 
                                 <td>
-                                    <a href="<?= base_url('User/operational/hapus/') . $us['id_operational']; ?>" class="badge badge-danger">Hapus</a>
-                                    <a href="<?= base_url('User/operational/edit/') . $us['id_operational']; ?>" class="badge badge-warning">Edit</a>
+                                <a href="<?= base_url('User/operational/hapus/').$us['id_operational'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url('User/operational/edit/').$us['id_operational'];?>" class="btn btn-xs btn-primary btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                             <?php $i++; ?>
