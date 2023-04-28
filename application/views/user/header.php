@@ -45,7 +45,7 @@
             
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/Dashboard'); ?>">
+                <a class="nav-link" href="<?= site_url('User/Home'); ?>">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a>
             </li>
