@@ -7,7 +7,7 @@
         <li class="breadcrumb-item">
             <a href="<?= site_url('user/dataprojek'); ?>">Data Projek</a>
         </li>
-        <li class="breadcrumb-item active">
+        <li class="breadcrumb-item active" >
             Tambah Data Projek
         </li>
     </ol>
@@ -40,7 +40,7 @@
                         </div>
 
                        
-                        <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data Projek</button>
+                        <button type="submit" name="tambah" class="btn btn-info float-right">Tambah Data Projek</button>
                     </form>
                 </div>
             </div>

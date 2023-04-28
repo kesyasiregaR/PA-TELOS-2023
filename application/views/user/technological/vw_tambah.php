@@ -52,7 +52,7 @@
                         </div>
 
                        
-                        <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data Technological</button>
+                        <button type="submit" name="tambah" class="btn btn-info float-right">Tambah Data Technological</button>
                     </form>
                 </div>
             </div>

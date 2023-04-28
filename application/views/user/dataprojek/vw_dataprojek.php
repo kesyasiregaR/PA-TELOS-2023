@@ -15,7 +15,7 @@
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
-            <a href=<?=base_url('user/DataProjek/tambah');?> class="btn btn-primary">Tambah Data</a>
+            <a href=<?=base_url('user/DataProjek/tambah');?> class="btn btn-info">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -41,7 +41,7 @@
 
                             <td>
                             <a href="<?= base_url('User/dataprojek/hapus/').$us['id_dataproject'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
-                                <a href="<?= base_url('User/dataprojek/edit/').$us['id_dataproject'];?>" class="btn btn-xs btn-primary btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
+                                <a href="<?= base_url('User/dataprojek/edit/').$us['id_dataproject'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
                         <?php $i++;?>
