@@ -39,7 +39,7 @@
                             <?= form_error('status', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
-                       
+                        
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Tambah Data Legalitas</button>
                     </form>
                 </div>

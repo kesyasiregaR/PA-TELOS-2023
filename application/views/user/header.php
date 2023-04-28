@@ -42,24 +42,24 @@
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
-
+            
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url(''); ?>">
+                <a class="nav-link" href="<?= site_url('User/Dashboard'); ?>">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('User/DataProjek'); ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <i class="fas fa-fw fa-book"></i>
                     <span>Data Project</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('User/technological'); ?>">
-                    <i class="fa-solid fa-desktop"></i>
+                    <i class="fas fa-fw fa-desktop"></i>
                     <span>Technological</span></a>
             </li>
 
@@ -71,13 +71,13 @@
 
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('User/legal'); ?>">
-                    <i class="fas fa-fw fa-calculator"></i>
+                    <i class="fas fa-fw fa-credit-card"></i>
                     <span>Legal</span></a>
             </li>
 
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('User/Operational'); ?>">
-                    <i class="fas fa-fw fa-home"></i>
+                    <i class="fas fa-fw fa-cogs"></i>
                     <span>Operational</span></a>
             </li>
             <li class="nav-item active">
@@ -86,8 +86,8 @@
                     <span>Schedule</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url(''); ?>">
-                    <i class="fas fa-fw fa-home"></i>
+                <a class="nav-link" href="<?= site_url('user/Summary'); ?>">
+                    <i class="fas fa-fw fa-tasks"></i>
                     <span>Summary</span></a>
             </li>
         </ul>
