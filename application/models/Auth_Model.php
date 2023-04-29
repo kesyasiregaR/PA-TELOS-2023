@@ -9,8 +9,8 @@ class Auth_model extends CI_Model
 	{
 		return [
 			[
-				'field' => 'username',
-				'label' => 'Username or Email',
+				'field' => 'email_pengguna',
+				'label' => 'Email',
 				'rules' => 'required'
 			],
 			[
@@ -23,7 +23,7 @@ class Auth_model extends CI_Model
 
 	public function login($username, $password)
 	{
-		$this->db->where('username', $username);
+		$this->db->where('email_pengguna', $username);
 		$query = $this->db->get($this->_table);
 		$user = $query->row();
 
@@ -65,7 +65,7 @@ class Auth_model extends CI_Model
 
 	public function read_by_username($username){
 		// $query = "SELECT * FROM `pengguna` WHERE username = '".$username."'";
-		$this->db->where('username', $username);
+		$this->db->where('email_pengguna', $username);
 		$this->db->get($this->_table);
 		return $this->db->last_query();
 		// die();
@@ -81,13 +81,13 @@ class Auth_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
-    public function getById($id)
-    {
-        $this->db->from($this->table);
-        $this->db->where('id_siswa', $id);
-        $query = $this->db->get();
-        return $query->row_array();
-    }
+    // public function getById($id)
+    // {
+    //     $this->db->from($this->table);
+    //     $this->db->where('id_siswa', $id);
+    //     $query = $this->db->get();
+    //     return $query->row_array();
+    // }
     public function update($where, $data)
     {
         $this->db->update($this->table, $data, $where);
