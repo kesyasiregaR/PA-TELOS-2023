@@ -175,7 +175,7 @@
 
     <div class="container py-4">
       <div class="container px-4 px-lg-5">
-        <div class="small text-center text-muted">Copyright &copy; Politeknik Caltex Riau</div>
+        <div class="small text-center font-weight-bolder">Copyright &copy; Politeknik Caltex Riau</div>
 
       </div>
   </footer><!-- End Footer -->

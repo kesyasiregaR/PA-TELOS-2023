@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>PPDB | MTS Al-Furqon</title>
+    <title>TELOS | FEASIBILITY TEST</title>
 
     <!-- Custom fonts for this template-->
     <link href="<?= base_url("assets2/")?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -70,7 +70,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; PPDB Al-Furqon</span>
+                    <span>Copyright &copy; POLITEKNIK CALTEX RIAU</span>
 
                     </div>
                 </div>
