@@ -91,37 +91,55 @@
     <section id="about" class="about section-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-title">
+        <!-- <div class="section-title">
           <h2>Tentang Kami</h2>
 
-        </div>
+        </div> -->
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100" style="margin-top:50px">
-            <img src="assets/img/about.JPG" class="img-fluid" alt="">
+            <img src="assets/img/why-us.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center" data-aos="fade-up"
             data-aos-delay="100" style="text-align: justify;font-size:14px;">
-            <h3>Sejarah</h3>
+            <h3>Metode TELOS</h3>
             <p>
 
-              Diawali dengan melihat kondisi daerah Raja Bejamu dan sekitarnya yang pada tahun 2000an dalam kondisi yang
-              terbelakang terutama dalam hal dunia pendidikan baik pendidikan umum ( SD SMP dan SMA ), apalagi
-              pendidikan agama (MDA, MI MTs dan MA). Menyikapi kondisi tersebut, maka mulailah dirintis pendirian
-              sekolah MDA (Madrasah Diniyah Awaliyah). </p>
-            <p>
-              Seiring perjalanan waktu MDA ini mulai berkembang dengan baik, beberapa tahun kemudian MDA ini mulai
-              memiliki tanah dan gedung sendiri walau dalam bentuk yang sederhana. Dengan pertolongan dan rahmat dari
-              Allah SWT lewat perjuangan para pendirinya maka MDA ini menjadi cikal bakal berdirinya yayasan Al-Furqon
-              Raja Bejamu.</P>
-            <p>Yayasan Al-Furqon Raja Bejamu berdiri pada tanggal 1 Juli 2006 dengan melaksanakan kegiatan program
-              pendidikan selain MDA, juga membuka pendidikan anak usia dini (PAUD) dan pendidikan Madrasah Tsanawiyah
-              (MTs). Al-Furqon Raja Bejamu </p>
-            <P> Sejak saat itu pergantian pimpinan Madrasah sebagai berikut:
-              <br>1. Zulfan menjabat dari tahun 2006 – 2008
-              <br>2. Sugiati, S. Pd.I menjabat dari tahun 2008 – 2013
-              <br>3. Arifin, S. Pd menjabat dari tahun 2013 – sekarang
-            </P>
+             Metode TELOS menguraikan lima aspek kelayakan proyek yang perlu dipertimbangkan .
+             Setiap proyek akan diuji akan dinilai dengan cara yang sama. Dengan menilai kendala utama pada sistem yang diuji, 
+             manajemen dapat mengevaluasi kemungkinan keberhasilan proyek,sebelum melakukan penggunaan sejumlah besar daya keuangan dan manusia. 
+             Metode TELOS memberikan panduan untuk menilai kelayakan proyek. Metode ini menggunakan lima faktor penilaian yakni kelayakan teknis (technical),
+             ekonomi (economic),hukum (legal),operasional (operational) dan jadwal (schedule).</p>
+           
+             <h3>1.	Kelayakan Teknik ( Technical Feasibility )</h3>
+            <p>Kelayakan teknik berhubungan dengan apakah sistem dapat dikembangkan di bawah teknologi yang ada atau jika teknologi baru diperlukan. 
+             Biasanya sudut pandang ketersediaan dalam kelayakan teknis biasanya bukan menjadi faktor masalah. Dalam beberapa kasus yang ditemui, 
+             yang menjadi masalah ialah keinginan dan kemampuan pihak yang bersangkutan untuk menerapkan teknologi yang tersedia. 
+             Mengingat bahwa teknologi adalah dasar fisik untuk sebagian besar fitur desain sistem, 
+             faktor ini menjadi aspek yang snagat bergantung pada kelayakan keseluruhan sistem yang bersaing.</p>
+
+             <h3>2. Kelayakan Ekonomi ( Economic Feasibility )</h3>
+            <p>Kelayakan ekonnomi berkaitan dengan ketersediaan dana yang akan digunakan untuk menyelesaikan proyek. 
+              Pada poin ini menitikberatkan pada komitmen keuangan manajemen untuk proyek dengan menimbang proyek modal pesaing lainnya. 
+              Tingkat dukungan ekonomi yang tersedia berdampak langsung pada sifat operasional dan lingkup sistem yang diusulkan.Kemudian, 
+              analisis biaya dan manfaat digunakan untuk mengidentifikasikan yang terbaik desain sistem untuk biaya.</p>
+              
+
+              <h3>3. Faktor Kelayakan Hukum ( Legal Feasibility )</h3>
+            <p>Kelayakan hokum mengidentifikasikan setiap konflik antara sistem konseptual dan kemampuan perusahaan untuk melaksanakan tanggung jawab hukumnya. 
+              Selain itu, banyak peraturan dan Undang-Undang berurusan dengan pelanggaran privasi dan kerahasiaan informasi yang disimpan. 
+              Pengambil keputusan harus yakin bahwa sistem yang diusulkan berada di dalam semua batasan hukum.</p>
+              
+              <h4>4. Faktor Kelayakan Operasional (Operational Feasibility )</h4>
+            <p>Kelayakan operasional menunjukkan tingkat kompatibilitas antara prosedur yang ada di perusahaan dan keterampilan personel 
+              dan persyaratan operasional dari sistem baru. Menerapkan sistem baru mungkin memerlukan adopsi yang baru prosedur dan pelatihan ulang personel operasi.</p>
+
+              <h3>5.	Faktor Kelayakan Jadwal ( Schedule Feasibility )</h3>
+             <p>Jadwal kelayakan berkaitan dengan kemampuan perusahaan untuk mengimplementasikan proyek 
+               dalam waktu yang dapat diterima. Faktor kelayakan ini berdampak baik pada ruang lingkup 
+               proyek dan apakah itu dikembangkan sendiri atau dibeli dari vendor perangkat lunak.Jika proyek,
+               seperti yang dibayangkan secara konseptual, tidak dapat diproduksi secara internal oleh target tanggal,
+               maka desain, metode akuisisi, atau tanggal target harus diubah.</p>
           </div>
         </div>
 
@@ -131,7 +149,7 @@
 
 
     <!-- ======= VisiMisi ======= -->
-    <section id="visimisi" class="visimisi section-bg">
+    <!-- <section id="visimisi" class="visimisi section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -149,14 +167,15 @@
 
         </div>
       </div>
-    </section><!-- End visimisi Section -->
+    </section> -->
+    <!-- End visimisi Section -->
     
   <footer id="footer">
 
 
     <div class="container py-4">
       <div class="container px-4 px-lg-5">
-        <div class="small text-center text-muted">Copyright &copy; PPDB Al-Furqon</div>
+        <div class="small text-center text-muted">Copyright &copy; Politeknik Caltex Riau</div>
 
       </div>
   </footer><!-- End Footer -->
