@@ -53,26 +53,28 @@
 
                         <!-- Email input -->
                         <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example3">Email address</label>
                             <input type="email" id="form3Example3" class="form-control form-control-lg"
                                 placeholder="Enter a valid email address" />
-                            <label class="form-label" for="form3Example3">Email address</label>
+
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-3">
+                        <label class="form-label" for="form3Example4">Password</label>
                             <input type="password" id="form3Example4" class="form-control form-control-lg"
                                 placeholder="Enter password" />
-                            <label class="form-label" for="form3Example4">Password</label>
+
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center">
 
 
                             <div class="text-center text-lg-start mt-4 pt-2">
-                                <button type="button" class="btn btn-primary btn-lg"
+                                <button type="button" class="btn btn-info btn-lg"
                                     style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
                                 <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a
-                                        href="<?= base_url('Auth/regis/'); ?>" class="link-danger">Register</a></p>
+                                        href="<?= base_url('user/registrasi'); ?>" class="link-danger">Register</a></p>
                             </div>
 
                     </form>
