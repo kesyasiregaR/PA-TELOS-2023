@@ -10,10 +10,10 @@ class Auth extends CI_Controller
 	public function index()
 	{
 		if ($this->session->userdata('username')) {
-			redirect('CalonSiswa/Home');
+			redirect('User/Home');
 		}
 
-		$this->form_validation->set_rules('username', 'Username', 'required');
+		$this->form_validation->set_rules('email_pengguna', 'email_pengguna', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'trim|required');
 
 		if ($this->form_validation->run() == false) {
@@ -25,20 +25,20 @@ class Auth extends CI_Controller
 
 	public function login()
 	{
-		$username = $this->input->post('username');
+		$email_pengguna = $this->input->post('email_pengguna');
 		$password = $this->input->post('password');
-		$calon = $this->db->get_where('calonsiswa', ['username' => $username])->row_array();
+		$calon = $this->db->get_where('pengguna', ['email_pengguna' => $email_pengguna])->row_array();
 		if ($calon) {
 			if (password_verify($password, $calon['password'])) {
 				$data = [
 					'nama_lengkap' => $calon['nama_lengkap'],
-					'username' => $calon['username'],
-					'id_siswa' => $calon['id_siswa'],
+					'email_pengguna' => $calon['email_pengguna'],
+					//'id_siswa' => $calon['id_siswa'],
 					'level' => $calon['level'],
 				];
 				$this->session->set_userdata($data);
 				
-					redirect('CalonSiswa/Home');
+					redirect('User/Home');
 				
 			} else {
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah!</div>');
@@ -85,26 +85,27 @@ class Auth extends CI_Controller
 
 	public function logout()
 	{
-		$this->session->unset_userdata('id_siswa');
+		//$this->session->unset_userdata('id_siswa');
 		$this->session->unset_userdata('nama_lengkap');
-		$this->session->unset_userdata('username');
+		$this->session->unset_userdata('email_pengguna');
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil Logout! </div>');
 		redirect('Landing');
 	}
 
 	public function regis()
 	{
-		if ($this->session->userdata('username')) {
-			redirect('CalonSiswa/Home');
+		if ($this->session->userdata('email_pengguna')) {
+			redirect('User/Home');
 		}
 		$this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required', [
 			'required' => 'Nama Pengguna Wajib di isi'
 		]);
-		$this->form_validation->set_rules('no_hp', 'No Hp', 'required', [
-			'required' => 'No Hp Pengguna Wajib di isi'
-		]);
-		$this->form_validation->set_rules('username', 'username', 'required', [
-			'required' => 'username Pengguna Wajib di isi'
+		// $this->form_validation->set_rules('no_hp', 'No Hp', 'required', [
+		// 	'required' => 'No Hp Pengguna Wajib di isi'
+		// ]);
+
+		$this->form_validation->set_rules('email_pengguna', 'email_pengguna', 'required', [
+			'required' => 'email_pengguna Pengguna Wajib di isi'
 		]);
 		$this->form_validation->set_rules(
 			'password',
@@ -116,17 +117,17 @@ class Auth extends CI_Controller
 			]
 		);
 		if ($this->form_validation->run() == false) {
-		$data['konfigurasi'] = $this->konfigurasi->get2();
+		//$data['konfigurasi'] = $this->konfigurasi->get2();
 		// var_dump($data['konfigurasi']);
 		// die;
-			$this->load->view('vw_registrasi',$data);
+			$this->load->view('vw_registrasi');
 		} else {
 			$data = [
-				'nama_lengkap' => htmlspecialchars($this->input->post('nama_lengkap', true)),
-				'no_hp' => htmlspecialchars($this->input->post('no_hp', true)),
-				'username' => htmlspecialchars($this->input->post('username', true)),
+				'nama_pengguna' => htmlspecialchars($this->input->post('nama_pengguna', true)),
+				//'no_hp' => htmlspecialchars($this->input->post('no_hp', true)),
+				'email_pengguna' => htmlspecialchars($this->input->post('email_pengguna', true)),
 				'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
-				'level'=> 'siswa'
+				'level'=> 'user'
 			];
 			$this->calon_model->insert($data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Registrasi Berhasil</div>');

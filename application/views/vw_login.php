@@ -56,7 +56,11 @@
                         <label class="form-label" for="form3Example3">Email address</label>
                             <input type="email" id="form3Example3" class="form-control form-control-lg"
                                 placeholder="Enter a valid email address" />
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> 2335e3613a1e63acb42c7de532c51ee74a0ecfd2
                         </div>
 
                         <!-- Password input -->
@@ -64,7 +68,11 @@
                         <label class="form-label" for="form3Example4">Password</label>
                             <input type="password" id="form3Example4" class="form-control form-control-lg"
                                 placeholder="Enter password" />
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> 2335e3613a1e63acb42c7de532c51ee74a0ecfd2
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center">
