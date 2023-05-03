@@ -130,7 +130,7 @@
               Selain itu, banyak peraturan dan Undang-Undang berurusan dengan pelanggaran privasi dan kerahasiaan informasi yang disimpan. 
               Pengambil keputusan harus yakin bahwa sistem yang diusulkan berada di dalam semua batasan hukum.</p>
               
-              <h4>4. Faktor Kelayakan Operasional (Operational Feasibility )</h4>
+              <h3>4. Faktor Kelayakan Operasional (Operational Feasibility )</h3>
             <p>Kelayakan operasional menunjukkan tingkat kompatibilitas antara prosedur yang ada di perusahaan dan keterampilan personel 
               dan persyaratan operasional dari sistem baru. Menerapkan sistem baru mungkin memerlukan adopsi yang baru prosedur dan pelatihan ulang personel operasi.</p>
 
