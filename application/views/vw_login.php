@@ -62,7 +62,12 @@
                 <div>
                   
                 <input type="submit" class="btn btn-info" value="Login">
+                <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="<?= base_url('Auth/regis'); ?>" class="link-danger">Register</a></p>
                 </div>
+
+                <!-- <div class="text-center text-lg-start mt-4 pt-2">
+                                <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="<?= base_url('Auth/regis'); ?>" class="link-danger">Register</a></p>
+                            </div> -->
                                     </form>
 
                                 </div>
