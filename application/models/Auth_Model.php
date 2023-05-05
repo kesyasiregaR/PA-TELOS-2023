@@ -1,16 +1,16 @@
 <?php
 
-class Auth_model extends CI_Model
+class Auth_Model extends CI_Model
 {
-	private $_table = "pengguna";
-	const SESSION_KEY = 'id_pengguna';
+	private $_table = "public";
+	const SESSION_KEY = 'id_public';
 
 	public function rules()
 	{
 		return [
 			[
-				'field' => 'email_pengguna',
-				'label' => 'Email',
+				'field' => 'username',
+				'label' => 'Username or Email',
 				'rules' => 'required'
 			],
 			[
@@ -23,7 +23,7 @@ class Auth_model extends CI_Model
 
 	public function login($username, $password)
 	{
-		$this->db->where('email_pengguna', $username);
+		$this->db->where('username', $username);
 		$query = $this->db->get($this->_table);
 		$user = $query->row();
 
@@ -38,7 +38,7 @@ class Auth_model extends CI_Model
 		}
 
 		// bikin session
-		$this->session->set_userdata(['id_pengguna' => $user->id_pengguna, 'nama_pengguna' => $user->nama_pengguna]);
+		$this->session->set_userdata(['id_public' => $user->id_public, 'nama_lengkap' => $user->nama_lengkap]);
 
 
 		return $this->session->has_userdata(self::SESSION_KEY);
@@ -51,7 +51,7 @@ class Auth_model extends CI_Model
 		}
 
 		$user_id = $this->session->userdata(self::SESSION_KEY);
-		$query = $this->db->get_where($this->_table, ['id_pengguna' => $user_id]);
+		$query = $this->db->get_where($this->_table, ['id_public' => $user_id]);
 		return $query->row();
 	}
 
@@ -65,7 +65,7 @@ class Auth_model extends CI_Model
 
 	public function read_by_username($username){
 		// $query = "SELECT * FROM `pengguna` WHERE username = '".$username."'";
-		$this->db->where('email_pengguna', $username);
+		$this->db->where('username', $username);
 		$this->db->get($this->_table);
 		return $this->db->last_query();
 		// die();
@@ -81,13 +81,19 @@ class Auth_model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
-    // public function getById($id)
-    // {
-    //     $this->db->from($this->table);
-    //     $this->db->where('id_siswa', $id);
-    //     $query = $this->db->get();
-    //     return $query->row_array();
-    // }
+    public function getById($id)
+    {
+        $this->db->from($this->table);
+        $this->db->where('id_public', $id);
+        $query = $this->db->get();
+        return $query->row_array();
+    }
+
+	public function getsiswabyid($id)
+	{
+		$query = 'select * from pendaftaran where id_public = "'.$id.'"';		
+		return $this->db->query($query)->result();
+	}
     public function update($where, $data)
     {
         $this->db->update($this->table, $data, $where);

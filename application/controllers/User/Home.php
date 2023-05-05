@@ -8,6 +8,7 @@ class Home extends CI_Controller {
 		parent::__construct();
 		// is_logged_in2();
 		$this->load->model('Technological_Model', 'technological');
+		$this->load->model('Public_Model', 'Public');
 		// $this->load->model('PendaftaranCalonSiswa_Model', 'pendaftaran');
 		// $this->load->model('Pembayaran_Model', 'pembayaran');
 		// $this->load->model('Auth_Model','calon');
@@ -17,7 +18,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		
-		
+		$id = $this->session->userdata('id_public');
 		$this->load->view('user/header');
 		$this->load->view('user/index');
 		$this->load->view('user/footer');

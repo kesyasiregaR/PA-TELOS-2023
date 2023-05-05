@@ -52,13 +52,8 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-          <!-- <li><a class="nav-link scrollto" href="#about">Tentang Kami</a></li>
-          <li><a class="nav-link scrollto" href="#visimisi">Visi Misi</a></li>
-          <li><a class="nav-link scrollto " href="#ekskul">Ekskul</a></li>
-          <li><a class="nav-link scrollto" href="#fasilitas">Fasilitas</a></li>
-          <li><a class="nav-link scrollto" href="#prestasi">Prestasi</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li> -->
-          <li><a class="nav-link scrollto" href="Auth">Login</a></li>
+          
+          <li><a class="nav-link scrollto active" href="Auth">Login</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -73,7 +68,8 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>TELOS | FEASIBILITY TEST</h1>
-          <h2>Analisis kelayakan merupakan salah satu bagian penting dari tahapan perancangan sistem informasi.Dokumen feasibility yang dihasilkan dari analisis kelayakan akan digunakan sebagai acuan organisasi untuk menentukan kelanjutan dari suatu proyek</h2>
+          <p>Analisis kelayakan merupakan salah satu bagian penting dari tahapan perancangan sistem informasi.Dokumen feasibility yang dihasilkan dari
+             analisis kelayakan akan digunakan sebagai acuan organisasi untuk menentukan kelanjutan dari suatu proyek</p>
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
             <a href="https://www.youtube.com/watch?v=H_m2HTo3HQI&ab_channel=MarketingBusinessNetwork" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
@@ -88,7 +84,7 @@
   </section><!-- End Hero -->
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about section-bg">
+    <section id="about" class="about section">
       <div class="container" data-aos="fade-up">
 
         <!-- <div class="section-title">
@@ -125,16 +121,16 @@
               analisis biaya dan manfaat digunakan untuk mengidentifikasikan yang terbaik desain sistem untuk biaya.</p>
               
 
-              <h3>3. Faktor Kelayakan Hukum ( Legal Feasibility )</h3>
+              <h3>3. Kelayakan Hukum ( Legal Feasibility )</h3>
             <p>Kelayakan hokum mengidentifikasikan setiap konflik antara sistem konseptual dan kemampuan perusahaan untuk melaksanakan tanggung jawab hukumnya. 
               Selain itu, banyak peraturan dan Undang-Undang berurusan dengan pelanggaran privasi dan kerahasiaan informasi yang disimpan. 
               Pengambil keputusan harus yakin bahwa sistem yang diusulkan berada di dalam semua batasan hukum.</p>
               
-              <h3>4. Faktor Kelayakan Operasional (Operational Feasibility )</h3>
+              <h3>4. Kelayakan Operasional (Operational Feasibility )</h3>
             <p>Kelayakan operasional menunjukkan tingkat kompatibilitas antara prosedur yang ada di perusahaan dan keterampilan personel 
               dan persyaratan operasional dari sistem baru. Menerapkan sistem baru mungkin memerlukan adopsi yang baru prosedur dan pelatihan ulang personel operasi.</p>
 
-              <h3>5.	Faktor Kelayakan Jadwal ( Schedule Feasibility )</h3>
+              <h3>5. Kelayakan Jadwal ( Schedule Feasibility )</h3>
              <p>Jadwal kelayakan berkaitan dengan kemampuan perusahaan untuk mengimplementasikan proyek 
                dalam waktu yang dapat diterima. Faktor kelayakan ini berdampak baik pada ruang lingkup 
                proyek dan apakah itu dikembangkan sendiri atau dibeli dari vendor perangkat lunak.Jika proyek,
@@ -145,30 +141,6 @@
 
       </div>
     </section><!-- End About Section -->
-
-
-
-    <!-- ======= VisiMisi ======= -->
-    <!-- <section id="visimisi" class="visimisi section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Visi Misi</h2>
-          <h3>Visi</h3>
-          <p class="visiMisi">Terwujudnya lembaga Pendidikan yang dapat mencetak generasi cerdas, kreatif dan
-            berakhlakul karimah.</p>
-          <h3>Misi</h3>
-          <P class="visiMisi" style="margin-top:-10px;">
-            <br>1. Membentuk generasi yag beriman, beramal dan berakhlakul karimah.
-            <br>2. Mengembangkan serta memberdaayakan program-program pendidikan.
-            <br>3. Menyiapkan lulusan yang memadai, dan pengajaran yang kreatif, inovatif dan transformatif
-            <br>4. Menerapkan keilmuan yag bernuansa islami dan berwawasan iptek
-          </P>
-
-        </div>
-      </div>
-    </section> -->
-    <!-- End visimisi Section -->
     
   <footer id="footer">
 

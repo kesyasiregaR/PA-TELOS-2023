@@ -44,42 +44,46 @@
 
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
 
-                                    <form class="mx-1 mx-md-4">
+                                    <form action="<?= base_url('Auth/regis');?>" method="POST" id="contactForm" enctype="multipart/form-data">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="nama_lengkap" id="nama_lengkap" required="required" type="text" placeholder="Masukkan Nama Lengkap anda..." value="<?= set_value('nama_lengkap'); ?>" />
+                                <label for="nama_lengkap">Nama Lengkap</label>
+                                <?= form_error('nama_lengkap', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
+                           <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" name="email" id="email" required="required" type="text" placeholder="Masukkan NO HP anda..." value="<?= set_value('email'); ?>" />
+                                <label for="email">Email</label>
+                                <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <input type="text" id="form3Example1c" class="form-control" />
-                                                <label class="form-label" for="form3Example1c">Your Name</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <input type="email" id="form3Example3c" class="form-control" />
-                                                <label class="form-label" for="form3Example3c">Your Email</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                                <input type="password" id="form3Example4c" class="form-control" />
-                                                <label class="form-label" for="form3Example4c">Password</label>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="button" class="btn btn-primary btn-lg">Register</button>
-                                        </div>
-
-                                    </form>
+                             <div class="form-floating mb-3">
+                                <input class="form-control" name="username" id="username" required="required" type="text" placeholder="Masukkan Username anda..." value="<?= set_value('username'); ?>" />
+                                <label for="username">Username</label>
+                                <?= form_error('username', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
+                            <!-- Username input-->
+                             <div class="form-floating mb-3">
+                                <input class="form-control" name="password" id="password" required="required" type="password" placeholder="Masukkan Password anda..." value="<?= set_value('password'); ?>" />
+                                <label for="password">Password</label>
+                                <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
+                            </div>
+                    
+                         
+                            <div class="d-grid">
+         
+                                <button type="submit" class="btn btn-primary" name="tambah" >Daftar</button>
+        
+                            </div>
+                            
+                        </form>
 
                                 </div>
-                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                        class="img-fluid" alt="Sample image">
+                               
+                                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image">
+                </div>
 
                                 </div>
                             </div>
