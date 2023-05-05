@@ -5,7 +5,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-black-800">Welcome, 
-        <?= $this->session->userdata('nama_lengkap') ?>
+    <?= ucwords($this->session->userdata('nama_lengkap')) ?>
     </h1>
     <h3> <b> TELOS | FEASIBILITY TEST FOR YOUR OWN BUSINESS </h3>
     <br>

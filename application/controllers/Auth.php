@@ -31,6 +31,8 @@ class Auth extends CI_Controller
 		$password = $this->input->post('password');
 		$calon = $this->db->get_where('public', ['username' => $username])->row_array();
 		if ($calon) {
+			// var_dump(password_hash($this->input->post('password'), PASSWORD_DEFAULT). $calon['password']);
+			// die();
 			if (password_verify($password, $calon['password'])) {
 				$data = [
 					'nama_lengkap' => $calon['nama_lengkap'],
@@ -70,8 +72,8 @@ class Auth extends CI_Controller
 		$this->form_validation->set_rules('nama_lengkap', 'Nama Lengkap', 'required', [
 			'required' => 'Nama Pengguna Wajib di isi'
 		]);
-		$this->form_validation->set_rules('email', 'No Hp', 'required', [
-			'required' => 'No Hp Pengguna Wajib di isi'
+		$this->form_validation->set_rules('email', 'Email', 'required', [
+			'required' => 'Email Wajib di isi'
 		]);
 		$this->form_validation->set_rules('username', 'username', 'required', [
 			'required' => 'username Pengguna Wajib di isi'

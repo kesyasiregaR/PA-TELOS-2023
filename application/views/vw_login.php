@@ -40,6 +40,7 @@
                     <div class="card text-black" style="border-radius: 25px;">
                         <div class="card-body p-md-5">
                             <div class="row justify-content-center">
+                            <?= $this->session->flashdata('message'); ?>
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
                                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign in</p>
@@ -54,14 +55,14 @@
                 <!-- Username input-->
                 <div class="form-floating mb-3">
                   <input class="form-control" id="password" required="required" type="password" name="password"
-                    placeholder="Masukkan Password anda..." value="<?= set_value('password'); ?>" />
+                    placeholder="Masukkan Password anda..." />
                   <label for="password">Password</label>
                   <?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
                 <div>
-                  <input type="submit" class="btn btn-info" value="Login">
+                  
+                <input type="submit" class="btn btn-info" value="Login">
                 </div>
-
                                     </form>
 
                                 </div>
