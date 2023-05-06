@@ -59,7 +59,7 @@
 					
 						
 						<a href="<?= base_url('user/economic') ?>" class="btn btn-danger">Tutup</a>
-						<button type="submit" name="tambah" class="btn btn-primary float-right">Ubah Data economic</button>
+						<button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>
 					</form>
 				</div>
 			</div>

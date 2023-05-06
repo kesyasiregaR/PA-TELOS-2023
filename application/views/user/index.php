@@ -17,7 +17,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-lg font-weight-bolder text-info text-uppercase mb-1">
-                                Data Project</div>
+                                Master Data</div>
                             <a class="collapse-item"
                                 href="<?= site_url('user/dataprojek'); ?>">View</a>
 

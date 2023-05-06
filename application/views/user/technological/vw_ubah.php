@@ -48,7 +48,7 @@
 						</div>
 						
 						<a href="<?= base_url('user/technological') ?>" class="btn btn-danger">Tutup</a>
-						<button type="submit" name="tambah" class="btn btn-primary float-right">Ubah Data Technological</button>
+						<button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>
 					</form>
 				</div>
 			</div>

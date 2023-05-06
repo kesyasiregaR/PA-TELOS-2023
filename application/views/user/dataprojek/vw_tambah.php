@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/home'); ?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="<?= site_url('user/dataprojek'); ?>">Data Projek</a>
+            <a href="<?= site_url('user/dataprojek'); ?>">Master Data</a>
         </li>
         <li class="breadcrumb-item active" >
             Tambah Data Projek
@@ -40,7 +40,7 @@
                         </div>
 
                        
-                        <button type="submit" name="tambah" class="btn btn-info float-right">Tambah Data Projek</button>
+                        <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>
                     </form>
                 </div>
             </div>
