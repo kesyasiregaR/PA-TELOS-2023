@@ -23,10 +23,13 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Team Name</th>
-                            <th>Action</th>
+                            <th>Technological</th>
+                            <th>Economic</th>
+                            <th>Legal</th>
+                            <th>Operational</th>
+                            <th>Schedule</th>
+                            <th>Hasil Akhir</th>
+                            <th>Aksi</th>
 
                         </tr>
                     </thead>

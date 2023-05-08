@@ -53,7 +53,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('User/DataProjek'); ?>">
                     <i class="fas fa-fw fa-book"></i>
-                    <span>Data Project</span></a>
+                    <span>Master Data</span></a>
             </li>
 
             <!-- Nav Item - Tables -->

@@ -40,7 +40,7 @@
                         </div>
 
                        
-                        <button type="submit" name="tambah" class="btn btn-info float-right">Tambah Data Schedule</button>
+                        <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>
                     </form>
                 </div>
             </div>

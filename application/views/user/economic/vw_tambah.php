@@ -23,49 +23,49 @@
                         <div class="form-group">
                             <label for="cost_benefit_type">	Cost Benefit Type</label>
                             <input name="cost_benefit_type" type="text" value="<?= set_value('cost_benefit_type'); ?>" class="form-control"
-                                id="cost_benefit_type" placeholder="cost_benefit_type technology ">
+                                id="cost_benefit_type" placeholder=" ">
                             <?= form_error('cost_benefit_type', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="cost_type">	Cost Type</label>
                             <input name="cost_type" type="text" value="<?= set_value('cost_type'); ?>"
-                                class="form-control" id="cost_type" placeholder="cost_type">
+                                class="form-control" id="cost_type" placeholder="">
                             <?= form_error('cost_type', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="cost_component">Cost Component</label>
                             <input name="cost_component" type="text" value="<?= set_value('cost_component'); ?>"
-                                class="form-control" id="cost_component" placeholder="cost_component ">
+                                class="form-control" id="cost_component" placeholder=" ">
                             <?= form_error('cost_component', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="item_type">Item Type</label>
                             <input name="item_type" type="text" value="<?= set_value('item_type'); ?>"
-                                class="form-control" id="item_type" placeholder="item_type ">
+                                class="form-control" id="item_type" placeholder="">
                             <?= form_error('item_type', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="Qty">Qty</label>
                             <input name="Qty" type="text" value="<?= set_value('Qty'); ?>"
-                                class="form-control" id="Qty" placeholder="Qty ">
+                                class="form-control" id="Qty" placeholder=" ">
                             <?= form_error('Qty', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="price">Price</label>
                             <input name="price" type="text" value="<?= set_value('price'); ?>"
-                                class="form-control" id="price" placeholder="price ">
+                                class="form-control" id="price" placeholder="">
                             <?= form_error('price', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="tco">TCO</label>
                             <input name="tco" type="text" value="<?= set_value('tco'); ?>"
-                                class="form-control" id="tco" placeholder="tco ">
+                                class="form-control" id="tco" placeholder=" ">
                             <?= form_error('tco', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
 
                        
-                        <button type="submit" name="tambah" class="btn btn-info float-right">Tambah Data economic</button>
+                        <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>
                     </form>
                 </div>
             </div>

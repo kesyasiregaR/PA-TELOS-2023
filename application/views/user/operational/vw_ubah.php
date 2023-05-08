@@ -43,7 +43,7 @@
 						</div>
 
 						<a href="<?= base_url('user/operational') ?>" class="btn btn-danger">Tutup</a>
-						<button type="submit" name="tambah" class="btn btn-primary float-right">Ubah Data Operational</button>
+						<button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>
 					</form>
 				</div>
 			</div>
