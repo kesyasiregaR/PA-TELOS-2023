@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/home'); ?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">
-            Master Data
+            Summary
         </li>
     </ol>
     <h2 class="h3 mb-2 text-gray-800"><?=$judul;?></h2>
@@ -15,7 +15,7 @@
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
-            <a href=<?=base_url('user/DataProjek/tambah');?> class="btn btn-info">Tambah Data</a>
+            <a href=<?=base_url('user/Summary/tambah');?> class="btn btn-info">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -23,6 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Project</th>
                             <th>Technological</th>
                             <th>Economic</th>
                             <th>Legal</th>
@@ -35,16 +36,20 @@
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
-                        <?php foreach ($dataproject as $us) : ?>
+                        <?php foreach ($summary as $us) : ?>
                         <tr>
                             <td><?=$i;?></td>
-                            <td><?= $us['name'];?></td>
-                            <td><?= $us['description'];?></td>
-                            <td><?= $us['team_name'];?></td>
+                            <td><?= $us['project'];?></td>
+                            <td><?= $us['technological'];?></td>
+                            <td><?= $us['economic'];?></td>
+                            <td><?= $us['legal'];?></td>
+                            <td><?= $us['operational'];?></td>
+                            <td><?= $us['schedule'];?></td>
+                            <td><?= $us['hasil_akhir'];?></td>
 
                             <td>
-                            <a href="<?= base_url('User/dataprojek/hapus/').$us['id_dataproject'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
-                                <a href="<?= base_url('User/dataprojek/edit/').$us['id_dataproject'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
+                            <a href="<?= base_url('User/summary/hapus/').$us['id_summary'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
+                                <a href="<?= base_url('User/summary/edit/').$us['id_summary'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
                         <?php $i++;?>

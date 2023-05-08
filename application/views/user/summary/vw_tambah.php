@@ -5,10 +5,10 @@
             <a href="<?= site_url('user/home'); ?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="<?= site_url('user/dataprojek'); ?>">Master Data</a>
+            <a href="<?= site_url('user/summary'); ?>">Master Data</a>
         </li>
         <li class="breadcrumb-item active" >
-            Tambah Data Projek
+            Tambah Data Summary
         </li>
     </ol>
     <h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
@@ -21,22 +21,45 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input name="name" type="text" value="<?= set_value('name'); ?>" class="form-control"
-                                id="name" placeholder="Name Project ">
+                            <label for="project">Project</label>
+                            <input name="project" type="text" value="<?= set_value('project'); ?>" class="form-control"
+                                id="project">
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div><div class="form-group">
+                            <label for="technological">Technological</label>
+                            <input name="technological" type="text" value="<?= set_value('technological'); ?>" class="form-control"
+                                id="technological">
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="description">Descriptions</label>
-                            <input name="description" type="text" value="<?= set_value('description'); ?>"
-                                class="form-control" id="description" placeholder="descriptions ">
-                            <?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <label for="economic">Economic</label>
+                            <input name="economic" type="text" value="<?= set_value('economic'); ?>"
+                                class="form-control" id="economic">
+                            <?= form_error('economic', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="team_name">Team Name</label>
-                            <input name="team_name" type="text" value="<?= set_value('team_name'); ?>"
-                                class="form-control" id="team_name" placeholder="team_name ">
-                            <?= form_error('team_name', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <label for="legal">Legal</label>
+                            <input name="legal" type="text" value="<?= set_value('legal'); ?>"
+                                class="form-control" id="legal">
+                            <?= form_error('legal', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
+                            <label for="operational">Operational</label>
+                            <input name="operational" type="text" value="<?= set_value('operational'); ?>"
+                                class="form-control" id="operational">
+                            <?= form_error('operational', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
+                            <label for="schedule">Schedule</label>
+                            <input name="schedule" type="text" value="<?= set_value('schedule'); ?>"
+                                class="form-control" id="schedule">
+                            <?= form_error('schedule', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
+                            <label for="hasil_akhir">Hasil Akhir</label>
+                            <input name="hasil_akhir" type="text" value="<?= set_value('hasil_akhir'); ?>"
+                                class="form-control" id="hasil_akhir">
+                            <?= form_error('hasil_akhir', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
                        

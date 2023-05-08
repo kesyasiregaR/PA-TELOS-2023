@@ -23,17 +23,17 @@
 						<input type="hidden" name="id_schedule" value="<?= $schedule['id_schedule']; ?>">
 						<div class="form-group">
 							<label for="name_of_activity">Name of Activity</label>
-							<input name="name_of_activity" value="<?= $schedule['name_of_activity']; ?>" type="text" class="form-control" id="name_of_activity" placeholder="name_of_activity schedule">
+							<input name="name_of_activity" value="<?= $schedule['name_of_activity']; ?>" type="text" class="form-control" id="name_of_activity" >
 							<?= form_error('name_of_activity', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
 							<label for="start_date">Start Date</label>
-							<input name="start_date" value="<?= $schedule['start_date']; ?>" type="date" class="form-control" id="start_date" placeholder="start_date schedule">
+							<input name="start_date" value="<?= $schedule['start_date']; ?>" type="date" class="form-control" id="start_date" placeholder="">
 							<?= form_error('start_date', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
 							<label for="end_date">End Date</label>
-							<input name="end_date" value="<?= $schedule['end_date']; ?>" type="date" class="form-control" id="end_date" placeholder="end_date schedule">
+							<input name="end_date" value="<?= $schedule['end_date']; ?>" type="date" class="form-control" id="end_date" placeholder="">
 							<?= form_error('end_date', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 

@@ -23,19 +23,19 @@
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input name="name" type="text" value="<?= set_value('name'); ?>" class="form-control"
-                                id="name" placeholder="Name Project ">
+                                id="name" placeholder="">
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description">Descriptions</label>
                             <input name="description" type="text" value="<?= set_value('description'); ?>"
-                                class="form-control" id="description" placeholder="descriptions ">
+                                class="form-control" id="description" placeholder="">
                             <?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="team_name">Team Name</label>
                             <input name="team_name" type="text" value="<?= set_value('team_name'); ?>"
-                                class="form-control" id="team_name" placeholder="team_name ">
+                                class="form-control" id="team_name" placeholder="">
                             <?= form_error('team_name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 

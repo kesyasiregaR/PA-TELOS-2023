@@ -22,22 +22,22 @@
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="category">Category</label>
-                            <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control" id="category" placeholder="category Project ">
+                            <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control" id="category" placeholder="">
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description_before">Descriptions_Before</label>
-                            <input name="description_before" type="text" value="<?= set_value('description_before'); ?>" class="form-control" id="description_before" placeholder="descriptions_before ">
+                            <input name="description_before" type="text" value="<?= set_value('description_before'); ?>" class="form-control" id="description_before" placeholder="">
                             <?= form_error('description_before', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description_after">Descriptions_After</label>
-                            <input name="description_after" type="text" value="<?= set_value('description_after'); ?>" class="form-control" id="description_after" placeholder="descriptions_after ">
+                            <input name="description_after" type="text" value="<?= set_value('description_after'); ?>" class="form-control" id="description_after" placeholder="">
                             <?= form_error('description_after', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="improvement">Improvement</label>
-                            <input name="improvement" type="text" value="<?= set_value('improvement'); ?>" class="form-control" id="improvement" placeholder="improvement ">
+                            <input name="improvement" type="text" value="<?= set_value('improvement'); ?>" class="form-control" id="improvement" placeholder="">
                             <?= form_error('improvement', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 

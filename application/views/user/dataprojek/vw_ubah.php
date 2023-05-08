@@ -23,17 +23,17 @@
 						<input type="hidden" name="id_dataproject" value="<?= $dataproject['id_dataproject']; ?>">
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input name="name" value="<?= $dataproject['name']; ?>" type="text" class="form-control" id="name" placeholder="Name ">
+							<input name="name" value="<?= $dataproject['name']; ?>" type="text" class="form-control" id="name" placeholder="">
 							<?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
 							<label for="description">Description</label>
-							<input name="description" value="<?= $dataproject['description']; ?>" type="text" class="form-control" id="description" placeholder="description dataproject">
+							<input name="description" value="<?= $dataproject['description']; ?>" type="text" class="form-control" id="description" placeholder="">
 							<?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
 							<label for="team_name">Deskription</label>
-							<input name="team_name" value="<?= $dataproject['team_name']; ?>" type="text" class="form-control" id="team_name" placeholder="team_name dataproject">
+							<input name="team_name" value="<?= $dataproject['team_name']; ?>" type="text" class="form-control" id="team_name" placeholder="">
 							<?= form_error('team_name', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						

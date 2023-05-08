@@ -23,31 +23,31 @@
                         <div class="form-group">
                             <label for="category">Category</label>
                             <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control"
-                                id="category" placeholder="category technology ">
+                                id="category" placeholder="">
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="item">Item</label>
                             <input name="item" type="text" value="<?= set_value('item'); ?>"
-                                class="form-control" id="item" placeholder="items ">
+                                class="form-control" id="item" placeholder="">
                             <?= form_error('item', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="specification">Specification</label>
                             <input name="specification" type="text" value="<?= set_value('specification'); ?>"
-                                class="form-control" id="specification" placeholder="specification ">
+                                class="form-control" id="specification" placeholder="">
                             <?= form_error('specification', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="price">Price</label>
                             <input name="price" type="text" value="<?= set_value('price'); ?>"
-                                class="form-control" id="price" placeholder="price ">
+                                class="form-control" id="price" placeholder="">
                             <?= form_error('price', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="source">Source</label>
                             <input name="source" type="text" value="<?= set_value('source'); ?>"
-                                class="form-control" id="source" placeholder="source ">
+                                class="form-control" id="source" placeholder="">
                             <?= form_error('source', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 

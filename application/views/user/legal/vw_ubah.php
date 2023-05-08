@@ -23,17 +23,17 @@
 						<input type="hidden" name="id_legal" value="<?= $legal['id_legal']; ?>">
 						<div class="form-group">
 							<label for="name">Name</label>
-							<input name="name" value="<?= $legal['name']; ?>" type="text" class="form-control" id="name" placeholder="Name ">
+							<input name="name" value="<?= $legal['name']; ?>" type="text" class="form-control" id="name" placeholder="">
 							<?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
 							<label for="description">Description</label>
-							<input name="description" value="<?= $legal['description']; ?>" type="text" class="form-control" id="description" placeholder="description legal">
+							<input name="description" value="<?= $legal['description']; ?>" type="text" class="form-control" id="description" placeholder="">
 							<?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
 							<label for="status">Status</label>
-							<input name="status" value="<?= $legal['status']; ?>" type="text" class="form-control" id="status" placeholder="status legal">
+							<input name="status" value="<?= $legal['status']; ?>" type="text" class="form-control" id="status" placeholder="">
 							<?= form_error('status', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						

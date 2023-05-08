@@ -32,26 +32,26 @@ class summary extends CI_Controller
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->form_validation->set_rules('cost_benefit_type', 'cost_benefit_type summary', 'required', [
-            'required' => 'cost_benefit_type Wajib di isi'
+        $this->form_validation->set_rules('project', 'project', 'required', [
+            'required' => 'project Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_type', 'cost_type summary', 'required', [
-            'required' => 'cost_type Wajib di isi'
+        $this->form_validation->set_rules('technological', 'technological', 'required', [
+            'required' => 'technological Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_component', 'cost_component summary', 'required', [
-            'required' => 'Specifikation Wajib di isi'
+        $this->form_validation->set_rules('economic', 'economic', 'required', [
+            'required' => 'economic Wajib di isi'
         ]);
-		$this->form_validation->set_rules('item_type', 'item_type summary', 'required', [
-            'required' => 'item_type Wajib di isi'
+        $this->form_validation->set_rules('legal', 'legal ', 'required', [
+            'required' => 'legal Wajib di isi'
         ]);
-		$this->form_validation->set_rules('Qty', 'Qty summary', 'required', [
-            'required' => 'Qty Wajib di isi'
+        $this->form_validation->set_rules('operational', 'operational', 'required', [
+            'required' => 'operational Wajib di isi'
         ]);
-        $this->form_validation->set_rules('price', 'price summary', 'required', [
-            'required' => 'price Wajib di isi'
+        $this->form_validation->set_rules('schedule', 'schedule', 'required', [
+            'required' => 'schedule Wajib di isi'
         ]);
-        $this->form_validation->set_rules('tco', 'tco summary', 'required', [
-            'required' => 'tco Wajib di isi'
+        $this->form_validation->set_rules('hasil_akhir', 'hasil_akhir', 'required', [
+            'required' => 'hasil_akhir Wajib di isi'
         ]);
 
 
@@ -61,14 +61,13 @@ class summary extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
-                'cost_benefit_type' => $this->input->post('cost_benefit_type'),
-                'cost_type' => $this->input->post('cost_type'),
-                'cost_component' => $this->input->post('cost_component'),
-                'item_type' => $this->input->post('item_type'),
-                'Qty' => $this->input->post('Qty'),
-                'price' => $this->input->post('price'),
-                'tco' => $this->input->post('tco'),
-
+                'project' => $this->input->post('project'),
+                'technological' => $this->input->post('technological'),
+                'economic' => $this->input->post('economic'),
+                'legal' => $this->input->post('legal'),
+                'operational' => $this->input->post('operational'),
+                'schedule' => $this->input->post('schedule'),
+                'hasil_akhir' => $this->input->post('hasil_akhir'),
             ];
             $this->summary->insert($data);
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data summary Berhasil Ditambah!</div>');
@@ -81,48 +80,49 @@ class summary extends CI_Controller
         $data['summary'] = $this->summary->getById($id);
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->form_validation->set_rules('cost_benefit_type', 'cost_benefit_type summary', 'required', [
-            'required' => 'cost_benefit_type Wajib di isi'
+        $this->form_validation->set_rules('project', 'project', 'required', [
+            'required' => 'project Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_type', 'cost_type summary', 'required', [
-            'required' => 'cost_type Wajib di isi'
+        $this->form_validation->set_rules('technological', 'technological', 'required', [
+            'required' => 'technological Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_component', 'cost_component economic', 'required', [
-            'required' => 'Specifikation Wajib di isi'
+        $this->form_validation->set_rules('economic', 'economic', 'required', [
+            'required' => 'economic Wajib di isi'
         ]);
-		$this->form_validation->set_rules('item_type', 'item_type economic', 'required', [
-            'required' => 'item_type Wajib di isi'
+        $this->form_validation->set_rules('legal', 'legal ', 'required', [
+            'required' => 'legal Wajib di isi'
         ]);
-		$this->form_validation->set_rules('Qty', 'Qty economic', 'required', [
-            'required' => 'Qty Wajib di isi'
+        $this->form_validation->set_rules('operational', 'operational', 'required', [
+            'required' => 'operational Wajib di isi'
         ]);
-        $this->form_validation->set_rules('price', 'price economic', 'required', [
-            'required' => 'price Wajib di isi'
+        $this->form_validation->set_rules('schedule', 'schedule', 'required', [
+            'required' => 'schedule Wajib di isi'
         ]);
-        $this->form_validation->set_rules('tco', 'tco economic', 'required', [
-            'required' => 'tco Wajib di isi'
+        $this->form_validation->set_rules('hasil_akhir', 'hasil_akhir', 'required', [
+            'required' => 'hasil_akhir Wajib di isi'
         ]);
+
 
 
         if ($this->form_validation->run() == false) {
             $this->load->view("user/header", $data);
-            $this->load->view("user/economic/vw_ubah", $data);
+            $this->load->view("user/summary/vw_ubah", $data);
             $this->load->view("user/footer");
         } else {
             $data = [
-                'cost_benefit_type' => $this->input->post('cost_benefit_type'),
-                'cost_type' => $this->input->post('cost_type'),
-                'cost_component' => $this->input->post('cost_component'),
-                'item_type' => $this->input->post('item_type'),
-                'Qty' => $this->input->post('Qty'),
-                'price' => $this->input->post('price'),
-                'tco' => $this->input->post('tco'),
-                'id_economic' => $this->input->post('id_economic')
+                'project' => $this->input->post('project'),
+                'technological' => $this->input->post('technological'),
+                'economic' => $this->input->post('economic'),
+                'legal' => $this->input->post('legal'),
+                'operational' => $this->input->post('operational'),
+                'schedule' => $this->input->post('schedule'),
+                'hasil_akhir' => $this->input->post('hasil_akhir'),
+                'id_summary' => $this->input->post('id_summary')
             ];
 
-            $this->economic->update($data, $data['id_economic']);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data economic Berhasil Diubah!</div>');
-            redirect('user/economic');
+            $this->summary->update($data, $data['id_summary']);
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Summary Berhasil Diubah!</div>');
+            redirect('user/summary');
         }
     }
 }
