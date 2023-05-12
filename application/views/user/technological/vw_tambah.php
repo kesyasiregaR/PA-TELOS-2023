@@ -21,37 +21,43 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
+                            <label for="name">name</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="name">
+                                <?php foreach ($dataproject as $us) : ?>
+                                    <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
                             <label for="category">Category</label>
-                            <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control"
-                                id="category" placeholder="">
+                            <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control" id="category" placeholder="">
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="item">Item</label>
-                            <input name="item" type="text" value="<?= set_value('item'); ?>"
-                                class="form-control" id="item" placeholder="">
+                            <input name="item" type="text" value="<?= set_value('item'); ?>" class="form-control" id="item" placeholder="">
                             <?= form_error('item', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="specification">Specification</label>
-                            <input name="specification" type="text" value="<?= set_value('specification'); ?>"
-                                class="form-control" id="specification" placeholder="">
+                            <input name="specification" type="text" value="<?= set_value('specification'); ?>" class="form-control" id="specification" placeholder="">
                             <?= form_error('specification', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="price">Price</label>
-                            <input name="price" type="text" value="<?= set_value('price'); ?>"
-                                class="form-control" id="price" placeholder="">
+                            <input name="price" type="text" value="<?= set_value('price'); ?>" class="form-control" id="price" placeholder="">
                             <?= form_error('price', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="source">Source</label>
-                            <input name="source" type="text" value="<?= set_value('source'); ?>"
-                                class="form-control" id="source" placeholder="">
+                            <input name="source" type="text" value="<?= set_value('source'); ?>" class="form-control" id="source" placeholder="">
                             <?= form_error('source', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
-                       
+
+
+
                         <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>
                     </form>
                 </div>

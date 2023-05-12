@@ -8,14 +8,14 @@
             Technological
         </li>
     </ol>
-    <h2 class="h3 mb-2 text-gray-800"><?=$judul;?></h2>
+    <h2 class="h3 mb-2 text-gray-800"><?= $judul; ?></h2>
 
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <?= $this->session->flashdata('message');?>
+        <?= $this->session->flashdata('message'); ?>
         <div class="card-header py-3">
-            <a href=<?=base_url('user/Technological/tambah');?> class="btn btn-info">Tambah Data</a>
+            <a href=<?= base_url('user/Technological/tambah'); ?> class="btn btn-info">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -23,6 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Name</th>
                             <th>Category</th>
                             <th>Item</th>
                             <th>Specification</th>
@@ -35,20 +36,21 @@
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach ($technological as $us) : ?>
-                        <tr>
-                            <td><?=$i;?></td>
-                            <td><?= $us['category'];?></td>
-                            <td><?= $us['item'];?></td>
-                            <td><?= $us['specification'];?></td>
-                            <td><?= $us['price'];?></td>
-                            <td><?= $us['source'];?></td>
+                            <tr>
+                                <td><?= $i; ?></td>
+                                <td><?= $us['name']; ?></td>
+                                <td><?= $us['category']; ?></td>
+                                <td><?= $us['item']; ?></td>
+                                <td><?= $us['specification']; ?></td>
+                                <td><?= $us['price']; ?></td>
+                                <td><?= $us['source']; ?></td>
 
-                            <td>
-                            <a href="<?= base_url('User/technological/hapus/').$us['id_technological'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
-                                <a href="<?= base_url('User/technological/edit/').$us['id_technological'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
-                            </td>
-                        </tr>
-                        <?php $i++;?>
+                                <td>
+                                    <a href="<?= base_url('User/technological/hapus/') . $us['id_technological']; ?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
+                                    <a href="<?= base_url('User/technological/edit/') . $us['id_technological']; ?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit"><i class="fa fa-edit"></i></a>
+                                </td>
+                            </tr>
+                            <?php $i++; ?>
                         <?php endforeach; ?>
 
 

@@ -9,6 +9,7 @@ class technological extends CI_Controller
         parent::__construct();
         // is_logged_in2();
         $this->load->model('Technological_Model', 'technological');
+        $this->load->model('DataProjek_Model', 'dataproject');
         $this->load->library('form_validation');
     }
     public function index()
@@ -29,9 +30,12 @@ class technological extends CI_Controller
     function tambah()
     {
         $data['judul'] = "Halaman Tambah Data Technological";
+        $data['dataproject'] = $this->dataproject->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
+        $this->form_validation->set_rules('name', 'name technological', 'required', [
+            'required' => 'name Wajib di isi'
+        ]);
         $this->form_validation->set_rules('category', 'category technological', 'required', [
             'required' => 'Category Wajib di isi'
         ]);
@@ -41,10 +45,10 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('specification', 'specification technological', 'required', [
             'required' => 'Specifikation Wajib di isi'
         ]);
-		$this->form_validation->set_rules('price', 'price technological', 'required', [
+        $this->form_validation->set_rules('price', 'price technological', 'required', [
             'required' => 'Price Wajib di isi'
         ]);
-		$this->form_validation->set_rules('source', 'source technological', 'required', [
+        $this->form_validation->set_rules('source', 'source technological', 'required', [
             'required' => 'source Wajib di isi'
         ]);
 
@@ -55,6 +59,8 @@ class technological extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
+
+                'name' => $this->input->post('name'),
                 'category' => $this->input->post('category'),
                 'item' => $this->input->post('item'),
                 'specification' => $this->input->post('specification'),
@@ -70,9 +76,13 @@ class technological extends CI_Controller
     public function edit($id)
     {
         $data['judul'] = "Halaman Ubah";
+        $data['dataproject'] = $this->dataproject->get();
         $data['technological'] = $this->technological->getById($id);
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
+        $this->form_validation->set_rules('name', 'name technological', 'required', [
+            'required' => 'name Wajib di isi'
+        ]);
         $this->form_validation->set_rules('category', 'category technological', 'required', [
             'required' => 'Category Wajib di isi'
         ]);
@@ -82,10 +92,10 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('specification', 'specification technological', 'required', [
             'required' => 'Specifikation Wajib di isi'
         ]);
-		$this->form_validation->set_rules('price', 'price technological', 'required', [
+        $this->form_validation->set_rules('price', 'price technological', 'required', [
             'required' => 'Price Wajib di isi'
         ]);
-		$this->form_validation->set_rules('source', 'source technological', 'required', [
+        $this->form_validation->set_rules('source', 'source technological', 'required', [
             'required' => 'source Wajib di isi'
         ]);
 
@@ -96,6 +106,7 @@ class technological extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
+                'name' => $this->input->post('name'),
                 'category' => $this->input->post('category'),
                 'item' => $this->input->post('item'),
                 'specification' => $this->input->post('specification'),

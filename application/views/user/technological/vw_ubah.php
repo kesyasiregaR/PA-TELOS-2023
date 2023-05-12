@@ -22,6 +22,15 @@
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_technological" value="<?= $technological['id_technological']; ?>">
 						<div class="form-group">
+                            <label for="name">name</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="name">
+                                <?php foreach ($dataproject as $us) : ?>
+                                    <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+						<div class="form-group">
 							<label for="category">Category</label>
 							<input name="category" value="<?= $technological['category']; ?>" type="text" class="form-control" id="category" placeholder="">
 							<?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
