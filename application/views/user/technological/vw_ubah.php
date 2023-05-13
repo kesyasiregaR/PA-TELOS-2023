@@ -21,7 +21,7 @@
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_technological" value="<?= $technological['id_technological']; ?>">
-						`s<div class="form-group">
+						<div class="form-group">
                             <label for="name">name</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>

@@ -20,6 +20,15 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                            <label for="name">name</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="name">
+                                <?php foreach ($dataproject as $us) : ?>
+                                    <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
                         <div class="form-group">
                             <label for="category">Category</label>
                             <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control" id="category" placeholder="">

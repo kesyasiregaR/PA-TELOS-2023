@@ -23,11 +23,12 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Name</th>
                             <th>Name of Activity</th>
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th>Action</th>
-
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -35,6 +36,7 @@
                         <?php foreach ($schedule as $us) : ?>
                             <tr>
                                 <td><?= $i; ?></td>
+                                <td><?= $us['name']; ?></td>
                                 <td><?= $us['name_of_activity']; ?></td>
                                 <td><?= $us['start_date']; ?></td>
                                 <td><?= $us['end_date']; ?></td>

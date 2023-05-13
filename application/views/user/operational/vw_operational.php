@@ -23,6 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Name</th>
                             <th>Category</th>
                             <th>Description_Before</th>
                             <th>Description_After</th>
@@ -36,6 +37,7 @@
                         <?php foreach ($operational as $us) : ?>
                             <tr>
                                 <td><?= $i; ?></td>
+                                <td><?= $us['name']; ?></td>
                                 <td><?= $us['category']; ?></td>
                                 <td><?= $us['description_before']; ?></td>
                                 <td><?= $us['description_after']; ?></td>

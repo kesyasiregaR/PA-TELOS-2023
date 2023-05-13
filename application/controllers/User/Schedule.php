@@ -9,6 +9,7 @@ class schedule extends CI_Controller
 		parent::__construct();
 		// is_logged_in2();
 		$this->load->model('Schedule_Model', 'schedule');
+		$this->load->model('DataProjek_Model', 'dataproject');
 		$this->load->library('form_validation');
 	}
 	public function index()
@@ -20,17 +21,22 @@ class schedule extends CI_Controller
 		$this->load->view('user/footer');
 	}
 	public function hapus($id)
-    {
-        $this->schedule->delete($id);
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+	{
+		$this->schedule->delete($id);
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
 			Data Legalitas Berhasil dihapus!</div>');
-        redirect('User/schedule');
-    }
+		redirect('User/schedule');
+	}
 	function tambah()
 	{
 		$data['judul'] = "Halaman Tambah Data Schedule";
 
+		$data['dataproject'] = $this->dataproject->get();
+
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$this->form_validation->set_rules('name', 'name technological', 'required', [
+			'required' => 'name Wajib di isi'
+		]);
 
 		$this->form_validation->set_rules('name_of_activity', 'name_of_activity schedule', 'required', [
 			'required' => 'Name schedule Wajib di isi'
@@ -49,6 +55,7 @@ class schedule extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
+				'name' => $this->input->post('name'),
 				'name_of_activity' => $this->input->post('name_of_activity'),
 				'start_date' => $this->input->post('start_date'),
 				'end_date' => $this->input->post('end_date'),
@@ -63,8 +70,12 @@ class schedule extends CI_Controller
 	{
 		$data['judul'] = "Halaman Ubah";
 		$data['schedule'] = $this->schedule->getById($id);
+		$data['dataproject'] = $this->dataproject->get();
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
+		$this->form_validation->set_rules('name', 'name technological', 'required', [
+			'required' => 'name Wajib di isi'
+		]);
 		$this->form_validation->set_rules('name_of_activity', 'name_of_activity schedule', 'required', [
 			'required' => 'Name schedule Wajib di isi'
 		]);
@@ -82,6 +93,7 @@ class schedule extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
+				'name' => $this->input->post('name'),
 				'name_of_activity' => $this->input->post('name_of_activity'),
 				'start_date' => $this->input->post('start_date'),
 				'end_date' => $this->input->post('end_date'),

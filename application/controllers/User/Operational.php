@@ -9,6 +9,7 @@ class operational extends CI_Controller
 		parent::__construct();
 		// is_logged_in2();
 		$this->load->model('Operational_Model', 'operational');
+		$this->load->model('DataProjek_Model', 'dataproject');
 		$this->load->library('form_validation');
 	}
 	public function index()
@@ -30,7 +31,12 @@ class operational extends CI_Controller
 	{
 		$data['judul'] = "Halaman Tambah Data Operational";
 
+		$data['dataproject'] = $this->dataproject->get();
+
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$this->form_validation->set_rules('name', 'name technological', 'required', [
+			'required' => 'name Wajib di isi'
+		]);
 
 		$this->form_validation->set_rules('category', 'category operational', 'required', [
 			'required' => 'Categori operational Wajib di isi'
@@ -52,6 +58,7 @@ class operational extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
+				'name' => $this->input->post('name'),
 				'category' => $this->input->post('category'),
 				'description_before' => $this->input->post('description_before'),
 				'description_after' => $this->input->post('description_after'),
@@ -67,8 +74,13 @@ class operational extends CI_Controller
 	{
 		$data['judul'] = "Halaman Ubah";
 		$data['operational'] = $this->operational->getById($id);
+		$data['dataproject'] = $this->dataproject->get();
+
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
+		$this->form_validation->set_rules('name', 'name technological', 'required', [
+			'required' => 'name Wajib di isi'
+		]);
 		$this->form_validation->set_rules('category', 'category dataproject', 'required', [
 			'required' => 'category operational Wajib di isi'
 		]);
@@ -89,6 +101,7 @@ class operational extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
+				'name' => $this->input->post('name'),
 				'category' => $this->input->post('category'),
 				'description_before' => $this->input->post('description_before'),
 				'description_after' => $this->input->post('description_after'),

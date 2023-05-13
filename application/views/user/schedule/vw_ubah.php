@@ -22,6 +22,15 @@
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_schedule" value="<?= $schedule['id_schedule']; ?>">
 						<div class="form-group">
+                            <label for="name">name</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="name">
+                                <?php foreach ($dataproject as $us) : ?>
+                                    <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+						<div class="form-group">
 							<label for="name_of_activity">Name of Activity</label>
 							<input name="name_of_activity" value="<?= $schedule['name_of_activity']; ?>" type="text" class="form-control" id="name_of_activity" >
 							<?= form_error('name_of_activity', '<small class="text-danger pl-3">', '</small>'); ?>
