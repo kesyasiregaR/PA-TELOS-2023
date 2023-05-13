@@ -24,6 +24,7 @@
                         <tr>
                             <th>No</th>
                             <th>Name</th>
+                            <th>Jenis</th>
                             <th>Description</th>
                             <th>Status</th>
                             <th>Action</th>
@@ -35,7 +36,8 @@
                         <?php foreach ($legal as $us) : ?>
                         <tr>
                             <td><?=$i;?></td>
-                            <td><?= $us['name'];?></td>
+                            <td><?= $us['name']; ?></td>
+                            <td><?= $us['jenis'];?></td>
                             <td><?= $us['description'];?></td>
                             <td><?= $us['status'];?></td>
 
