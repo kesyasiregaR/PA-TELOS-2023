@@ -34,7 +34,7 @@
                         </div>
 						<div class="form-group">
                             <label for="cost_benefit_type">	Cost Benefit Type</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <select class="form-control" id="exampleFormControlSelect1" name="cost_benefit_type">
                             <option value="Tangible">Tangible</option>
                                 <option value="Intangible">Intangible</option>
                             </select>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             <label for="cost_type">	Cost Type</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <select class="form-control" id="exampleFormControlSelect1" name="cost_type">
                             <option value="Direct Cost">Direct Cost</option>
                                 <option value="Indirect Cost">Indirect Cost</option>
                             </select>
