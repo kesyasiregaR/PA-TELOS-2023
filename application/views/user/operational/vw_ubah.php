@@ -31,10 +31,10 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                        <label for="kategori">Kategori</label>
+                        <label for="categori">Kategori</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="kategori">
                                 <option value="Performance">Performance</option>
-                                <option value="Tidak Performance">Tidak Performance</option>
+                                <option value="Non Performance">Non Performance</option>
                             </select>
                             <?= form_error('kategori', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
@@ -51,8 +51,8 @@
                         <div class="form-group">
                             <label for="improvement">Improvement</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="improvement">
-                                <option value="improvement">Improvement</option>
-                                <option value="Tidak improvemen">Tidak Improvemen</option>
+                                <option value="Setuju">Setuju</option>
+                                <option value="Tidak Setuju">Tidak Setuju</option>
                             </select>
                             <?= form_error('improvement', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
