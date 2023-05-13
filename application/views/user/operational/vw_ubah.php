@@ -31,9 +31,12 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Category</label>
-                            <input name="category" value="<?= $operational['category']; ?>" type="text" class="form-control" id="category" placeholder="">
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                        <label for="kategori">Kategori</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="kategori">
+                                <option value="Performance">Performance</option>
+                                <option value="Tidak Performance">Tidak Performance</option>
+                            </select>
+                            <?= form_error('kategori', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description_before">Description_Before</label>
@@ -47,7 +50,10 @@
                         </div>
                         <div class="form-group">
                             <label for="improvement">Improvement</label>
-                            <input name="improvement" value="<?= $operational['improvement']; ?>" type="text" class="form-control" id="improvement" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="improvement">
+                                <option value="improvement">Improvement</option>
+                                <option value="Tidak improvemen">Tidak Improvemen</option>
+                            </select>
                             <?= form_error('improvement', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 

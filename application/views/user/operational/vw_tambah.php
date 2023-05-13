@@ -20,7 +20,7 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
-                    <div class="form-group">
+                        <div class="form-group">
                             <label for="name">name</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
@@ -30,9 +30,12 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Category</label>
-                            <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control" id="category" placeholder="">
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <label for="kategori">Kategori</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="kategori">
+                                <option value="Performance">Performance</option>
+                                <option value="Tidak Performance">Tidak Performance</option>
+                            </select>
+                            <?= form_error('kategori', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description_before">Descriptions_Before</label>
@@ -46,7 +49,10 @@
                         </div>
                         <div class="form-group">
                             <label for="improvement">Improvement</label>
-                            <input name="improvement" type="text" value="<?= set_value('improvement'); ?>" class="form-control" id="improvement" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="improvement">
+                                <option value="improvement">Improvement</option>
+                                <option value="Tidak improvemen">Tidak Improvemen</option>
+                            </select>
                             <?= form_error('improvement', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 

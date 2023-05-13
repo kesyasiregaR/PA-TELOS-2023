@@ -31,24 +31,23 @@
                         </div>
                         <div class="form-group">
                             <label for="jenis">Jenis</label>
-                            <input name="jenis" type="text" value="<?= set_value('jenis'); ?>"
-                                class="form-control" id="jenis" placeholder="">
+                            <input name="jenis" type="text" value="<?= set_value('jenis'); ?>" class="form-control" id="jenis" placeholder="">
                             <?= form_error('jenis', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description">Descriptions</label>
-                            <input name="description" type="text" value="<?= set_value('description'); ?>"
-                                class="form-control" id="description" placeholder="">
+                            <input name="description" type="text" value="<?= set_value('description'); ?>" class="form-control" id="description" placeholder="">
                             <?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="status">Status</label>
-                            <input name="status" type="text" value="<?= set_value('status'); ?>"
-                                class="form-control" id="status" placeholder="">
+                            <label for="status">status</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="status">
+                                <option value="Aktif">Aktif</option>
+                                <option value="Tidak Aktif">Tidak Aktif</option>
+                            </select>
                             <?= form_error('status', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
-                        
                         <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>
                     </form>
                 </div>

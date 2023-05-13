@@ -42,10 +42,13 @@
 							<?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
-							<label for="status">Status</label>
-							<input name="status" value="<?= $legal['status']; ?>" type="text" class="form-control" id="status" placeholder="">
-							<?= form_error('status', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+						<label for="status">status</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="status">
+                                <option value="Aktif">Aktif</option>
+                                <option value="Tidak Aktif">Tidak Aktif</option>
+                            </select>
+                            <?= form_error('status', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
 						
 						<a href="<?= base_url('user/legal') ?>" class="btn btn-danger">Tutup</a>
 						<button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>
