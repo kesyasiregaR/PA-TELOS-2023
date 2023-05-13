@@ -33,15 +33,21 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 						<div class="form-group">
-							<label for="cost_benefit_type">Cost Benefit Type</label>
-							<input name="cost_benefit_type" value="<?= $economic['cost_benefit_type']; ?>" type="text" class="form-control" id="cost_benefit_type" placeholder="">
-							<?= form_error('cost_benefit_type', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
-						<div class="form-group">
-							<label for="cost_type">Cost Type</label>
-							<input name="cost_type" value="<?= $economic['cost_type']; ?>" type="text" class="form-control" id="cost_type" placeholder="">
-							<?= form_error('cost_type', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+                            <label for="cost_benefit_type">	Cost Benefit Type</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <option value="Tangible">Tangible</option>
+                                <option value="Intangible">Intangible</option>
+                            </select>
+                            <?= form_error('cost_benefit_type', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
+                            <label for="cost_type">	Cost Type</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <option value="Direct Cost">Direct Cost</option>
+                                <option value="Indirect Cost">Indirect Cost</option>
+                            </select>
+                            <?= form_error('cost_type', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
 						<div class="form-group">
 							<label for="cost_component">Cost Component</label>
 							<input name="cost_component" value="<?= $economic['cost_component']; ?>" type="text" class="form-control" id="cost_component" placeholder="">

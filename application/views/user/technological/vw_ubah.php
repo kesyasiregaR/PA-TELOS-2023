@@ -5,7 +5,7 @@
 			<a href="<?= site_url('user/home'); ?>">Dashboard</a>
 		</li>
 		<li class="breadcrumb-item">
-			<a href="<?= site_url('user/technological'); ?>">Technoloogical</a>
+			<a href="<?= site_url('user/technological'); ?>">Technological</a>
 		</li>
 		<li class="breadcrumb-item active">
 			Ubah Data Technologi
@@ -32,8 +32,15 @@
                         </div>
 						<div class="form-group">
 							<label for="category">Category</label>
-							<input name="category" value="<?= $technological['category']; ?>" type="text" class="form-control" id="category" placeholder="">
-							<?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+							<select class="form-control" id="exampleFormControlSelect1" name="category">
+                                <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                                <option value="Network">Network</option>
+                                <option value="Management">Management</option>
+                                <option value="Support">Support</option>
+                                <option value="Implementation">Implementation</option>
+                            </select>
+                            
 						</div>
 						<div class="form-group">
 							<label for="item">Item</label>
