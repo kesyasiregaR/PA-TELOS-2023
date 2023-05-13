@@ -22,9 +22,18 @@
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input name="name" type="text" value="<?= set_value('name'); ?>" class="form-control"
-                                id="name" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="name">
+                                <?php foreach ($dataproject as $us) : ?>
+                                    <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis">Jenis</label>
+                            <input name="jenis" type="text" value="<?= set_value('jenis'); ?>"
+                                class="form-control" id="jenis" placeholder="">
+                            <?= form_error('jenis', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description">Descriptions</label>

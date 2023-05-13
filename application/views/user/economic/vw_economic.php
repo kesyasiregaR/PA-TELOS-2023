@@ -23,6 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Name</th>
                             <th>Cost Benefit Type</th>
                             <th>Cost Type</th>
                             <th>Cost Component	</th>
@@ -39,6 +40,7 @@
                         <?php foreach ($economic as $us) : ?>
                         <tr>
                             <td><?=$i;?></td>
+                            <td><?= $us['name']; ?></td>
                             <td><?= $us['cost_benefit_type'];?></td>
                             <td><?= $us['cost_type'];?></td>
                             <td><?= $us['cost_component'];?></td>

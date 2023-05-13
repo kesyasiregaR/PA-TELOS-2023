@@ -9,6 +9,7 @@ class legal extends CI_Controller
         parent::__construct();
         // is_logged_in2();
         $this->load->model('Legal_Model', 'legal');
+        $this->load->model('DataProjek_Model', 'dataproject');
         $this->load->library('form_validation');
     }
     public function index()
@@ -29,10 +30,13 @@ class legal extends CI_Controller
     function tambah()
     {
         $data['judul'] = "Halaman Tambah Data Legal";
+        $data['dataproject'] = $this->dataproject->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-        $this->form_validation->set_rules('name', 'Nama legal', 'required', [
+        $this->form_validation->set_rules('name', 'Nama technological', 'required', [
+            'required' => 'Nama Wajib di isi'
+        ]);
+        $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
             'required' => 'Nama legal Wajib di isi'
         ]);
         $this->form_validation->set_rules('description', 'Deskripsi legal', 'required', [
@@ -50,6 +54,7 @@ class legal extends CI_Controller
         } else {
             $data = [
                 'name' => $this->input->post('name'),
+                'jenis' => $this->input->post('jenis'),
                 'description' => $this->input->post('description'),
                 'status' => $this->input->post('status'),
 
@@ -62,11 +67,15 @@ class legal extends CI_Controller
     public function edit($id)
     {
         $data['judul'] = "Halaman Ubah";
+        $data['dataproject'] = $this->dataproject->get();
         $data['legal'] = $this->legal->getById($id);
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('name', 'Nama legal', 'required', [
             'required' => 'Nama legal Wajib di isi'
+        ]);
+        $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
+            'required' => 'Jenis legal Wajib di isi'
         ]);
         $this->form_validation->set_rules('description', 'Deskripsi legal', 'required', [
             'required' => 'Deskripsi legal Wajib di isi'
@@ -83,6 +92,7 @@ class legal extends CI_Controller
         } else {
             $data = [
                 'name' => $this->input->post('name'),
+                'jenis' => $this->input->post('jenis'),
                 'description' => $this->input->post('description'),
                 'status' => $this->input->post('status'),
                 'id_legal' => $this->input->post('id_legal')

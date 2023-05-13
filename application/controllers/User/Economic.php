@@ -85,7 +85,7 @@ class economic extends CI_Controller
         $data['judul'] = "Halaman Ubah";
         $data['economic'] = $this->economic->getById($id);
         $data['dataproject'] = $this->dataproject->get();
-        // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+       
         $this->form_validation->set_rules('name', 'name technological', 'required', [
             'required' => 'name Wajib di isi'
         ]);
