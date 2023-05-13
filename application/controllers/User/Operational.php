@@ -37,7 +37,6 @@ class operational extends CI_Controller
 		$this->form_validation->set_rules('name', 'name technological', 'required', [
 			'required' => 'name Wajib di isi'
 		]);
-
 		$this->form_validation->set_rules('category', 'category operational', 'required', [
 			'required' => 'Categori operational Wajib di isi'
 		]);
