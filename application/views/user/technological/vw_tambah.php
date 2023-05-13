@@ -31,7 +31,15 @@
                         </div>
                         <div class="form-group">
                             <label for="category">Category</label>
-                            <input name="category" type="text" value="<?= set_value('category'); ?>" class="form-control" id="category" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                                <option value="Network">Network</option>
+                                <option value="Management">Management</option>
+                                <option value="Support">Support</option>
+                                <option value="Implementation">Implementation</option>
+                            </select>
+                            
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
