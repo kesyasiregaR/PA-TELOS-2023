@@ -9,6 +9,7 @@ class economic extends CI_Controller
         parent::__construct();
         // is_logged_in2();
         $this->load->model('Economic_Model', 'economic');
+        $this->load->model('DataProjek_Model', 'dataproject');
         $this->load->library('form_validation');
     }
     public function index()
@@ -29,9 +30,12 @@ class economic extends CI_Controller
     function tambah()
     {
         $data['judul'] = "Halaman Tambah Data Economic";
+        $data['dataproject'] = $this->dataproject->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
+        $this->form_validation->set_rules('name', 'name technological', 'required', [
+            'required' => 'name Wajib di isi'
+        ]);
         $this->form_validation->set_rules('cost_benefit_type', 'cost_benefit_type economic', 'required', [
             'required' => 'cost_benefit_type Wajib di isi'
         ]);
@@ -61,6 +65,7 @@ class economic extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
+                'name' => $this->input->post('name'),
                 'cost_benefit_type' => $this->input->post('cost_benefit_type'),
                 'cost_type' => $this->input->post('cost_type'),
                 'cost_component' => $this->input->post('cost_component'),
@@ -79,8 +84,11 @@ class economic extends CI_Controller
     {
         $data['judul'] = "Halaman Ubah";
         $data['economic'] = $this->economic->getById($id);
+        $data['dataproject'] = $this->dataproject->get();
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
+        $this->form_validation->set_rules('name', 'name technological', 'required', [
+            'required' => 'name Wajib di isi'
+        ]);
         $this->form_validation->set_rules('cost_benefit_type', 'cost_benefit_type economic', 'required', [
             'required' => 'cost_benefit_type Wajib di isi'
         ]);
@@ -110,6 +118,7 @@ class economic extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
+                'name' => $this->input->post('name'),
                 'cost_benefit_type' => $this->input->post('cost_benefit_type'),
                 'cost_type' => $this->input->post('cost_type'),
                 'cost_component' => $this->input->post('cost_component'),

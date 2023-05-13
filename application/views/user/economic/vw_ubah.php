@@ -16,11 +16,22 @@
 		<div class="col-md-12 ">
 			<div class="card">
 				<div class="card-header">
-					Form Ubah Data Technologi
+				Form Ubah Data Economic
 				</div>
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_economic" value="<?= $economic['id_economic']; ?>">
+						<div class="card-body">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                            <label for="name">name</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="name">
+                                <?php foreach ($dataproject as $us) : ?>
+                                    <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
 						<div class="form-group">
 							<label for="cost_benefit_type">Cost Benefit Type</label>
 							<input name="cost_benefit_type" value="<?= $economic['cost_benefit_type']; ?>" type="text" class="form-control" id="cost_benefit_type" placeholder="">
