@@ -17,13 +17,13 @@ class DataProjek_Model extends CI_Model
     public function getById($id)
     {
         $this->db->from($this->table);
-        $this->db->where('id_dataproject',$id);
+        $this->db->where('id_dataproject', $id);
         $query = $this->db->get();
         return $query->row_array();
     }
     public function update($data, $where)
     {
-        $this->db->update($this->table, $data, array ('id_dataproject' => $where));
+        $this->db->update($this->table, $data, array('id_dataproject' => $where));
         return $this->db->affected_rows();
     }
     public function insert($data)
@@ -36,5 +36,11 @@ class DataProjek_Model extends CI_Model
         $this->db->where($this->id, $id);
         $this->db->delete($this->table);
         return $this->db->affected_rows();
+    }
+    public function jml_data()
+    {
+        $this->db->select('*');
+        $this->db->from('dataproject');
+        return $this->db->get()->num_rows();
     }
 }
