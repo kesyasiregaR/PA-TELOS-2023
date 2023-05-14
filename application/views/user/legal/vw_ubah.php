@@ -23,7 +23,7 @@
 						<input type="hidden" name="id_legal" value="<?= $legal['id_legal']; ?>">
 						
 						<div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Nama Projek</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
                                     <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
@@ -37,12 +37,12 @@
 							<?= form_error('jenis', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
-							<label for="description">Description</label>
+							<label for="description">Keterangan</label>
 							<input name="description" value="<?= $legal['description']; ?>" type="text" class="form-control" id="description" placeholder="">
 							<?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
-						<label for="status">status</label>
+						<label for="status">Status</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="status">
                                 <option value="Aktif">Aktif</option>
                                 <option value="Tidak Aktif">Tidak Aktif</option>

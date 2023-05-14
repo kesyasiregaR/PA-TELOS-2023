@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="name">name</label>
+                            <label for="name">Nama Projek</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
                                     <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
@@ -38,17 +38,17 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="description_before">Descriptions_Before</label>
+                            <label for="description_before">Deskripsi Sebelum</label>
                             <input name="description_before" type="text" value="<?= set_value('description_before'); ?>" class="form-control" id="description_before" placeholder="">
                             <?= form_error('description_before', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="description_after">Descriptions_After</label>
+                            <label for="description_after">Deskripsi Sesudah</label>
                             <input name="description_after" type="text" value="<?= set_value('description_after'); ?>" class="form-control" id="description_after" placeholder="">
                             <?= form_error('description_after', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="improvement">Improvement</label>
+                            <label for="improvement">Peningkatan</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="improvement">
                                 <option value="Setuju">Setuju</option>
                                 <option value="Tidak Setuju">Tidak Setuju</option>

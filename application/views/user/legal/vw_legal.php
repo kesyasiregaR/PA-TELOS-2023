@@ -23,11 +23,11 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
+                            <th>Nama Projek</th>
                             <th>Jenis</th>
-                            <th>Description</th>
+                            <th>Keterangan</th>
                             <th>Status</th>
-                            <th>Action</th>
+                            <th>Aksi</th>
 
                         </tr>
                     </thead>

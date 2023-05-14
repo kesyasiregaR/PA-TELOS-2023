@@ -23,12 +23,12 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Description_Before</th>
-                            <th>Description_After</th>
-                            <th>Improvement</th>
-                            <th>Action</th>
+                            <th>Nama Projek</th>
+                            <th>Kategori</th>
+                            <th>Keterangan Sebelum</th>
+                            <th>Keterangan Sesudah</th>
+                            <th>Peningkatan</th>
+                            <th>Aksi</th>
 
                         </tr>
                     </thead>
