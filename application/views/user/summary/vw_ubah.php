@@ -22,7 +22,7 @@
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_summary" value="<?= $summary['id_summary']; ?>">
 						<div class="form-group">
-							<label for="project">Project</label>
+							<label for="project">Nama Project</label>
 							<input name="project" value="<?= $summary['project']; ?>" type="text" class="form-control" id="project">
 							<?= form_error('project', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>

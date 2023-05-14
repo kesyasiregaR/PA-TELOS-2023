@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                            <label for="name">name</label>
+                            <label for="Nama Projek">Nama Projek</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
                                     <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
@@ -30,19 +30,19 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="name_of_activity">Name of Activity</label>
+                            <label for="name_of_activity">Nama Aktivitas</label>
                             <input name="name_of_activity" type="text" value="<?= set_value('name_of_activity'); ?>" class="form-control"
                                 id="name_of_activity" >
                             <?= form_error('name_of_activity', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="start_date">Start Date</label>
+                            <label for="start_date">Tanggal Mulai</label>
                             <input name="start_date" type="date" value="<?= set_value('start_date'); ?>"
                                 class="form-control" id="start_date" >
                             <?= form_error('start_date', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="end_date">End Date</label>
+                            <label for="end_date">Tanggal Berakhir</label>
                             <input name="end_date" type="date" value="<?= set_value('end_date'); ?>"
                                 class="form-control" id="end_date" >
                             <?= form_error('end_date', '<small class="text-danger pl-3">', '</small>'); ?>

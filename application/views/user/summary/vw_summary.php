@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Project</th>
+                            <th>Nama Project</th>
                             <th>Technological</th>
                             <th>Economic</th>
                             <th>Legal</th>

@@ -23,11 +23,11 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Name of Activity</th>
-                            <th>Start Date</th>
-                            <th>End Date</th>
-                            <th>Action</th>
+                            <th>Nama Projek</th>
+                            <th>Nama Aktivitas</th>
+                            <th>Tanggal Mulai</th>
+                            <th>Tanggal Berakhir</th>
+                            <th>Aksi</th>
                             
                         </tr>
                     </thead>
