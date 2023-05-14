@@ -11,6 +11,8 @@ class Home extends CI_Controller
         $this->load->model('Technological_Model', 'technological');
         $this->load->model('DataProjek_Model', 'dataproject');
         $this->load->model('Public_Model', 'Public');
+        $this->load->model('Auth_model', 'auth_model');
+
         // $this->load->model('PendaftaranCalonSiswa_Model', 'pendaftaran');
         // $this->load->model('Pembayaran_Model', 'pembayaran');
         // $this->load->model('Auth_Model','calon');

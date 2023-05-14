@@ -1,6 +1,6 @@
 <?php
 
-class PintuMasuk extends CI_Controller
+class AdminLog extends CI_Controller
 {
 
     public function __construct()
@@ -18,7 +18,7 @@ class PintuMasuk extends CI_Controller
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('vw_pintumasuk');
+            $this->load->view('vw_admin_log');
         } else {
             $this->login();
         }
@@ -28,24 +28,18 @@ class PintuMasuk extends CI_Controller
     {
         $username = $this->input->post('username');
         $password = $this->input->post('password');
-        $pengguna = $this->db->get_where('pengguna', ['username' => $username])->row_array();
-        if ($pengguna) {
-            if (password_verify($password, $pengguna['password'])) {
+        $admin = $this->db->get_where('admin', ['username' => $username])->row_array();
+        if ($admin) {
+            if (password_verify($password, $admin['password'])) {
                 $data = [
-                    'nama_pengguna' => $pengguna['nama_pengguna'],
-                    'username' => $pengguna['username'],
-                    'id_pengguna' => $pengguna['id_pengguna'],
-                    'level' => $pengguna['level'],
+                    'nama_admin' => $admin['nama_admin'],
+                    'username' => $admin['username'],
+                    'id_admin' => $admin['id_admin'],
+                    'level' => $admin['level'],
                 ];
                 $this->session->set_userdata($data);
-                if($pengguna['level']=='admin'){
-                    redirect('Admin/Home');
-                }else if ($pengguna['level'] == 'bendahara') {
-                    redirect('Bendahara/Home');
-                }
 
-                redirect('PanitiaPSB/Home');
-
+                redirect('Admin/Home');
             } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password Salah!</div>');
                 redirect('auth');
@@ -68,10 +62,10 @@ class PintuMasuk extends CI_Controller
     // 		if (password_verify($password, $user->password)) {
 
     // 			$session = [
-    // 				'id_pengguna' => $user->id_pengguna,
-    // 				'nama_pengguna' => $user->nama_pengguna,
+    // 				'id_admin' => $user->id_admin,
+    // 				'nama_admin' => $user->nama_admin,
     // 				'username' => $user->username,
-    // 				'hp_pengguna' => $user->hp_pengguna
+    // 				'hp_admin' => $user->hp_admin
     // 			];
     // 			$this->session->set_userdata($session);
     // 			redirect('Admin/Home');
@@ -91,11 +85,10 @@ class PintuMasuk extends CI_Controller
 
     public function logout()
     {
-        $this->session->unset_userdata('id_pengguna');
-        $this->session->unset_userdata('nama_lengkap');
+        $this->session->unset_userdata('id_admin');
+        $this->session->unset_userdata('nama_admin');
         $this->session->unset_userdata('username');
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Berhasil Logout! </div>');
-        redirect('PintuMasuk');
+        redirect('AdminLog');
     }
-
 }
