@@ -35,7 +35,7 @@
                             <?= form_error('jenis', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="description">Keterangan</label>
+                            <label for="description">Deskripsi</label>
                             <input name="description" type="text" value="<?= set_value('description'); ?>" class="form-control" id="description" placeholder="">
                             <?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>

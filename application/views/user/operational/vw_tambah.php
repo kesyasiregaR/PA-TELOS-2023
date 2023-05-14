@@ -48,7 +48,7 @@
                             <?= form_error('description_after', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="improvement">Peningkatan</label>
+                            <label for="improvement">Persetujuan</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="improvement">
                                 <option value="Setuju">Setuju</option>
                                 <option value="Tidak Setuju">Tidak Setuju</option>

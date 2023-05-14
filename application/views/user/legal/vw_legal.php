@@ -25,7 +25,7 @@
                             <th>No</th>
                             <th>Nama Projek</th>
                             <th>Jenis</th>
-                            <th>Keterangan</th>
+                            <th>Deskripsi</th>
                             <th>Status</th>
                             <th>Aksi</th>
 

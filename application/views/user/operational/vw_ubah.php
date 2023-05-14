@@ -39,17 +39,17 @@
                             <?= form_error('kategori', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="description_before">Keterangan Sebelum</label>
+                            <label for="description_before">Deskripsi Sebelum</label>
                             <input name="description_before" value="<?= $operational['description_before']; ?>" type="text" class="form-control" id="description_before" placeholder="">
                             <?= form_error('description_before', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="description_after">Keterangan Sesudah</label>
+                            <label for="description_after">Deskripsi Sesudah</label>
                             <input name="description_after" value="<?= $operational['description_after']; ?>" type="text" class="form-control" id="description_after" placeholder="">
                             <?= form_error('description_after', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="improvement">Peningkatan</label>
+                            <label for="improvement">Persetujuan</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="improvement">
                                 <option value="Setuju">Setuju</option>
                                 <option value="Tidak Setuju">Tidak Setuju</option>

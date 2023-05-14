@@ -21,7 +21,7 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="project">Project</label>
+                            <label for="project">Nama Project</label>
                             <input name="project" type="text" value="<?= set_value('project'); ?>" class="form-control"
                                 id="project">
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>

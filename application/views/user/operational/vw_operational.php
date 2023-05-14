@@ -25,9 +25,9 @@
                             <th>No</th>
                             <th>Nama Projek</th>
                             <th>Kategori</th>
-                            <th>Keterangan Sebelum</th>
-                            <th>Keterangan Sesudah</th>
-                            <th>Peningkatan</th>
+                            <th>Deskripsi Sebelum</th>
+                            <th>Deskripsi Sesudah</th>
+                            <th>Persetujuan</th>
                             <th>Aksi</th>
 
                         </tr>
