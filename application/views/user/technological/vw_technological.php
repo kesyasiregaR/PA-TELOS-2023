@@ -23,13 +23,13 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Category</th>
+                            <th>Projek</th>
+                            <th>Kategori</th>
                             <th>Item</th>
-                            <th>Specification</th>
-                            <th>Price</th>
-                            <th>Source</th>
-                            <th>Action</th>
+                            <th>Spesifikasi</th>
+                            <th>Harga</th>
+                            <th>Sumber</th>
+                            <th>Aksi</th>
 
                         </tr>
                     </thead>

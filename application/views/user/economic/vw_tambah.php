@@ -5,10 +5,10 @@
             <a href="<?= site_url('user/home'); ?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="<?= site_url('user/economic'); ?>">Data Economic</a>
+            <a href="<?= site_url('user/economic'); ?>">Data Ekonomi</a>
         </li>
         <li class="breadcrumb-item active">
-            Tambah Data Economic
+            Tambah Data Ekonomi
         </li>
     </ol>
     <h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
@@ -16,12 +16,12 @@
         <div class="col-md-12 ">
             <div class="card">
                 <div class="card-header">
-                    Form Tambah Data Economic
+                    Form Tambah Data Ekonomi
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                            <label for="name">name</label>
+                            <label for="name">Nama</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
                                     <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
@@ -30,7 +30,7 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="cost_benefit_type">	Cost Benefit Type</label>
+                            <label for="cost_benefit_type">	Jenis Cost Benefit</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="cost_benefit_type">
                             <option value="Tangible">Tangible</option>
                                 <option value="Intangible">Intangible</option>
@@ -38,7 +38,7 @@
                             <?= form_error('cost_benefit_type', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="cost_type">	Cost Type</label>
+                            <label for="cost_type">	Jenist  </label>
                             <select class="form-control" id="exampleFormControlSelect1" name="cost_type">
                             <option value="Direct Cost">Direct Cost</option>
                                 <option value="Indirect Cost">Indirect Cost</option>

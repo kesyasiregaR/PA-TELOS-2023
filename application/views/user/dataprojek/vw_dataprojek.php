@@ -23,10 +23,10 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Team Name</th>
-                            <th>Action</th>
+                            <th>Nama</th>
+                            <th>Deskripsi</th>
+                            <th>Tim</th>
+                            <th>Aksi</th>
 
                         </tr>
                     </thead>

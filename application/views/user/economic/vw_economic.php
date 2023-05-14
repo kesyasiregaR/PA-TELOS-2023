@@ -23,15 +23,15 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Name</th>
-                            <th>Cost Benefit Type</th>
-                            <th>Cost Type</th>
-                            <th>Cost Component	</th>
-                            <th>Item Type</th>
-                            <th>Qty</th>
-                            <th>Price</th>
+                            <th>Projek </th>
+                            <th>Tipe Biaya Benefit</th>
+                            <th>Tipe Biaya</th>
+                            <th>Komponen Biaya</th>
+                            <th>Item</th>
+                            <th>Jumkah</th>
+                            <th>Harga</th>
                             <th>TCO</th> 
-                            <th>Action</th>
+                            <th>Aksi</th>
 
                         </tr>
                     </thead>
