@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Projek</th>
+                            <th>Nama Projek</th>
                             <th>Kategori</th>
                             <th>Item</th>
                             <th>Spesifikasi</th>

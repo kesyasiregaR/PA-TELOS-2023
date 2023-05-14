@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama</th>
+                            <th>Nama Projek</th>
                             <th>Deskripsi</th>
                             <th>Tim</th>
                             <th>Aksi</th>

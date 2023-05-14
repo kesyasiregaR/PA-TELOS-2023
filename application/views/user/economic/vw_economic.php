@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Projek </th>
+                            <th>Nama Projek </th>
                             <th>Tipe Biaya Benefit</th>
                             <th>Tipe Biaya</th>
                             <th>Komponen Biaya</th>
