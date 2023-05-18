@@ -45,48 +45,48 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/Home'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/Home'); ?>">
                     <i class="fas fa-fw fa-home"></i>
                     <span>Dashboard</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/DataProjek'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/DataProjek'); ?>">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Master Data</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/technological'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/technological'); ?>">
                     <i class="fas fa-fw fa-desktop"></i>
                     <span>Technological</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/economic'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/economic'); ?>">
                     <i class="fas fa-fw fa-calculator"></i>
                     <span>Economic</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/legal'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/legal'); ?>">
                     <i class="fas fa-fw fa-credit-card"></i>
                     <span>Legal</span></a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/Operational'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/Operational'); ?>">
                     <i class="fas fa-fw fa-cogs"></i>
                     <span>Operational</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/Schedule'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/Schedule'); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Schedule</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('user/Summary'); ?>">
+                <a class="nav-link" href="<?= site_url('admin/Summary'); ?>">
                     <i class="fas fa-fw fa-tasks"></i>
                     <span>Summary</span></a>
             </li>

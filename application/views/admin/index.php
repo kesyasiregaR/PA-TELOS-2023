@@ -35,7 +35,7 @@
                         <div class="col mr-2">
                             <div class="text-lg font-weight-bolder text-info text-uppercase mb-1">
                                 Technological </div>
-                            <a class="collapse-item" href="<?= site_url('user/technological'); ?>">View</a>
+                            <a class="collapse-item" href="<?= site_url('admin/technological'); ?>">View</a>
 
                         </div>
                         <div class="col-auto">
@@ -53,7 +53,7 @@
                         <div class="col mr-2">
                             <div class="text-lg font-weight-bolder text-info text-uppercase mb-1">
                                 Economic</div>
-                            <a class="collapse-item" href="<?= site_url('user/economic'); ?>">View</a>
+                            <a class="collapse-item" href="<?= site_url('admin/economic'); ?>">View</a>
 
                         </div>
                         <div class="col-auto">
@@ -70,7 +70,7 @@
                         <div class="col mr-2">
                             <div class="text-lg font-weight-bolder text-info text-uppercase mb-1">
                                 Legal</div>
-                            <a class="collapse-item" href="<?= site_url('user/economic'); ?>">View</a>
+                            <a class="collapse-item" href="<?= site_url('admin/economic'); ?>">View</a>
 
                         </div>
                         <div class="col-auto">
@@ -87,7 +87,7 @@
                         <div class="col mr-2">
                             <div class="text-lg font-weight-bolder text-info text-uppercase mb-1">
                                 Operational</div>
-                            <a class="collapse-item" href="<?= site_url('user/operational'); ?>">View</a>
+                            <a class="collapse-item" href="<?= site_url('admin/operational'); ?>">View</a>
 
                         </div>
                         <div class="col-auto">
@@ -105,7 +105,7 @@
                         <div class="col mr-2">
                             <div class="text-lg font-weight-bolder text-info text-uppercase mb-1">
                                 Schedule</div>
-                            <a class="collapse-item" href="<?= site_url('user/schedule'); ?>">View</a>
+                            <a class="collapse-item" href="<?= site_url('admin/schedule'); ?>">View</a>
 
                         </div>
                         <div class="col-auto">
