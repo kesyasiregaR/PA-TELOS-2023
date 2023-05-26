@@ -86,6 +86,24 @@
                     <span>Schedule</span></a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-address-book"></i>
+                    <span>Test Kelayakan</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+
+                        <a class="collapse-item" href="<?= site_url('User/TestKelayakan/Form_Technological'); ?>">Form Uji Technological</a>
+                        <a class="collapse-item" href="<?= site_url('user/TestKelayakan/Form_Economic'); ?>">Form Uji Economic</a>
+                        <a class="collapse-item" href="<?= site_url('user/TestKelayakan/Form_Legal'); ?>">Form Uji Legal</a>
+                        <a class="collapse-item" href="<?= site_url('user/TestKelayakan/Form_Operational'); ?>">Form Uji Operational</a>
+                        <a class="collapse-item" href="<?= site_url('user/TestKelayakan/Form_Schedule'); ?>">Form Uji Schedule</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('user/Summary'); ?>">
                     <i class="fas fa-fw fa-tasks"></i>
                     <span>Summary</span></a>

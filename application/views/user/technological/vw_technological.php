@@ -29,6 +29,7 @@
                             <th>Spesifikasi</th>
                             <th>Harga</th>
                             <th>Sumber</th>
+                            <th>Status</th>
                             <th>Aksi</th>
 
                         </tr>
