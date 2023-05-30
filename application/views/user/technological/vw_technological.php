@@ -33,6 +33,7 @@
                             <th>Aksi</th>
 
                         </tr>
+
                     </thead>
                     <tbody>
                         <?php $i = 1; ?>
@@ -44,15 +45,20 @@
                                 <td><?= $us['item']; ?></td>
                                 <td><?= $us['specification']; ?></td>
                                 <td><?= $us['price']; ?></td>
-                               
-                                <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td>
-                               
 
+                                <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td>
+                                <td> </td>
                                 <td>
                                     <a href="<?= base_url('User/technological/hapus/') . $us['id_technological']; ?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
                                     <a href="<?= base_url('User/technological/edit/') . $us['id_technological']; ?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit"><i class="fa fa-edit"></i></a>
                                 </td>
+
+
+
+
+
                             </tr>
+
                             <?php $i++; ?>
                         <?php endforeach; ?>
 
