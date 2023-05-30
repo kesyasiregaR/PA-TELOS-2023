@@ -30,6 +30,7 @@
                             <th>Operational</th>
                             <th>Schedule</th>
                             <th>Hasil Akhir</th>
+                            <th>Status</th>
                             <th>Aksi</th>
 
                         </tr>
@@ -46,7 +47,9 @@
                             <td><?= $us['operational'];?></td>
                             <td><?= $us['schedule'];?></td>
                             <td><?= $us['hasil_akhir'];?></td>
-
+                            <td> 
+                                    <!-- untuk kolom Status -->
+                                </td>
                             <td>
                             <a href="<?= base_url('User/summary/hapus/').$us['id_summary'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
                                 <a href="<?= base_url('User/summary/edit/').$us['id_summary'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>

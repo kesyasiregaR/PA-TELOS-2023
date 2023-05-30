@@ -28,6 +28,7 @@
                             <th>Deskripsi Sebelum</th>
                             <th>Deskripsi Sesudah</th>
                             <th>Persetujuan</th>
+                            <th>Status</th>
                             <th>Aksi</th>
 
                         </tr>
@@ -42,7 +43,9 @@
                                 <td><?= $us['description_before']; ?></td>
                                 <td><?= $us['description_after']; ?></td>
                                 <td><?= $us['improvement']; ?></td>
-
+                                <td> 
+                                    <!-- untuk kolom Status -->
+                                </td>
                                 <td>
                                 <a href="<?= base_url('User/operational/hapus/').$us['id_operational'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
                                 <a href="<?= base_url('User/operational/edit/').$us['id_operational'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>

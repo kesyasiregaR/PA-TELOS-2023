@@ -27,6 +27,7 @@
                             <th>Nama Aktivitas</th>
                             <th>Tanggal Mulai</th>
                             <th>Tanggal Berakhir</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                             
                         </tr>
@@ -40,7 +41,9 @@
                                 <td><?= $us['name_of_activity']; ?></td>
                                 <td><?= $us['start_date']; ?></td>
                                 <td><?= $us['end_date']; ?></td>
-
+                                <td> 
+                                    <!-- untuk kolom Status -->
+                                </td>
                                 <td>
                                 <a href="<?= base_url('User/schedule/hapus/').$us['id_schedule'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
                                 <a href="<?= base_url('User/schedule/edit/').$us['id_schedule'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
