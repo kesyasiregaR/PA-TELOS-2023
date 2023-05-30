@@ -26,6 +26,7 @@
                             <th>Nama Projek</th>
                             <th>Jenis</th>
                             <th>Deskripsi</th>
+                            <th>Status Legal</th>
                             <th>Status</th>
                             <th>Aksi</th>
 
@@ -40,7 +41,9 @@
                             <td><?= $us['jenis'];?></td>
                             <td><?= $us['description'];?></td>
                             <td><?= $us['status'];?></td>
-
+                            <td> 
+                                    <!-- untuk kolom Status -->
+                            </td>
                             <td>
                             <a href="<?= base_url('User/legal/hapus/').$us['id_legal'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
                                 <a href="<?= base_url('User/legal/edit/').$us['id_legal'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
