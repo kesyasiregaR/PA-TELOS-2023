@@ -37,16 +37,4 @@ class Economic_Model extends CI_Model
         $this->db->delete($this->table);
         return $this->db->affected_rows();
     }
-    public function getMultiplicationTotal()
-    {
-        $query = $this->db->select('Qty', false)
-    ->select('Price', false)
-    ->select('Qty * Price AS Total', false)
-    ->from('economic')
-    ->get();
-
-$result = $query->result();
-
-
-}
 }

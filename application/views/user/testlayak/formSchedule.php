@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                            <label for="category">Menggunakan manajemen waktu yang logis dan sesuai dalam perencanaan dan pengembangan? <span class="text-danger">*</span> </label>
+                            <label for="category">Menggunakan manajemen waktu yang logis dan sesuai dalam perencanaan dan pengembangan? </label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
@@ -22,7 +22,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Kesesuaian kesepakatan penjadwalan?<span class="text-danger">*</span></label>
+                            <label for="category">Kesesuaian kesepakatan penjadwalan?</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
@@ -31,7 +31,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah Anda dapat mengirimkan proyek saat dibutuhkan? <span class="text-danger">*</span></label>
+                            <label for="category">Apakah Anda dapat mengirimkan proyek saat dibutuhkan? </label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
@@ -40,7 +40,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Konflik penjadwalan apa (termasuk konflik dengan proyek lain atau konflik dengan kebutuhan departemen lain) yang mungkin muncul, dan bagaimana Anda akan mengatasinya?<span class="text-danger">*</span> </label>
+                            <label for="category">Konflik penjadwalan apa (termasuk konflik dengan proyek lain atau konflik dengan kebutuhan departemen lain) yang mungkin muncul, dan bagaimana Anda akan mengatasinya? </label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>
@@ -49,7 +49,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Di mana tenggat waktu utama akan jatuh, dan bagaimana Anda memastikan bahwa Anda memenuhinya?<span class="text-danger">*</span></label>
+                            <label for="category">Di mana tenggat waktu utama akan jatuh, dan bagaimana Anda memastikan bahwa Anda memenuhinya?</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>

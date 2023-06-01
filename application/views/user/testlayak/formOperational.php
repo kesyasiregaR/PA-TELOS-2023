@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                            <label for="category">Prosedur baru apa yang perlu Anda terapkan untuk menyukseskan proyek?<span class="text-danger">*</span> </label>
+                            <label for="category">Prosedur baru apa yang perlu Anda terapkan untuk menyukseskan proyek? </label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
@@ -22,7 +22,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Pelatihan apa (selain pelatihan berorientasi teknologi) yang dibutuhkan orang?<span class="text-danger">*</span></label>
+                            <label for="category">Pelatihan apa (selain pelatihan berorientasi teknologi) yang dibutuhkan orang?</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
@@ -31,7 +31,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Perubahan apa lagi yang mungkin perlu Anda lakukan untuk mendukung proyek dalam jangka panjang? Misalnya, apakah Anda perlu menerima anggota tim baru?<span class="text-danger">*</span></label>
+                            <label for="category">Perubahan apa lagi yang mungkin perlu Anda lakukan untuk mendukung proyek dalam jangka panjang? Misalnya, apakah Anda perlu menerima anggota tim baru?</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
@@ -40,7 +40,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apa dampaknya terhadap proyek lain atau departemen lain? <span class="text-danger">*</span></label>
+                            <label for="category">Apa dampaknya terhadap proyek lain atau departemen lain? </label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>
@@ -49,7 +49,7 @@
                             <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah fasilitas operasional sudah terpenuhi?<span class="text-danger">*</span></label>
+                            <label for="category">Apakah fasilitas operasional sudah terpenuhi?</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>

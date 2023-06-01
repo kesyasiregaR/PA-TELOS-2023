@@ -30,8 +30,7 @@
                             <th>Item</th>
                             <th>Jumlah</th>
                             <th>Harga</th>
-                            <th>TCO</th>
-                            <th>Status</th>
+                            <th>TCO</th> 
                             <th>Aksi</th>
 
                         </tr>
@@ -49,8 +48,6 @@
                             <td><?= $us['Qty'];?></td>
                             <td><?= $us['price'];?></td>
                             <td><?= $us['tco'];?></td>
-                            
-                            <td> </td>
 
                             <td>
                                
