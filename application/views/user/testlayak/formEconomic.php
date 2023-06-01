@@ -11,51 +11,51 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST" enctype="multipart/form-data">
+                    <form action="<?= base_url('User/TestKelayakan/Form_Economic/tambah'); ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                            <label for="category">Bagaimana proyek Anda akan didanai? <span class="text-danger">*</span> </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="b1">Bagaimana proyek Anda akan didanai? <span class="text-danger">*</span> </label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="b1">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('b1', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah pembuat keputusan cenderung mendukung proyek secara finansial? <span class="text-danger">*</span></label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="b2">Apakah pembuat keputusan cenderung mendukung proyek secara finansial? <span class="text-danger">*</span></label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="b2">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('b2', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Seberapa menarik secara finansial proyek tersebut, khususnya jika dibandingkan dengan proyek lain yang ingin dijalankan oleh organisasi?<span class="text-danger">*</span></label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="b3">Seberapa menarik secara finansial proyek tersebut, khususnya jika dibandingkan dengan proyek lain yang ingin dijalankan oleh organisasi?<span class="text-danger">*</span></label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="b3">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('b3', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Kendala keuangan apa yang dapat mempengaruhi proyek Anda? Misalnya, apakah perlu menunjukkan pengembalian investasi dalam jangka waktu tertentu untuk dianggap sukses?<span class="text-danger">*</span></label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="b4">Kendala keuangan apa yang dapat mempengaruhi proyek Anda? Misalnya, apakah perlu menunjukkan pengembalian investasi dalam jangka waktu tertentu untuk dianggap sukses?<span class="text-danger">*</span></label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="b4">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('b4', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah sumber dana sudah terpenuhi?<span class="text-danger">*</span></label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="b5">Apakah sumber dana sudah terpenuhi?<span class="text-danger">*</span></label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="b5">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('b5', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
                        

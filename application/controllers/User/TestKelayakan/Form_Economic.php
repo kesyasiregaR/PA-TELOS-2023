@@ -7,23 +7,25 @@ class Form_Economic extends CI_Controller {
 	{
 		parent::__construct();
 		// is_logged_in2();
-		// $this->load->model('DataProjek_Model','dataproject');
+		$this->load->model('FormEconomic_Model','form_economic');
 		$this->load->library('form_validation');
 	}
 	public function index()
 	{
 		// $data['judul']="Halaman Data Project";
-		// $data['dataproject']=$this->dataproject->get();
+		// $data['form_economic']=$this->form_economic->get();
+		$data['form_economic'] = $this->form_economic->get();
 		$this->load->view('user/header');
-		$this->load->view('user/testlayak/formEconomic');
+		$data['judul1'] = "Maaf Anda Telah Melakukan Test Kelayakan Pada Form Economic";
+		$this->load->view('user/testlayak/formeconomic',$data);
 		$this->load->view('user/footer');
 		
 	}
 	public function hapus($id){
-		$this->dataproject->delete($id);
+		$this->form_economic->delete($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
 			Data data projek Berhasil dihapus!</div>');
-		redirect('User/dataprojek');
+		redirect('User/form_economic');
 	}
 	function tambah()
 	{
@@ -31,65 +33,80 @@ class Form_Economic extends CI_Controller {
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('name', 'Nama dataproject', 'required', [
-			'required' => 'Nama dataproject Wajib di isi'
+		$this->form_validation->set_rules('b1', '', 'required', [
+			'required' => ' Wajib di isi'
 		]);
-		$this->form_validation->set_rules('description', 'Deskripsi dataproject', 'required', [
-			'required' => 'Deskripsi dataproject Wajib di isi'
+		$this->form_validation->set_rules('b2', '', 'required', [
+			'required' => 'Wajib di isi'
 		]);
-		$this->form_validation->set_rules('team_name', 'Team Name dataproject', 'required', [
-			'required' => 'Team name Wajib di isi'
+		$this->form_validation->set_rules('b3', '', 'required', [
+			'required' => ' Wajib di isi'
+		]);
+		$this->form_validation->set_rules('b4', '', 'required', [
+			'required' => ' Wajib di isi'
+		]);
+		$this->form_validation->set_rules('b5', '', 'required', [
+			'required' => ' Wajib di isi'
 		]);
 	
 	
 		if ($this->form_validation->run() == false) {
 			$this->load->view("user/header", $data);
-			$this->load->view("user/dataprojek/vw_tambah", $data);
+			$this->load->view("user/testlayak/form_economic", $data);
 			$this->load->view("user/footer");
 		}  else {
 			$data = [
-				'name' => $this->input->post('name'),
-				'description' => $this->input->post('description'),
-				'team_name' => $this->input->post('team_name'),
+				'b1' => $this->input->post('b1'),
+				'b2' => $this->input->post('b2'),
+				'b3' => $this->input->post('b3'),
+				'b4' => $this->input->post('b4'),
+				'b5' => $this->input->post('b5'),
 		
 			];
-			$this->dataproject->insert($data);
+			$this->form_economic->insert($data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data data projek Berhasil Ditambah!</div>');
-			redirect('user/dataprojek');
+			redirect('user/TestKelayakan/form_economic');
 		}
 	}
 	public function edit($id)
 	{
 		$data['judul'] = "Halaman Ubah";
-		$data['dataproject'] = $this->dataproject->getById($id);
+		$data['form_economic'] = $this->form_economic->getById($id);
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('name', 'Nama dataproject', 'required', [
-			'required' => 'Nama dataproject Wajib di isi'
+		$this->form_validation->set_rules('b1', '', 'required', [
+			'required' => ' Wajib di isi'
 		]);
-		$this->form_validation->set_rules('description', 'Deskripsi dataproject', 'required', [
-			'required' => 'Deskripsi dataproject Wajib di isi'
+		$this->form_validation->set_rules('b2', '', 'required', [
+			'required' => 'Wajib di isi'
 		]);
-		$this->form_validation->set_rules('team_name', 'Team Name dataproject', 'required', [
-			'required' => 'Deskripsi dataproject Wajib di isi'
+		$this->form_validation->set_rules('b3', '', 'required', [
+			'required' => ' Wajib di isi'
+		]);
+		$this->form_validation->set_rules('b4', '', 'required', [
+			'required' => ' Wajib di isi'
+		]);
+		$this->form_validation->set_rules('b5', '', 'required', [
+			'required' => ' Wajib di isi'
 		]);
 		
 	
 		if ($this->form_validation->run() == false) {
 			$this->load->view("user/header", $data);
-			$this->load->view("user/dataprojek/vw_ubah", $data);
+			$this->load->view("user/testlayak/form_economic", $data);
 			$this->load->view("user/footer");
 		} else {
 			$data = [
-				'name' => $this->input->post('name'),
-				'description' => $this->input->post('description'),
-				'team_name' => $this->input->post('team_name'),
-				'id_dataproject' => $this->input->post('id_dataproject')
+				'b1' => $this->input->post('b1'),
+				'b2' => $this->input->post('b2'),
+				'b3' => $this->input->post('b3'),
+				'b4' => $this->input->post('b4'),
+				'b5' => $this->input->post('b5'),
 			];
 
-			$this->dataproject->update($data,$data ['id_dataproject']);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data dataproject Berhasil Diubah!</div>');
-			redirect('user/dataprojek');
+			$this->form_economic->update($data,$data ['id_form_economic']);
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data form_economic Berhasil Diubah!</div>');
+			redirect('user/testlayak/form_economic');
 		}
 	}
 }
