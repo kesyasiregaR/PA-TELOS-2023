@@ -7,7 +7,7 @@ class Form_Legal extends CI_Controller {
 	{
 		parent::__construct();
 		// is_logged_in2();
-		// $this->load->model('DataProjek_Model','dataproject');
+		$this->load->model('FormLegal_Model','form_legal');
 		$this->load->library('form_validation');
 	}
 	public function index()
