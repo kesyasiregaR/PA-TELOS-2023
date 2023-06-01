@@ -1,9 +1,9 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class Economic_Model extends CI_Model
+class FormSchedule_Model extends CI_Model
 {
-    public $table = 'economic';
-    public $id = 'economic.id_economic';
+    public $table = 'Form_Schedule';
+    public $id = 'Form_Schedule.id_form_schedule';
     public function __construct()
     {
         parent::__construct();
@@ -17,13 +17,13 @@ class Economic_Model extends CI_Model
     public function getById($id)
     {
         $this->db->from($this->table);
-        $this->db->where('id_economic',$id);
+        $this->db->where('id_form_schedule',$id);
         $query = $this->db->get();
         return $query->row_array();
     }
     public function update($data, $where)
     {
-        $this->db->update($this->table, $data, array ('id_economic' => $where));
+        $this->db->update($this->table, $data, array ('id_form_schedule' => $where));
         return $this->db->affected_rows();
     }
     public function insert($data)
@@ -37,16 +37,16 @@ class Economic_Model extends CI_Model
         $this->db->delete($this->table);
         return $this->db->affected_rows();
     }
-    public function getMultiplicationTotal()
-    {
-        $query = $this->db->select('Qty', false)
-    ->select('Price', false)
-    ->select('Qty * Price AS Total', false)
-    ->from('economic')
-    ->get();
+//     public function getMultiplicationTotal()
+//     {
+//         $query = $this->db->select('Qty', false)
+//     ->select('Price', false)
+//     ->select('Qty * Price AS Total', false)
+//     ->from('economic')
+//     ->get();
 
-$result = $query->result();
+// $result = $query->result();
 
 
-}
+// }
 }

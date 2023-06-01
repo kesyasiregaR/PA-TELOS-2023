@@ -16,6 +16,7 @@ class economic extends CI_Controller
     {
         $data['judul'] = "Halaman Data Economic";
         $data['economic'] = $this->economic->get();
+        $data['getMultiplicationTotal'] = $this->economic->getMultiplicationTotal();
         $this->load->view('user/header');
         $this->load->view('user/economic/vw_economic', $data);
         $this->load->view('user/footer');
