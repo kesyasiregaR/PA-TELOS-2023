@@ -7,15 +7,16 @@ class Form_Technological extends CI_Controller {
 	{
 		parent::__construct();
 		// is_logged_in2();
-		// $this->load->model('DataProjek_Model','dataproject');
+		 $this->load->model('FormTechnological_Model','form_technological');
 		$this->load->library('form_validation');
 	}
 	public function index()
 	{
 		// $data['judul']="Halaman Data Project";
-		// $data['dataproject']=$this->dataproject->get();
+		$data['judul1'] = "Maaf Anda Telah Melakukan Test Kelayakan Pada Form Teknologi";
+		$data['form_technological']=$this->form_technological->get();
 		$this->load->view('user/header');
-		$this->load->view('user/testlayak/formtechnological');
+		$this->load->view('user/testlayak/formtechnological',$data);
 		$this->load->view('user/footer');
 		
 	}

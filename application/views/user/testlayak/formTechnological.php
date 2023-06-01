@@ -1,5 +1,6 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
+<?php if(count($form_technological) == 0): ?>
    
     <!-- <h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1> -->
     <div class="row justify-content-center">
@@ -66,4 +67,12 @@
 
         </div>
     </div>
+    <?php else: ?>
+    <section class="col-sm-12 mb-5">
+      <h1 class="h3 mb-2 text-gray-800">
+    <?php echo $judul1; ?>
+  </h1>
+      <p>Kembali ke <a href="<?= base_url('user/technological'); ?>">Technological</a></p>
+      </section>
+    <?php endif; ?>
 </div>
