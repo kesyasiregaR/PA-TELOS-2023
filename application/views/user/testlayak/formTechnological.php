@@ -12,51 +12,51 @@
 
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST" enctype="multipart/form-data">
+                <form action="<?= base_url('User/TestKelayakan/Form_Technological/tambah'); ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                            <label for="category">Apakah secara teknis memungkinkan untuk menyampaikan apa yang Anda inginkan?  </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="a1">Apakah secara teknis memungkinkan untuk menyampaikan apa yang Anda inginkan?  </label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="a1">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('a1', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah tim Anda memiliki akses ke teknologi yang Anda perlukan untuk menyukseskan proyek? </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="a2">Apakah tim Anda memiliki akses ke teknologi yang Anda perlukan untuk menyukseskan proyek? </label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="a2">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('a2', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah Teknologi sudah stabil? </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="a3">Apakah Teknologi sudah stabil? </label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="a3">
                                 <option value="">-</option>
                                 <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('a3', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah Teknologi relatif mudah dikembangkan? </label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="a4">Apakah Teknologi relatif mudah dikembangkan? </label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="a4">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('a4', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="category">Apakah Teknologi yang dipakai sudah terbaru?</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                            <label for="a5">Apakah Teknologi yang dipakai sudah terbaru?</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="a5">
                             <option value="">-</option>
                             <option value="Memenuhi">Memenuhi</option>
                                 <option value="Tidak Memenuhi">Tidak Memenuhi</option>
                             </select>
-                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('a5', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 
                        
