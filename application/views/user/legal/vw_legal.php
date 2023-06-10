@@ -25,6 +25,7 @@
                             <th>No</th>
                             <th>Nama Projek</th>
                             <th>Jenis</th>
+                            <th>Nama_Jenis_Produk</th>
                             <th>Deskripsi</th>
                             <th>Status Legal</th>
                             <th>Status</th>
@@ -39,6 +40,7 @@
                             <td><?=$i;?></td>
                             <td><?= $us['name']; ?></td>
                             <td><?= $us['jenis'];?></td>
+                            <td><?= $us['nama_jenis_produk'];?></td>
                             <td><?= $us['description'];?></td>
                             <td><?= $us['status'];?></td>
                             <td> 

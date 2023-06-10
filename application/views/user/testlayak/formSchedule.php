@@ -1,6 +1,6 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-<?php if (count($form_schedule) == 0) : ?>
+    <?php if (count($form_schedule) == 0) : ?>
         <!-- <h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1> -->
         <div class="row justify-content-center">
             <div class="col-md-12 ">

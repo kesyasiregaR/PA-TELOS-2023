@@ -46,9 +46,9 @@ class operational extends CI_Controller
 		$this->form_validation->set_rules('description_after', 'deskripsi_after operational', 'required', [
 			'required' => 'deskripsi__after operational Wajib di isi'
 		]);
-		$this->form_validation->set_rules('improvement', 'improvement dataproject', 'required', [
-			'required' => 'improvement dataproject Wajib di isi'
-		]);
+		//$this->form_validation->set_rules('improvement', 'improvement dataproject', 'required', [
+		//	'required' => 'improvement dataproject Wajib di isi'
+		//]);
 
 
 		if ($this->form_validation->run() == false) {
@@ -61,7 +61,7 @@ class operational extends CI_Controller
 				'category' => $this->input->post('category'),
 				'description_before' => $this->input->post('description_before'),
 				'description_after' => $this->input->post('description_after'),
-				'improvement' => $this->input->post('improvement'),
+				//'improvement' => $this->input->post('improvement'),//
 
 			];
 			$this->operational->insert($data);
@@ -89,9 +89,9 @@ class operational extends CI_Controller
 		$this->form_validation->set_rules('description_after', 'deskripsi_after operational', 'required', [
 			'required' => 'deskripsi__after operational Wajib di isi'
 		]);
-		$this->form_validation->set_rules('improvement', 'improvement dataproject', 'required', [
-			'required' => 'improvement dataproject Wajib di isi'
-		]);
+		//$this->form_validation->set_rules('improvement', 'improvement dataproject', 'required', [
+		//	'required' => 'improvement dataproject Wajib di isi'
+		//]);
 
 
 		if ($this->form_validation->run() == false) {
@@ -104,7 +104,7 @@ class operational extends CI_Controller
 				'category' => $this->input->post('category'),
 				'description_before' => $this->input->post('description_before'),
 				'description_after' => $this->input->post('description_after'),
-				'improvement' => $this->input->post('improvement'),
+				//'improvement' => $this->input->post('improvement'),
 				'id_operational' => $this->input->post('id_operational')
 			];
 

@@ -37,10 +37,13 @@ class legal extends CI_Controller
             'required' => 'Nama Wajib di isi'
         ]);
         $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
-            'required' => 'Nama legal Wajib di isi'
+            'required' => 'Jenis Produk  Wajib di isi'
+        ]);
+        $this->form_validation->set_rules('nama_jenis_produk', 'Jenis legal', 'required', [
+            'required' => 'Nama Jenis Produk Wajib di isi'
         ]);
         $this->form_validation->set_rules('description', 'Deskripsi legal', 'required', [
-            'required' => 'Deskripsi legal Wajib di isi'
+            'required' => 'Deskripsi Wajib di isi'
         ]);
         $this->form_validation->set_rules('status', 'Status legal', 'required', [
             'required' => 'Status legal Wajib di isi'
@@ -55,6 +58,7 @@ class legal extends CI_Controller
             $data = [
                 'name' => $this->input->post('name'),
                 'jenis' => $this->input->post('jenis'),
+                'nama_jenis_produk' => $this->input->post('nama_jenis_produk'),
                 'description' => $this->input->post('description'),
                 'status' => $this->input->post('status'),
 
@@ -72,16 +76,19 @@ class legal extends CI_Controller
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('name', 'Nama legal', 'required', [
-            'required' => 'Nama legal Wajib di isi'
+            'required' => 'Nama project Wajib di isi'
         ]);
         $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
-            'required' => 'Jenis legal Wajib di isi'
+            'required' => 'Jenis produk  Wajib di isi'
+        ]);
+        $this->form_validation->set_rules('nama_jenis_produk', 'Jenis legal', 'required', [
+            'required' => 'Nama Jenis Produk Wajib di isi'
         ]);
         $this->form_validation->set_rules('description', 'Deskripsi legal', 'required', [
-            'required' => 'Deskripsi legal Wajib di isi'
+            'required' => 'Deskripsi  Wajib di isi'
         ]);
         $this->form_validation->set_rules('status', 'status legal', 'required', [
-            'required' => 'Status legal Wajib di isi'
+            'required' => 'Status Wajib di isi'
         ]);
 
 
@@ -93,6 +100,7 @@ class legal extends CI_Controller
             $data = [
                 'name' => $this->input->post('name'),
                 'jenis' => $this->input->post('jenis'),
+                'nama_jenis_produk' => $this->input->post('nama_jenis_produk'),
                 'description' => $this->input->post('description'),
                 'status' => $this->input->post('status'),
                 'id_legal' => $this->input->post('id_legal')

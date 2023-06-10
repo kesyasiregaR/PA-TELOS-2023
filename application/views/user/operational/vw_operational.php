@@ -27,7 +27,7 @@
                             <th>Kategori</th>
                             <th>Deskripsi Sebelum</th>
                             <th>Deskripsi Sesudah</th>
-                            <th>Persetujuan</th>
+                            <!-- <th>Persetujuan</th> -->
                             <th>Status</th>
                             <th>Aksi</th>
 
@@ -42,7 +42,7 @@
                                 <td><?= $us['category']; ?></td>
                                 <td><?= $us['description_before']; ?></td>
                                 <td><?= $us['description_after']; ?></td>
-                                <td><?= $us['improvement']; ?></td>
+                            
                                 <td> 
                                     <!-- untuk kolom Status -->
                                 </td>

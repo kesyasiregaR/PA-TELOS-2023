@@ -30,17 +30,25 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="jenis">Jenis</label>
-                            <input name="jenis" type="text" value="<?= set_value('jenis'); ?>" class="form-control" id="jenis" placeholder="">
-                            <?= form_error('jenis', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <label for="jenis">Jenis Produk</label>
+                                <select class="form-control" id="exampleFormControlSelect1" name="jenis">
+                                <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                            </select>
+                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="description">Deskripsi</label>
+                            <label for="nama_jenis_produk">Nama Jenis Produk</label>
+                            <input name="nama_jenis_produk" type="text" value="<?= set_value('nama_jenis_produk'); ?>" class="form-control" id="nama_jenis_produk" placeholder="">
+                            <?= form_error('nama_jenis_produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Deskripsi Produk</label>
                             <input name="description" type="text" value="<?= set_value('description'); ?>" class="form-control" id="description" placeholder="">
                             <?= form_error('description', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="status">Status</label>
+                            <label for="status">Status Legal</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="status">
                                 <option value="Aktif">Aktif</option>
                                 <option value="Tidak Aktif">Tidak Aktif</option>

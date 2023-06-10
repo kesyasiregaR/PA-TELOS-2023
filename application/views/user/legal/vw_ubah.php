@@ -32,10 +32,18 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
 						<div class="form-group">
-							<label for="jenis">Jenis</label>
-							<input name="jenis" value="<?= $legal['jenis']; ?>" type="text" class="form-control" id="jenis" placeholder="">
-							<?= form_error('jenis', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+                            <label for="jenis">Jenis Produk</label>
+                                <select class="form-control" id="exampleFormControlSelect1" name="jenis">
+                                <option value="Hardware">Hardware</option>
+                                <option value="Software">Software</option>
+                            </select>
+                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+						<div class="form-group">
+                            <label for="nama_jenis_produk">Nama Jenis Produk</label>
+                            <input name="nama_jenis_produk" value="<?= $legal['nama_jenis_produk']; ?>" type="text" class="form-control" id="nama_jenis_produk" placeholder="">
+                            <?= form_error('nama_jenis_produk', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
 						<div class="form-group">
 							<label for="description">Deskripsi</label>
 							<input name="description" value="<?= $legal['description']; ?>" type="text" class="form-control" id="description" placeholder="">

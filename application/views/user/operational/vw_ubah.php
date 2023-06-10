@@ -31,12 +31,17 @@
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                        <label for="categori">Kategori</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="kategori">
+                        <div class="form-group">
+                            <label for="category">Kategori</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="category">
                                 <option value="Performance">Performance</option>
-                                <option value="Non Performance">Non Performance</option>
+                                <option value="Information">Information</option>
+                                <option value="Economic">Economic</option>
+                                <option value="Control">Control</option>
+                                <option value="Efficiency">Efficiency</option>
+                                <option value="Services">Services</option>
                             </select>
-                            <?= form_error('kategori', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('category', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
                             <label for="description_before">Deskripsi Sebelum</label>
@@ -48,14 +53,15 @@
                             <input name="description_after" value="<?= $operational['description_after']; ?>" type="text" class="form-control" id="description_after" placeholder="">
                             <?= form_error('description_after', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
-                        <div class="form-group">
+
+                       <!-- <div class="form-group">
                             <label for="improvement">Persetujuan</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="improvement">
                                 <option value="Setuju">Setuju</option>
                                 <option value="Tidak Setuju">Tidak Setuju</option>
                             </select>
-                            <?= form_error('improvement', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                            
+                        </div> -->
 
                         <a href="<?= base_url('user/operational') ?>" class="btn btn-danger">Tutup</a>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>
