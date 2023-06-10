@@ -85,7 +85,7 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Schedule</span></a>
             </li>
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-address-book"></i>
@@ -102,7 +102,7 @@
 
                     </div>
                 </div>
-            </li>
+            </li> -->
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('user/Summary'); ?>">
                     <i class="fas fa-fw fa-tasks"></i>
