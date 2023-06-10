@@ -13,6 +13,7 @@ class Form_Technological extends CI_Controller {
 	public function index()
 	{
 		// $data['judul']="Halaman Data Project";
+		$data['form_technological'] = $this->form_technological->get2($this->session->userdata('id_public'));
 		$data['judul1'] = "Maaf Anda Telah Melakukan Test Kelayakan Pada Form Teknologi";
 		$data['form_technological']=$this->form_technological->get();
 		$this->load->view('user/header');
@@ -60,6 +61,7 @@ class Form_Technological extends CI_Controller {
 				'a3' => $this->input->post('a3'),
 				'a4' => $this->input->post('a4'),
 				'a5' => $this->input->post('a5'),
+				'id_public' => $this->session->userdata('id_public'),
 		
 			];
 			$this->form_technological->insert($data);
