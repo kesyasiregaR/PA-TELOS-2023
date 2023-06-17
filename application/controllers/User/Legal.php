@@ -76,7 +76,7 @@ class legal extends CI_Controller
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->form_validation->set_rules('name', 'Nama legal', 'required', [
-            'required' => 'Nama project Wajib di isi'
+            'required' => 'Nama projek Wajib di isi'
         ]);
         $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
             'required' => 'Jenis produk  Wajib di isi'
