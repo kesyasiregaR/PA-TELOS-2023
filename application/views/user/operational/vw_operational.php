@@ -24,10 +24,6 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Projek</th>
-                            <th>Kategori</th>
-                            <th>Deskripsi Sebelum</th>
-                            <th>Deskripsi Sesudah</th>
-                            <!-- <th>Persetujuan</th> -->
                             <th>Status</th>
                             <th>Aksi</th>
 
@@ -39,16 +35,13 @@
                             <tr>
                                 <td><?= $i; ?></td>
                                 <td><?= $us['name']; ?></td>
-                                <td><?= $us['category']; ?></td>
-                                <td><?= $us['description_before']; ?></td>
-                                <td><?= $us['description_after']; ?></td>
-                            
-                                <td> 
+                                <td>
                                     <!-- untuk kolom Status -->
                                 </td>
                                 <td>
-                                <a href="<?= base_url('User/operational/hapus/').$us['id_operational'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
-                                <a href="<?= base_url('User/operational/edit/').$us['id_operational'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
+                                    <a href="<?= base_url('User/operational/detail/') . $us['id_operational']; ?>" class="btn btn-xs btn-warning btn-delete"> <i class="fa fa-low-vision"></i></a>
+                                    <a href="<?= base_url('User/operational/hapus/') . $us['id_operational']; ?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
+                                    <a href="<?= base_url('User/operational/edit/') . $us['id_operational']; ?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                             <?php $i++; ?>
