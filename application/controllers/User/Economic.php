@@ -12,7 +12,7 @@ class economic extends CI_Controller
         $this->load->model('DataProjek_Model', 'dataproject');
         $this->load->library('form_validation');
     }
-    public function index()
+    public function index() 
     {
         $data['judul'] = "Halaman Data Economic";
         $data['economic'] = $this->economic->get();
@@ -33,29 +33,29 @@ class economic extends CI_Controller
         $data['dataproject'] = $this->dataproject->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $this->form_validation->set_rules('name', 'name technological', 'required', [
+        $this->form_validation->set_rules('name', 'name ', 'required', [
             'required' => 'name Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_benefit_type', 'cost_benefit_type economic', 'required', [
-            'required' => 'cost_benefit_type Wajib di isi'
+        $this->form_validation->set_rules('	id_economic_investasi', '	id_economic_investasi ', 'required', [
+            'required' => '	id_economic_investasi Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_type', 'cost_type economic', 'required', [
-            'required' => 'cost_type Wajib di isi'
+        $this->form_validation->set_rules('	id_keuntungan', '	id_keuntungan ', 'required', [
+            'required' => '	id_keuntungan Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_component', 'cost_component economic', 'required', [
+        $this->form_validation->set_rules('id_economic_komponen_biaya', 'id_economic_komponen_biaya ', 'required', [
             'required' => 'Specifikation Wajib di isi'
         ]);
-		$this->form_validation->set_rules('item_type', 'item_type economic', 'required', [
-            'required' => 'item_type Wajib di isi'
+		$this->form_validation->set_rules('	total_pajak', '	total_pajak', 'required', [
+            'required' => '	total_pajak Wajib di isi'
         ]);
-		$this->form_validation->set_rules('Qty', 'Qty economic', 'required', [
-            'required' => 'Qty Wajib di isi'
+		$this->form_validation->set_rules('	total_nilai_setelah_pajak', '	total_nilai_setelah_pajak', 'required', [
+            'required' => '	total_nilai_setelah_pajak Wajib di isi'
         ]);
-        $this->form_validation->set_rules('price', 'price economic', 'required', [
-            'required' => 'price Wajib di isi'
+        $this->form_validation->set_rules('total_arus_kas', 'total_arus_kas ', 'required', [
+            'required' => 'total_arus_kas Wajib di isi'
         ]);
-        $this->form_validation->set_rules('tco', 'tco economic', 'required', [
-            'required' => 'tco Wajib di isi'
+        $this->form_validation->set_rules('total_arus_kas_kumulatif', 'total_arus_kas_kumulatif ', 'required', [
+            'required' => 'total_arus_kas_kumulatif Wajib di isi'
         ]);
 
 
@@ -66,13 +66,13 @@ class economic extends CI_Controller
         } else {
             $data = [
                 'name' => $this->input->post('name'),
-                'cost_benefit_type' => $this->input->post('cost_benefit_type'),
-                'cost_type' => $this->input->post('cost_type'),
-                'cost_component' => $this->input->post('cost_component'),
-                'item_type' => $this->input->post('item_type'),
-                'Qty' => $this->input->post('Qty'),
-                'price' => $this->input->post('price'),
-                'tco' => $this->input->post('tco'),
+                'id_economic_investasi ' => $this->input->post('id_economic_investasi '),
+                'id_keuntungan' => $this->input->post('id_keuntungan'),
+                'id_economic_komponen_biaya' => $this->input->post('	id_economic_komponen_biaya'),
+                'total_pajak' => $this->input->post('total_pajak'),
+                'total_nilai_setelah_pajak' => $this->input->post('total_nilai_setelah_pajak'),
+                'total_arus_kas' => $this->input->post('total_arus_kas'),
+                'total_arus_kas_kumulatif' => $this->input->post('total_arus_kas_kumulatif'),
 
             ];
             $this->economic->insert($data);
@@ -89,26 +89,26 @@ class economic extends CI_Controller
         $this->form_validation->set_rules('name', 'name technological', 'required', [
             'required' => 'name Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_benefit_type', 'cost_benefit_type economic', 'required', [
-            'required' => 'cost_benefit_type Wajib di isi'
+        $this->form_validation->set_rules('	id_economic_investasi', 'id_economic_investasi ', 'required', [
+            'required' => '	id_economic_investasi Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_type', 'cost_type economic', 'required', [
-            'required' => 'cost_type Wajib di isi'
+        $this->form_validation->set_rules('	id_keuntungan', 'id_keuntungan ', 'required', [
+            'required' => '	id_keuntungan Wajib di isi'
         ]);
-        $this->form_validation->set_rules('cost_component', 'cost_component economic', 'required', [
+        $this->form_validation->set_rules('id_economic_komponen_biaya', 'id_economic_komponen_biaya ', 'required', [
             'required' => 'Specifikation Wajib di isi'
         ]);
-		$this->form_validation->set_rules('item_type', 'item_type economic', 'required', [
-            'required' => 'item_type Wajib di isi'
+		$this->form_validation->set_rules('	total_pajak', '	total_pajak', 'required', [
+            'required' => '	total_pajak Wajib di isi'
         ]);
-		$this->form_validation->set_rules('Qty', 'Qty economic', 'required', [
-            'required' => 'Qty Wajib di isi'
+		$this->form_validation->set_rules('	total_nilai_setelah_pajak', 'total_nilai_setelah_pajak', 'required', [
+            'required' => '	total_nilai_setelah_pajak Wajib di isi'
         ]);
-        $this->form_validation->set_rules('price', 'price economic', 'required', [
-            'required' => 'price Wajib di isi'
+        $this->form_validation->set_rules('total_arus_kas', 'total_arus_kas ', 'required', [
+            'required' => 'total_arus_kas Wajib di isi'
         ]);
-        $this->form_validation->set_rules('tco', 'tco economic', 'required', [
-            'required' => 'tco Wajib di isi'
+        $this->form_validation->set_rules('total_arus_kas_kumulatif', 'total_arus_kas_kumulatif ', 'required', [
+            'required' => 'total_arus_kas_kumulatif Wajib di isi'
         ]);
 
 
@@ -119,13 +119,13 @@ class economic extends CI_Controller
         } else {
             $data = [
                 'name' => $this->input->post('name'),
-                'cost_benefit_type' => $this->input->post('cost_benefit_type'),
-                'cost_type' => $this->input->post('cost_type'),
-                'cost_component' => $this->input->post('cost_component'),
-                'item_type' => $this->input->post('item_type'),
-                'Qty' => $this->input->post('Qty'),
-                'price' => $this->input->post('price'),
-                'tco' => $this->input->post('tco'),
+                'id_economic_investasi ' => $this->input->post('id_economic_investasi '),
+                'id_keuntungan' => $this->input->post('id_keuntungan'),
+                'id_economic_komponen_biaya' => $this->input->post('id_economic_komponen_biaya'),
+                'total_pajak' => $this->input->post('total_pajak'),
+                'total_nilai_setelah_pajak' => $this->input->post('total_nilai_setelah_pajak'),
+                'total_arus_kas' => $this->input->post('total_arus_kas'),
+                'total_arus_kas_kumulatif' => $this->input->post('total_arus_kas_kumulatif'),
                 'id_economic' => $this->input->post('id_economic')
             ];
 
@@ -133,5 +133,13 @@ class economic extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data economic Berhasil Diubah!</div>');
             redirect('user/economic');
         }
+    }
+    public function investasiawal() 
+    {
+        $data['judul'] = "Halaman Data Economic";
+        $data['economic'] = $this->economic->get();
+        $this->load->view('user/header');
+        $this->load->view('user/economic/vw_economic', $data);
+        $this->load->view('user/footer');
     }
 }

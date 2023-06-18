@@ -9,10 +9,10 @@ class Home extends CI_Controller {
 		// is_logged_in2();
 		$this->load->model('Technological_Model', 'technological');
 		$this->load->model('Public_Model', 'Public');
-		$this->load->model('FormTechnological_Model','form_technological');
+
 
 	
-		
+
 	}
 
 	public function index()

@@ -62,12 +62,30 @@
                     <i class="fas fa-fw fa-desktop"></i>
                     <span>Technological</span></a>
             </li>
+            
 
             <li class="nav-item active">
-                <a class="nav-link" href="<?= site_url('User/economic'); ?>">
-                    <i class="fas fa-fw fa-calculator"></i>
-                    <span>Economic</span></a>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages1"
+                    aria-expanded="true" aria-controls="collapsePages1">
+                     <i class="fas fa-fw fa-calculator"></i>
+                    <span>Economic</span>
+                </a>
+                <div id="collapsePages1" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        <a class="collapse-item" href="<?=site_url('user/economic');?>">Economic</a>
+                        <a class="collapse-item" href="<?=site_url('user/dataperusahaan');?>">Data Perusahaan</a>
+                        <a class="collapse-item" href="<?=site_url('admin/ivestasiawal');?>">Investasi Awal</a>
+                        <a class="collapse-item" href="<?=site_url('admin/keuntungan');?>">Keuntungan bersih</a>
+                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Komponen Biaya</a>
+                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Pajak</a>
+                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Nilai Setelah Pajak</a>
+                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Arus Kas</a>
+                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Arus kas Kumulatif</a>
+                    </div>
+                </div>
             </li>
+
 
             <li class="nav-item active">
                 <a class="nav-link" href="<?= site_url('User/legal'); ?>">

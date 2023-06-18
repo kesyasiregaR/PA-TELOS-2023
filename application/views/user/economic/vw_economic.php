@@ -24,13 +24,13 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Projek </th>
-                            <th>Tipe Biaya Benefit</th>
-                            <th>Tipe Biaya</th>
+                            <th>Investasi awal</th>
+                            <th>Keuntungan Bersih</th>
                             <th>Komponen Biaya</th>
-                            <th>Item</th>
-                            <th>Jumlah</th>
-                            <th>Harga</th>
-                            <th>TCO</th> 
+                            <th>NPV</th>
+                            <th>IRR</th>
+                            <th>Payback Period</th>
+                            <th>ROI</th> 
                             <th>Aksi</th>
 
                         </tr>
@@ -41,13 +41,13 @@
                         <tr>
                             <td><?=$i;?></td>
                             <td><?= $us['name']; ?></td>
-                            <td><?= $us['cost_benefit_type'];?></td>
-                            <td><?= $us['cost_type'];?></td>
-                            <td><?= $us['cost_component'];?></td>
-                            <td><?= $us['item_type'];?></td>
-                            <td><?= $us['Qty'];?></td>
-                            <td><?= $us['price'];?></td>
-                            <td><?= $us['tco'];?></td>
+                            <td><?= $us['id_economic_investasi'];?></td>
+                            <td><?= $us['id_keuntungan'];?></td>
+                            <td><?= $us['id_economic_komponen_biaya'];?></td>
+                            <td><?= $us['total_pajak'];?></td>
+                            <td><?= $us['total_nilai_setelah_pajak'];?></td>
+                            <td><?= $us['total_arus_kas'];?></td>
+                            <td><?= $us['total_arus_kas_kumulatif'];?></td>
 
                             <td>
                                
