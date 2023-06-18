@@ -75,13 +75,13 @@
                         
                         <a class="collapse-item" href="<?=site_url('user/economic');?>">Economic</a>
                         <a class="collapse-item" href="<?=site_url('user/dataperusahaan');?>">Data Perusahaan</a>
-                        <a class="collapse-item" href="<?=site_url('admin/ivestasiawal');?>">Investasi Awal</a>
-                        <a class="collapse-item" href="<?=site_url('admin/keuntungan');?>">Keuntungan bersih</a>
-                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Komponen Biaya</a>
-                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Pajak</a>
-                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Nilai Setelah Pajak</a>
-                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Arus Kas</a>
-                        <a class="collapse-item" href="<?=site_url('admin/kelulusan/tolak');?>">Total Arus kas Kumulatif</a>
+                        <a class="collapse-item" href="<?=site_url('user/investasi');?>">Investasi Awal</a>
+                        <a class="collapse-item" href="<?=site_url('user/keuntungan');?>">Keuntungan bersih</a>
+                        <a class="collapse-item" href="<?=site_url('user/biaya');?>">Komponen Biaya</a>
+                        <a class="collapse-item" href="<?=site_url('user/totalpajak');?>">Total Pajak</a>
+                        <a class="collapse-item" href="<?=site_url('user/totalsetelahpajak');?>">Total Nilai Setelah Pajak</a>
+                        <a class="collapse-item" href="<?=site_url('user/totalaruskas');?>">Total Arus Kas</a>
+                        <a class="collapse-item" href="<?=site_url('user/aruskaskumulatif');?>">Total Arus kas Kumulatif</a>
                     </div>
                 </div>
             </li>
