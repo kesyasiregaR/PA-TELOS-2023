@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/economic'); ?>">Economic</a>
         </li>
         <li class="breadcrumb-item active">
-            Master Data
+            Investasi Awal
         </li>
     </ol>
     <h2 class="h3 mb-2 text-gray-800"><?=$judul;?></h2>
