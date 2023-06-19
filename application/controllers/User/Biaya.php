@@ -12,7 +12,7 @@ class biaya extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['judul']="Halaman Data Usaha";
+		$data['judul']="Halaman Data Komponen Biaya";
 		$data['economic_komponen_biaya']=$this->economic_komponen_biaya->get();
 		$this->load->view('user/header');
 		$this->load->view('user/biaya/vw_biaya',$data);

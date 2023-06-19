@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/economic'); ?>">Economic</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="<?= site_url('user/investasi'); ?>">Master Data</a>
+            <a href="<?= site_url('user/investasi'); ?>">Investasi</a>
         </li>
         <li class="breadcrumb-item active" >
             Tambah Data Investasi
