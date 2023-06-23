@@ -32,12 +32,12 @@
                                 class="form-control" id="harga_tahun1" placeholder="">
                             <?= form_error('harga_tahun1', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="total">Total</label>
                             <input name="total" type="text" value="<?= set_value('total'); ?>"
                                 class="form-control" id="total" placeholder="">
                             <?= form_error('total', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
 
                        
                         <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>

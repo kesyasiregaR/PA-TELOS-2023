@@ -31,11 +31,11 @@
 							<input name="harga_tahun1" value="<?= $economic_investasi['harga_tahun1']; ?>" type="text" class="form-control" id="harga_tahun1" placeholder="">
 							<?= form_error('harga_tahun1', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="total">Total</label>
 							<input name="total" value="<?= $economic_investasi['total']; ?>" type="text" class="form-control" id="total" placeholder="">
 							<?= form_error('total', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+						</div> -->
 						
 						<a href="<?= base_url('user/investasi') ?>" class="btn btn-danger">Tutup</a>
 						<button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>

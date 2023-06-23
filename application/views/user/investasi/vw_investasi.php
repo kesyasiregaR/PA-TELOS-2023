@@ -25,19 +25,20 @@
                             <th>No</th>
                             <th>Rincian Investasi</th>
                             <th>Tahun 1</th>
-                            <th>Total</th>
+                            <!-- <th>Total</th> -->
                             <th>Aksi</th>
 
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = 1; ?>
+                        <?php $i = 1; $total_tahun1=0 ; ?>
                         <?php foreach ($economic_investasi as $us) : ?>
+                            <?php $total_tahun1 +=$us['harga_tahun1']; ?>
                         <tr>
-                            <td><?=$i;?></td>
+                            <td><?=$i; ?></td>
                             <td><?= $us['rincian_investasi'];?></td>
                             <td><?= $us['harga_tahun1'];?></td>
-                            <td><?= $us['total'];?></td>
+                            <!-- <td><?= $us['total'];?></td> -->
 
                             <td>
                             <a href="<?= base_url('User/investasi/hapus/').$us['id_economic_investasi'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
@@ -46,9 +47,17 @@
                         </tr>
                         <?php $i++;?>
                         <?php endforeach; ?>
-
-
+                        <tfoot>
+                        <tr>
+                            <th> </th>
+                            <th>Total</th>
+                
+                        <th>Rp<?php echo $total_tahun1; ?> </th>
+                        <!-- <th>Rp<?php echo $total_tahun2; ?> </th>
+                        <th>Rp<?php echo $total_tahun3; ?> </th> -->
+                        </tr>
                     </tbody>
+                        </tfoot>
                 </table>
             </div>
         </div>

@@ -35,8 +35,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = 1; ?>
+                        <?php $i = 1; $total_tahun1=0 ; $total_tahun2=0; $total_tahun3=0; $total_tahun4=0; $total_tahun5=0; ?>
                         <?php foreach ($economic_komponen_biaya as $us) : ?>
+                            <?php 
+                            $total_tahun1 +=$us['biaya_tahun1'];
+                            $total_tahun2 +=$us['biaya_tahun2'];
+                            $total_tahun3 +=$us['biaya_tahun3'];
+                            $total_tahun4 +=$us['biaya_tahun4'];
+                            $total_tahun5 +=$us['biaya_tahun5'];?>
                         <tr>
                             <td><?=$i;?></td>
                             <td><?= $us['komponen_biaya'];?></td>
@@ -51,16 +57,30 @@
                             <a href="<?= base_url('User/biaya/hapus/').$us['id_economic_komponen_biaya'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
                                 <a href="<?= base_url('User/biaya/edit/').$us['id_economic_komponen_biaya'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
                             </td>
-                        </tr>
-                        <?php $i++;?>
-                        <?php endforeach; ?>
+                            </tr>
+        
+        <?php $i++;?>
+        <?php endforeach; ?>
+        <tfoot>
+        <tr>
+            <th> </th>
+            <th> </th>
+            <th>Total</th>
 
+        <th>Rp<?php echo $total_tahun1; ?> </th>
+        <th>Rp<?php echo $total_tahun2; ?> </th>
+        <th>Rp<?php echo $total_tahun3; ?> </th>
+        <th>Rp<?php echo $total_tahun4; ?> </th>
+       <th> Rp<?php echo $total_tahun5; ?> </th>
+    
+        </tr>
+    </tbody>
+    </tfoot>
+</table>
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 
 </div>
 <!-- /.container-fluid -->

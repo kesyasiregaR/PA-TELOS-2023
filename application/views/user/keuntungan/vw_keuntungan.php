@@ -34,8 +34,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = 1; ?>
+                        <?php $i = 1; $total_tahun1=0 ; $total_tahun2=0; $total_tahun3=0; $total_tahun4=0; $total_tahun5=0; ?>
                         <?php foreach ($economic_keuntungan as $us) : ?>
+                            <?php $total_tahun1 +=$us['keuntungan_tahun1']; 
+                                  $total_tahun2 +=$us['keuntungan_tahun2'];
+                                  $total_tahun3 +=$us['keuntungan_tahun3'];
+                                  $total_tahun4 +=$us['keuntungan_tahun4']; 
+                                  $total_tahun5 +=$us['keuntungan_tahun5'];?>
+                        
                         <tr>
                             <td><?=$i;?></td>
                             <td><?= $us['sumber_keuntungan'];?></td>
@@ -50,12 +56,24 @@
                                 <a href="<?= base_url('User/keuntungan/edit/').$us['id_economic_keuntungan'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
+        
                         <?php $i++;?>
                         <?php endforeach; ?>
-
-
+                        <tfoot>
+                        <tr>
+                            <th> </th>
+                            <th>Total</th>
+                
+                        <th>Rp<?php echo $total_tahun1; ?> </th>
+                        <th>Rp<?php echo $total_tahun2; ?> </th>
+                        <th>Rp<?php echo $total_tahun3; ?> </th>
+                        <th>Rp<?php echo $total_tahun4; ?> </th>
+                       <th> Rp<?php echo $total_tahun5; ?> </th>
+                        </tr>
                     </tbody>
+                    </tfoot>
                 </table>
+                
             </div>
         </div>
     </div>

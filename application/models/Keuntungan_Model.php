@@ -28,8 +28,23 @@ class Keuntungan_Model extends CI_Model
     }
     public function insert($data)
     {
+         $this->db->select('*');
+         $this->db->from('economic');
+         $this->db->join('economic_keuntungan', 'economic.id = economic_keuntungan.economic_id', 'inner');
+         $query = $this->db->get();
+
+if ($query->num_rows() > 0) {
+    foreach ($query->result() as $row) {
+        // Lakukan sesuatu dengan data yang dihasilkan
+        echo $row->column1;
+        echo $row->column2;
+    }
+}
+
         $this->db->insert($this->table, $data);
         return $this->db->insert_id();
+        return $this->db->economic_id();
+        
     }
     public function delete($id)
     {
@@ -44,3 +59,4 @@ class Keuntungan_Model extends CI_Model
         return $this->db->get()->num_rows();
     }
 }
+

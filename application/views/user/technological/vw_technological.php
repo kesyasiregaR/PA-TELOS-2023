@@ -28,6 +28,7 @@
                             <th>Item</th>
                             <th>Spesifikasi</th>
                             <th>Harga</th>
+                            <th>Awal Tahun Pemakaian</th>
                             <th>Sumber</th>
                             <th>Status</th>
                             <th>Aksi</th>
@@ -45,10 +46,20 @@
                                 <td><?= $us['item']; ?></td>
                                 <td><?= $us['specification']; ?></td>
                                 <td><?= $us['price']; ?></td>
+                                <td><?= $us['Date']; ?></td>
 
                                 <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td>
                                 <td> 
                                     <!-- untuk kolom Status -->
+                                    <?php $Date = $us['Date']  ; ?>
+                                    <?php if ( $Date >= '2017'): ?>
+                                    <p><?php echo ($Date); ?></p>
+                                    <p>Layak</p>
+                                <?php else: ?>
+                                    <p> <?php echo ($Date); ?></p>
+                                    <p>Tidak Layak</p>
+                                <?php endif; ?>
+
                                 </td>
                                 <td>
                                     <a href="<?= base_url('User/technological/hapus/') . $us['id_technological']; ?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>

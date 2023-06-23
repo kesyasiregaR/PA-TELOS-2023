@@ -37,9 +37,9 @@ class investasi extends CI_Controller {
 		$this->form_validation->set_rules('harga_tahun1', 'harga_tahun1', 'required', [
 			'required' => 'Wajib di isi'
 		]);
-		$this->form_validation->set_rules('total', 'total', 'required', [
-			'required' => ' Wajib di isi'
-		]);
+		// $this->form_validation->set_rules('total', 'total', 'required', [
+		// 	'required' => ' Wajib di isi'
+		// ]);
 	
 	
 		if ($this->form_validation->run() == false) {
@@ -50,7 +50,7 @@ class investasi extends CI_Controller {
 			$data = [
 				'rincian_investasi' => $this->input->post('rincian_investasi'),
 				'harga_tahun1' => $this->input->post('harga_tahun1'),
-				'total' => $this->input->post('total'),
+				// 'total' => $this->input->post('total'),
 		
 			];
 			$this-> economic_investasi->insert($data);
@@ -70,9 +70,9 @@ class investasi extends CI_Controller {
 		$this->form_validation->set_rules('harga_tahun1', 'harga tahun1', 'required', [
 			'required' => ' Wajib di isi'
 		]);
-		$this->form_validation->set_rules('total', 'Total', 'required', [
-			'required' => ' Wajib di isi'
-		]);
+		// $this->form_validation->set_rules('total', 'Total', 'required', [
+		// 	'required' => ' Wajib di isi'
+		// ]);
 		
 	
 		if ($this->form_validation->run() == false) {
@@ -83,7 +83,7 @@ class investasi extends CI_Controller {
 			$data = [
 				'rincian_investasi' => $this->input->post('rincian_investasi'),
 				'harga_tahun1' => $this->input->post('harga_tahun1'),
-				'total' => $this->input->post('total'),
+				// 'total' => $this->input->post('total'),
 				'id_economic_investasi' => $this->input->post('id_economic_investasi')
 			];
 

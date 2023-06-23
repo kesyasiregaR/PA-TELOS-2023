@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/economic'); ?>">Economic</a>
         </li>
         <li class="breadcrumb-item">
-            <a href="<?= site_url('user/keuntungan'); ?>">Master Data</a>
+            <a href="<?= site_url('user/keuntungan'); ?>">Keuntungan</a>
         </li>
         <li class="breadcrumb-item active" >
             Tambah Data Keuntungan
@@ -22,7 +22,7 @@
                     <form action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                             <label for="sumber_keuntungan">Sumber Keuntungan</label>
-                            <input name="sumber_keuntungan" type="text" value="<?= set_value('sumber_keuntungan'); ?>"
+                       <input name="sumber_keuntungan" type="text" value="<?= set_value('sumber_keuntungan'); ?>"
                                 class="form-control" id="sumber_keuntungan" placeholder="">
                             <?= form_error('sumber_keuntungan', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>

@@ -58,6 +58,11 @@
 							<?= form_error('price', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
+							<label for="Date">Awal Tahun Pemakaian</label>
+							<input name="Date" value="<?= $technological['Date']; ?>" type="text" class="form-control" id="Date" placeholder="Tahun-Bulan-Tanggal">
+							<?= form_error('Date', '<small class="text-danger pl-3">', '</small>'); ?>
+						</div>
+						<div class="form-group">
 							<label for="source">Source</label>
 							<input name="source" value="<?= $technological['source']; ?>" type="text" class="form-control" id="source" placeholder="">
 							<?= form_error('source', '<small class="text-danger pl-3">', '</small>'); ?>

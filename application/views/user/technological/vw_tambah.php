@@ -58,6 +58,11 @@
                             <?= form_error('price', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
+                            <label for="Date">Awal Tahun Pemakaian </label>
+                            <input name="Date" type="text" value="<?= set_value('Date'); ?>" class="form-control" id="Date" placeholder="Tahun-Bulan-Tanggal">
+                            <?= form_error('Date', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+                        <div class="form-group">
                             <label for="source">Source</label>
                             <input name="source" type="text" value="<?= set_value('source'); ?>" class="form-control" id="source" placeholder="">
                             <?= form_error('source', '<small class="text-danger pl-3">', '</small>'); ?>

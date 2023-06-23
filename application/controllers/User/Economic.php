@@ -10,16 +10,19 @@ class economic extends CI_Controller
         // is_logged_in2();
         $this->load->model('Economic_Model', 'economic');
         $this->load->model('DataProjek_Model', 'dataproject');
+        $this->load->model('Keuntungan_Model', 'economic_keuntungan');
         $this->load->library('form_validation');
     }
     public function index() 
     {
         $data['judul'] = "Halaman Data Economic";
         $data['economic'] = $this->economic->get();
+        $data['economic_keuntungan']= $this->economic_keuntungan->get();
         $this->load->view('user/header');
         $this->load->view('user/economic/vw_economic', $data);
         $this->load->view('user/footer');
     }
+   
     public function hapus($id)
     {
         $this->economic->delete($id);
@@ -31,6 +34,7 @@ class economic extends CI_Controller
     {
         $data['judul'] = "Halaman Tambah Data Economic";
         $data['dataproject'] = $this->dataproject->get();
+        $data['economic_keuntungan'] = $this->economic_keuntungan->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $this->form_validation->set_rules('name', 'name ', 'required', [
@@ -88,7 +92,7 @@ class economic extends CI_Controller
                
             ];
             $this->economic->insert($data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">DatabBerhasil Ditambah!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah!</div>');
             redirect('user/economic');
         }
     }
@@ -97,6 +101,7 @@ class economic extends CI_Controller
         $data['judul'] = "Halaman Ubah";
         $data['economic'] = $this->economic->getById($id);
         $data['dataproject'] = $this->dataproject->get();
+        $data['economic_keuntungan'] = $this->economic_keuntungan->get();
        
         $this->form_validation->set_rules('name', 'name', 'required', [
             'required' => 'Wajib di isi'

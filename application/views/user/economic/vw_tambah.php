@@ -32,8 +32,8 @@
                         <div class="form-group">
                             <label for="akumulasi_biaya"> Akumulasi Biaya</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="akumulasi_biaya">
-                            <option value="Keuntungan Bersih">Keuntungan Bersih</option>
-                                <option value="Pajak">Pajak</option>
+                            <option value="Keuntungan Bersih" id="keuntung">Keuntungan Bersih</option>
+                                <option value="Pajak" id="pajak" >Pajak</option>
                                 <option value="Nilai Setelah Pajak">Nilai Setelah Pajak</option>
                                 <option value="Total Arus Kas">Total Arus Kas</option>
                                 <option value="Total Arus Kas Kumulatif">Total Arus Kas Kumulatif</option>
@@ -41,10 +41,17 @@
                             <?= form_error('akumulasi_biaya', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="tahun1">Tahun 1</label>
+                            <!-- <label for="keuntungan_tahun1">Tahun 1</label> -->
+                            <!-- <?php $i = 1; $total_tahun1=0; ?>
+                            <input name ="keuntungan_tahun1" type="text" value="<?php foreach ($economic_keuntungan as $us) : ?>
+                                <?php $total_tahun1 +=$us['keuntungan_tahun1']; ?>
+                                <?php endforeach; ?>
+                                <?php echo $total_tahun1; ?>"
+                                class="form-control" id="keuntungan_tahun1" placeholder=" " style > -->
+                                <label for="tahun1">Tahun 1</label>
                             <input name="tahun1" type="text" value="<?= set_value('tahun1'); ?>"
                                 class="form-control" id="tahun1" placeholder=" ">
-                            <?= form_error('tahun1', '<small class="text-danger pl-3">', '</small>'); ?>
+                            <?= form_error('tahun1', '<small class="text-danger pl-3">', '</small>'); ?> 
                         </div>
                         <div class="form-group">
                             <label for="tahun2">Tahun 2</label>

@@ -48,6 +48,9 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('price', 'price technological', 'required', [
             'required' => 'Price Wajib di isi'
         ]);
+        $this->form_validation->set_rules('Date', 'Date technological', 'required', [
+            'required' => 'Date Wajib di isi'
+        ]);
         $this->form_validation->set_rules('source', 'source technological', 'required', [
             'required' => 'source Wajib di isi'
         ]);
@@ -65,6 +68,7 @@ class technological extends CI_Controller
                 'item' => $this->input->post('item'),
                 'specification' => $this->input->post('specification'),
                 'price' => $this->input->post('price'),
+                'Date' => $this->input->post('Date'),
                 'source' => $this->input->post('source'),
 
             ];
@@ -95,6 +99,9 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('price', 'price technological', 'required', [
             'required' => 'Price Wajib di isi'
         ]);
+        $this->form_validation->set_rules('Date', 'Date technological', 'required', [
+            'required' => 'Date Wajib di isi'
+        ]);
         $this->form_validation->set_rules('source', 'source technological', 'required', [
             'required' => 'source Wajib di isi'
         ]);
@@ -111,6 +118,7 @@ class technological extends CI_Controller
                 'item' => $this->input->post('item'),
                 'specification' => $this->input->post('specification'),
                 'price' => $this->input->post('price'),
+                'Date' => $this->input->post('Date'),
                 'source' => $this->input->post('source'),
                 'id_technological' => $this->input->post('id_technological')
             ];
