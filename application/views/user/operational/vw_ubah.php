@@ -45,9 +45,15 @@
                         </div>
                         <div class="form-group">
                             <label for="description_after_perfomance">Deskripsi Sesudah</label>
-                            <input name="description_after_perfomance" value="<?= $operational['description_after_perfomance']; ?>" type="text" class="form-control" id="description_after_perfomance" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="description_after_perfomance">
+                            <option value="Bagus">Bagus</option>
+                                <option value="Tidak Bagus">Tidak Bagus</option>
+                                </select>
                             <?= form_error('description_after_perfomance', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                            </div> 
+                            <!-- <input name="description_after_perfomance" value="<?= $operational['description_after_perfomance']; ?>" type="text" class="form-control" id="description_after_perfomance" placeholder="">
+                            <?= form_error('description_after_perfomance', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div> -->
                         <tr>
                             <td colspan="3"><b>Information</b></td>
                         </tr>
@@ -64,9 +70,19 @@
                         </div>
                         <div class="form-group">
                             <label for="description_after_information">Deskripsi Sesudah</label>
-                            <input name="description_after_information" type="text" value="<?= $operational['description_after_information']; ?>" class="form-control" id="description_after_information" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="description_after_information">
+                            <option value="Akurat">Akurat</option>
+                                <option value="Tidak Akurat">Tidak Akurat</option>
+                                </select>
+                            <!-- <input name="description_after_information" type="text" value="<?= set_value('description_after_information'); ?>" class="form-control" id="description_after_information" placeholder=""> -->
                             <?= form_error('description_after_information', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
+
+                        <!-- <div class="form-group">
+                            <label for="description_after_information">Deskripsi Sesudah</label>
+                            <input name="description_after_information" type="text" value="<?= $operational['description_after_information']; ?>" class="form-control" id="description_after_information" placeholder="">
+                            <?= form_error('description_after_information', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div> -->
                         <tr>
                             <td colspan="3"><b>Economic</b></td>
                         </tr>
@@ -82,9 +98,19 @@
                         </div>
                         <div class="form-group">
                             <label for="description_after_economic">Deskripsi Sesudah</label>
-                            <input name="description_after_economic" type="text" value="<?= $operational['description_after_economic']; ?>" class="form-control" id="description_after_economic" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="description_after_economic">
+                            <option value="Efisien">Efisien</option>
+                            <option value="Tidak Efisien">Tidak Efisien</option>
+                                </select>
+                            <!-- <input name="description_after_economic" type="text" value="<?= set_value('description_after_economic'); ?>" class="form-control" id="description_after_economic" placeholder=""> -->
                             <?= form_error('description_after_economic', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
+
+                        <!-- <div class="form-group">
+                            <label for="description_after_economic">Deskripsi Sesudah</label>
+                            <input name="description_after_economic" type="text" value="<?= $operational['description_after_economic']; ?>" class="form-control" id="description_after_economic" placeholder="">
+                            <?= form_error('description_after_economic', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div> -->
                         <tr>
                             <td colspan="3"><b>Control</b></td>
                         </tr>
@@ -101,9 +127,19 @@
                         </div>
                         <div class="form-group">
                             <label for="description_after_control">Deskripsi Sesudah</label>
-                            <input name="description_after_control" type="text" value="<?= $operational['description_after_control']; ?>" class="form-control" id="description_after_control" placeholder="">
+                            <select class="form-control" id="exampleFormControlSelect1" name="description_after_control">
+                            <option value="Efektif">Efektif</option>
+                            <option value="Tidak Efektif">Tidak Efektif</option>
+                                </select>
+                            <!-- <input name="description_after_control" type="text" value="<?= set_value('description_after_control'); ?>" class="form-control" id="description_after_control" placeholder=""> -->
                             <?= form_error('description_after_control', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
+
+                        <!-- <div class="form-group">
+                            <label for="description_after_control">Deskripsi Sesudah</label>
+                            <input name="description_after_control" type="text" value="<?= $operational['description_after_control']; ?>" class="form-control" id="description_after_control" placeholder="">
+                            <?= form_error('description_after_control', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div> -->
                         <tr>
                             <td colspan="3"><b>Effeciency</b></td>
                         </tr>
@@ -120,9 +156,19 @@
                         </div>
                         <div class="form-group">
                             <label for="description_after_efficiency">Deskripsi Sesudah</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="description_after_efficiency">
+                            <option value=" Optimal">Optimal</option>
+                            <option value="Tidak Optimal">Tidak Optimal</option>
+                                </select>
+                            <!-- <input name="description_after_efficiency" type="text" value="<?= set_value('description_after_efficiency'); ?>" class="form-control" id="description_after_efficiency" placeholder=""> -->
+                            <?= form_error('description_after', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label for="description_after_efficiency">Deskripsi Sesudah</label>
                             <input name="description_after_efficiency" type="text" value="<?= $operational['description_after_efficiency']; ?>" class="form-control" id="description_after_efficiency" placeholder="">
                             <?= form_error('description_after_efficiency', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
                         <tr>
                             <td colspan="3"><b>Services</b></td>
                         </tr>
@@ -139,9 +185,19 @@
                         </div>
                         <div class="form-group">
                             <label for="description_after_services">Deskripsi Sesudah</label>
+                            <select class="form-control" id="exampleFormControlSelect1" name="description_after_services">
+                            <option value="Memuaskan">Memuaskan</option>
+                            <option value="Tidak Memuaskan">Tidak Memuaskan</option>
+                                </select>
+                            <!-- <input name="description_after_services" type="text" value="<?= set_value('description_after_services'); ?>" class="form-control" id="description_after_services" placeholder=""> -->
+                            <?= form_error('description_after', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label for="description_after_services">Deskripsi Sesudah</label>
                             <input name="description_after_services" type="text" value="<?= $operational['description_after_services']; ?>" class="form-control" id="description_after_services" placeholder="">
                             <?= form_error('description_after_services', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
 
                         <a href="<?= base_url('user/operational') ?>" class="btn btn-danger">Tutup</a>
                         <button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>
