@@ -8,12 +8,14 @@ class dataprojek extends CI_Controller {
 		parent::__construct();
 		// is_logged_in2();
 		$this->load->model('DataProjek_Model','dataproject');
+		$this->load->model('Public_Model','public');
 		$this->load->library('form_validation');
 	}
 	public function index()
 	{
 		$data['judul']="Halaman Data Project";
 		$data['dataproject']=$this->dataproject->get();
+		$data['public']=$this->public->get();
 		$this->load->view('user/header');
 		$this->load->view('user/dataprojek/vw_dataprojek',$data);
 		$this->load->view('user/footer');
@@ -48,6 +50,7 @@ class dataprojek extends CI_Controller {
 			$this->load->view("user/footer");
 		}  else {
 			$data = [
+				'id_public' => $this->input->post('id_public'), //ditambah adib
 				'name' => $this->input->post('name'),
 				'description' => $this->input->post('description'),
 				'team_name' => $this->input->post('team_name'),

@@ -20,6 +20,17 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
+                       
+                            <div class="form-group">
+                    
+                            <input name="id_public" type="text" value="<?php $var = $this->session->userdata;
+                            echo $var['id_public'];
+                            ?>" class="form-control"
+                                id="id_public" placeholder="" hidden>
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
+                        </div>
+
+                      
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input name="name" type="text" value="<?= set_value('name'); ?>" class="form-control"

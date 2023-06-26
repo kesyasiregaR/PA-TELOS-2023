@@ -31,7 +31,9 @@
                         </div>
                         <div class="form-group">
                             <label for="akumulasi_biaya"> Akumulasi Biaya</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="akumulasi_biaya">
+                            <select class="form-control" onchange="ambilTahun(this.value)" id="exampleFormControlSelect1" name="akumulasi_biaya">
+                            <option selected hidden>Pilih Akumulasi Biaya</option>
+                           
                             <option value="Keuntungan Bersih" id="keuntung">Keuntungan Bersih</option>
                                 <option value="Pajak" id="pajak" >Pajak</option>
                                 <option value="Nilai Setelah Pajak">Nilai Setelah Pajak</option>
@@ -50,7 +52,7 @@
                                 class="form-control" id="keuntungan_tahun1" placeholder=" " style > -->
                                 <label for="tahun1">Tahun 1</label>
                             <input name="tahun1" type="text" value="<?= set_value('tahun1'); ?>"
-                                class="form-control" id="tahun1" placeholder=" ">
+                                class="form-control" id="tahun1" placeholder=" " readonly>
                             <?= form_error('tahun1', '<small class="text-danger pl-3">', '</small>'); ?> 
                         </div>
                         <div class="form-group">
@@ -106,6 +108,44 @@
                         
                         <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>
                     </form>
+                    <script>
+
+                    function ambilTahun(value) {
+                        console.log(value);
+                        tahun1 = document.getElementById('tahun1');
+                        tahun2 = document.getElementById('tahun2');
+                        tahun3 = document.getElementById('tahun3');
+                        tahun4 = document.getElementById('tahun4');
+                        tahun5 = document.getElementById('tahun5');
+
+                        if(value === "Keuntungan Bersih"){
+                            <?php $i = 1; $total_tahun1=0 ; $total_tahun2=0; $total_tahun3=0; $total_tahun4=0; $total_tahun5=0; ?>
+                        <?php foreach ($economic_keuntungan as $us) { 
+                            $total_tahun1 +=$us['keuntungan_tahun1']; 
+                                  $total_tahun2 +=$us['keuntungan_tahun2'];
+                                  $total_tahun3 +=$us['keuntungan_tahun3'];
+                                  $total_tahun4 +=$us['keuntungan_tahun4']; 
+                                  $total_tahun5 +=$us['keuntungan_tahun5'];
+                                  
+                        }?>
+
+                            tahun1.value = "<?php echo ($total_tahun1)?>";
+                            tahun2.value = "<?php echo ($total_tahun2)?>";
+                            tahun3.value = "<?php echo ($total_tahun3)?>";
+                            tahun4.value = "<?php echo ($total_tahun4)?>";
+                            tahun5.value = "<?php echo ($total_tahun5)?>";
+
+                            
+
+                        }else if(value === "Pajak"){
+                            tahun1.value = "40000";
+                            tahun2.value = "60000";
+                            tahun3.value = "60000";
+                            tahun4.value = "60000";
+                            tahun5.value = "60000";
+                        }
+                    }
+                    </script>
                 </div>
             </div>
 
