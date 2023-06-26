@@ -37,7 +37,17 @@
                                 <td><?= $us['name']; ?></td>
                                 <td>
                                     <!-- untuk kolom Status -->
+                                    <?php $description_after_perfomance = $us['description_after_perfomance']. $description_after_information = $us['description_after_information']. $description_after_economic = $us['description_after_economic']. $description_after_control = $us['description_after_control']. $description_after_efficiency = $us['description_after_efficiency']. $description_after_services = $us['description_after_services']; ?>
+                                    <?php if ( $description_after_perfomance  !== "Bagus" && $description_after_information !== "Akurat" && $description_after_economic !== "Efisien" && $description_after_control !== "Efektif" && $description_after_efficiency !== "Optimal" && $description_after_services !=="Memuaskan"): ?>
+                                    <!-- <p><?php echo ($description_after_perfomance); ?></p> -->
+                                    <p>Tidak Layak</p>
+                                <?php else: ?>
+                                    <!-- <p> <?php echo ($description_after_perfomance ); ?></p> -->
+                                    <p>Layak</p>
+                                <?php endif; ?>
+
                                 </td>
+                                
                                 <td>
                                     <a href="<?= base_url('User/operational/detail/') . $us['id_operational']; ?>" class="btn btn-xs btn-warning btn-delete"> <i class="fa fa-low-vision"></i></a>
                                     <a href="<?= base_url('User/operational/hapus/') . $us['id_operational']; ?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
