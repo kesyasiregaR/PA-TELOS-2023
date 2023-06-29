@@ -31,9 +31,9 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = 1; $total_tahun1=0 ; ?>
+                        <?php $i = 1; $totalInvestasi_tahun1=0 ; ?>
                         <?php foreach ($economic_investasi as $us) : ?>
-                            <?php $total_tahun1 +=$us['harga_tahun1']; ?>
+                            <?php $totalInvestasi_tahun1 +=$us['harga_tahun1']; ?>
                         <tr>
                             <td><?=$i; ?></td>
                             <td><?= $us['rincian_investasi'];?></td>
@@ -52,9 +52,9 @@
                             <th> </th>
                             <th>Total</th>
                 
-                        <th>Rp<?php echo $total_tahun1; ?> </th>
-                        <!-- <th>Rp<?php echo $total_tahun2; ?> </th>
-                        <th>Rp<?php echo $total_tahun3; ?> </th> -->
+                        <th>Rp<?php echo $totalInvestasi_tahun1; ?> </th>
+                        <th> </th>
+                      
                         </tr>
                     </tbody>
                         </tfoot>

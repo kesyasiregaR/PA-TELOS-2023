@@ -69,6 +69,7 @@
                         <th>Rp<?php echo $total_tahun3; ?> </th>
                         <th>Rp<?php echo $total_tahun4; ?> </th>
                        <th> Rp<?php echo $total_tahun5; ?> </th>
+                       <th> </th>
                         </tr>
                     </tbody>
                     </tfoot>

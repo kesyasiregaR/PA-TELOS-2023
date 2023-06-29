@@ -23,8 +23,8 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Tingkat Pengembalian</th>
-                            <th>Tarif Pajak</th>
+                            <th>Tingkat Pengembalian / Investment Rate (%)</th>
+                            <th>Tarif Pajak (%)</th>
                             <th>Aksi</th>
 
                         </tr>

@@ -59,7 +59,7 @@
                         </div>
                         <div class="form-group">
                             <label for="Date">Awal Tahun Pemakaian </label>
-                            <input name="Date" type="text" value="<?= set_value('Date'); ?>" class="form-control" id="Date" placeholder="Tahun-Bulan-Tanggal">
+                            <input name="Date" type="date" value="<?= set_value('Date'); ?>" class="form-control" id="Date" placeholder="Tahun-Bulan-Tanggal">
                             <?= form_error('Date', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
                         <div class="form-group">

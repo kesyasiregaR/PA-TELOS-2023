@@ -30,7 +30,7 @@ class Keuntungan_Model extends CI_Model
     {
          $this->db->select('*');
          $this->db->from('economic');
-         $this->db->join('economic_keuntungan', 'economic.id = economic_keuntungan.economic_id', 'inner');
+        //  $this->db->join('economic_keuntungan', 'economic.id = economic_keuntungan.economic_id', 'inner');
          $query = $this->db->get();
 
 if ($query->num_rows() > 0) {
