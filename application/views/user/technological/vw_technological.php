@@ -53,11 +53,11 @@
                                     <!-- untuk kolom Status -->
                                     <?php $Date = $us['Date']  ; ?>
                                     <?php if ( $Date >= '2017'): ?>
-                                    <p><?php echo ($Date); ?></p>
-                                    <p>Layak</p>
+                                    <p> <span style = "color:  green;"> <b> Layak </b> </span> </p>
+
                                 <?php else: ?>
-                                    <p> <?php echo ($Date); ?></p>
-                                    <p>Tidak Layak</p>
+                                    <p> <span style = "color:  red;"> <b> Tidak Layak </b> </span> </p>
+                                    <p> Kurun waktu kelayakan = 5 tahun terakhir <p>
                                 <?php endif; ?>
 
                                 </td>
