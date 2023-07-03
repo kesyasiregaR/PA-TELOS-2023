@@ -11,6 +11,9 @@ class economic extends CI_Controller
         $this->load->model('Economic_Model', 'economic');
         $this->load->model('DataProjek_Model', 'dataproject');
         $this->load->model('Keuntungan_Model', 'economic_keuntungan');
+        $this->load->model('DataPerusahaan_Model', 'economic_data_perusahaan');
+        $this->load->model('Investasi_Model', 'economic_investasi');
+        $this->load->model('Biaya_Model', 'economic_komponen_biaya');
         $this->load->library('form_validation');
     }
     public function index() 
@@ -18,6 +21,9 @@ class economic extends CI_Controller
         $data['judul'] = "Halaman Data Economic";
         $data['economic'] = $this->economic->get();
         $data['economic_keuntungan']= $this->economic_keuntungan->get();
+        $data['economic_data_perusahaan']= $this->economic_data_perusahaan->get();
+        $data['economic_investasi']= $this->economic_investasi->get();
+        $data['economic_komponen_biaya']= $this->economic_komponen_biaya->get();
         $this->load->view('user/header');
         $this->load->view('user/economic/vw_economic', $data);
         $this->load->view('user/footer');
@@ -35,6 +41,9 @@ class economic extends CI_Controller
         $data['judul'] = "Halaman Tambah Data Economic";
         $data['dataproject'] = $this->dataproject->get();
         $data['economic_keuntungan'] = $this->economic_keuntungan->get();
+        $data['economic_data_perusahaan']= $this->economic_data_perusahaan->get();
+        $data['economic_investasi']= $this->economic_investasi->get();
+        $data['economic_komponen_biaya']= $this->economic_komponen_biaya->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $this->form_validation->set_rules('name', 'name ', 'required', [
@@ -102,6 +111,9 @@ class economic extends CI_Controller
         $data['economic'] = $this->economic->getById($id);
         $data['dataproject'] = $this->dataproject->get();
         $data['economic_keuntungan'] = $this->economic_keuntungan->get();
+        $data['economic_data_perusahaan']= $this->economic_data_perusahaan->get();
+        $data['economic_investasi']= $this->economic_investasi->get();
+        $data['economic_komponen_biaya']= $this->economic_komponen_biaya->get();
        
         $this->form_validation->set_rules('name', 'name', 'required', [
             'required' => 'Wajib di isi'

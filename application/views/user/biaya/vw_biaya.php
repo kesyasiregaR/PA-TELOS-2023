@@ -35,14 +35,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = 1; $total_tahun1=0 ; $total_tahun2=0; $total_tahun3=0; $total_tahun4=0; $total_tahun5=0; ?>
+                        <?php $i = 1; $biaya_tahun1=0 ; $biaya_tahun2=0; $biaya_tahun3=0; $biaya_tahun4=0; $biaya_tahun5=0; ?>
                         <?php foreach ($economic_komponen_biaya as $us) : ?>
                             <?php 
-                            $total_tahun1 +=$us['biaya_tahun1'];
-                            $total_tahun2 +=$us['biaya_tahun2'];
-                            $total_tahun3 +=$us['biaya_tahun3'];
-                            $total_tahun4 +=$us['biaya_tahun4'];
-                            $total_tahun5 +=$us['biaya_tahun5'];?>
+                            $biaya_tahun1 +=$us['biaya_tahun1'];
+                            $biaya_tahun2 +=$us['biaya_tahun2'];
+                            $biaya_tahun3 +=$us['biaya_tahun3'];
+                            $biaya_tahun4 +=$us['biaya_tahun4'];
+                            $biaya_tahun5 +=$us['biaya_tahun5'];?>
                         <tr>
                             <td><?=$i;?></td>
                             <td><?= $us['komponen_biaya'];?></td>
@@ -67,11 +67,12 @@
             <th> </th>
             <th>Total</th>
 
-        <th>Rp<?php echo $total_tahun1; ?> </th>
-        <th>Rp<?php echo $total_tahun2; ?> </th>
-        <th>Rp<?php echo $total_tahun3; ?> </th>
-        <th>Rp<?php echo $total_tahun4; ?> </th>
-       <th> Rp<?php echo $total_tahun5; ?> </th>
+        <th>Rp<?php echo $biaya_tahun1; ?> </th>
+        <th>Rp<?php echo $biaya_tahun2; ?> </th>
+        <th>Rp<?php echo $biaya_tahun3; ?> </th>
+        <th>Rp<?php echo $biaya_tahun4; ?> </th>
+       <th> Rp<?php echo $biaya_tahun5; ?> </th>
+       <th> </th>
     
         </tr>
     </tbody>
