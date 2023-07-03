@@ -137,7 +137,7 @@
                 <td> Pajak </td>
                 
                 <!-- tahun 1 -->
-                <td><?php  $tarif_pajak ;?>
+                <td><?php  $tarif_pajak=0 ;?>
                 <?php foreach ($economic_data_perusahaan as $us) {
                     $tarif_pajak = $us['tarif_pajak'];
                 }?>
@@ -149,7 +149,7 @@
                 <?php echo rupiah($pajak1)?>  </td>
 
                 <!-- tahun 2 -->
-                <td> <?php  $tarif_pajak ;?>
+                <td> <?php  $tarif_pajak=0 ;?>
                 <?php foreach ($economic_data_perusahaan as $us) {
                     $tarif_pajak = $us['tarif_pajak'];
                 }?>
@@ -161,7 +161,7 @@
                 <?php echo rupiah($pajak2)?>  </td>
 
                 <!-- tahun 3 -->
-                <td> <?php  $tarif_pajak ;?>
+                <td> <?php  $tarif_pajak =0;?>
                 <?php foreach ($economic_data_perusahaan as $us) {
                     $tarif_pajak = $us['tarif_pajak'];
                 }?>
@@ -173,7 +173,7 @@
                 <?php echo rupiah($pajak3)?>  </td>
 
                 <!-- tahun 4 -->
-                <td> <?php  $tarif_pajak ;?>
+                <td> <?php  $tarif_pajak=0 ;?>
                 <?php foreach ($economic_data_perusahaan as $us) {
                     $tarif_pajak = $us['tarif_pajak'];
                 }?>
@@ -185,7 +185,7 @@
                 <?php echo rupiah($pajak4)?> </td>
 
                 <!-- tahun 5 -->
-                <td> <?php  $tarif_pajak ;?>
+                <td> <?php  $tarif_pajak=0 ;?>
                 <?php foreach ($economic_data_perusahaan as $us) {
                     $tarif_pajak = $us['tarif_pajak'];
                 }?>
@@ -324,7 +324,7 @@
             <th> 8 </th>
             <th> <span style="color: blue;"> Payback Period (PP) </span></th>
             <?php $pp =0 ;?>
-            <?php $totalCash = ($aruskas1)+($aruskas2)+($aruskas3)+($aruskas4)+($aruskas5)?>
+            <?php $totalCash = ($aruskas1)+($aruskas2)+($aruskas3)+($aruskas4)+($aruskas5);?>
 
             <!-- rumus pp = [ total investasi / total arus kas] tahun -->
             <?php $pp = ($totalInvestasi_tahun1) / (($totalCash) /5); ?>
