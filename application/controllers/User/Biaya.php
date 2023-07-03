@@ -13,7 +13,8 @@ class biaya extends CI_Controller {
 	public function index()
 	{
 		$data['judul']="Halaman Data Komponen Biaya";
-		$data['economic_komponen_biaya']=$this->economic_komponen_biaya->get();
+		$data['economic_komponen_biaya'] = $this->economic_komponen_biaya->getBiayaId($this->session->userdata('id_public'));
+		// $data['economic_komponen_biaya']=$this->economic_komponen_biaya->get();
 		$this->load->view('user/header');
 		$this->load->view('user/biaya/vw_biaya',$data);
 		$this->load->view('user/footer');
@@ -27,6 +28,7 @@ class biaya extends CI_Controller {
 	}
 	function tambah()
 	{
+		$data['economic_komponen_biaya'] = $this->economic_komponen_biaya->get2($this->session->userdata('id_public')); 
 		$data['judul'] = "Halaman Tambah Data Komponen Biaya";
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -68,6 +70,7 @@ class biaya extends CI_Controller {
 				'biaya_tahun3' => $this->input->post('biaya_tahun3'),
 				'biaya_tahun4' => $this->input->post('biaya_tahun4'),
 				'biaya_tahun5' => $this->input->post('biaya_tahun5'),
+				'id_public' => $this->session->userdata('id_public'),
 		
 			];
 			$this-> economic_komponen_biaya->insert($data);

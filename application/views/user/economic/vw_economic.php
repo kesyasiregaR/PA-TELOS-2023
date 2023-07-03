@@ -48,7 +48,7 @@
                     1
                 </td>
                 <td>
-                    Investasi Awal
+                <a href="<?= site_url('user/investasi'); ?>"> <span style="color: grey"> Investasi Awal </span>
                 </td>
                 <td>   <?php function rupiah($angka){
 	            $hasil_rupiah = "Rp " . number_format($angka,2,',','.');
@@ -69,7 +69,7 @@
                 <!-- <td>
                 
                 </td> -->
-                <td><span>Keuntungan Bersih (Biaya)</span></td>
+                <td><a href="<?= site_url('user/keuntungan'); ?>"> <span style="color: grey"> Keuntungan Bersih (Biaya) </a> </span></td>
                 <!-- tahun 1 -->
                 <td>
                 <?php  $total_tahun1=0 ;?>
@@ -134,7 +134,7 @@
             <tr>
                 <td> 3</td>
                 <!-- <td> </td> -->
-                <td> Pajak </td>
+                <td> <a href="<?= site_url('user/dataperusahaan'); ?>"> <span style="color: grey"> Pajak  </span> </td>
                 
                 <!-- tahun 1 -->
                 <td><?php  $tarif_pajak=0 ;?>
@@ -199,7 +199,7 @@
              <tr> 
                 <td> 4 </td>
                 <!-- <td> </td> -->
-                <td> Nilai Setelah Pajak
+                <td><span style="color: grey"> Nilai Setelah Pajak </span>
             </td>
 
             <!-- tahun 1 -->
@@ -231,7 +231,7 @@
              <tr>
                 <td> 5 </td>
                 <!-- <td>  </td> -->
-                <td> Arus Kas </td>
+                <td> <span style="color: grey"> Arus Kas </span></td>
 
                 <!-- tahun 1 -->
                 <td> <?php $aruskas1; ?>
@@ -262,7 +262,7 @@
             <tr>
                 <td> 6 </td>
                 <!-- <td>  </td> -->
-                <td> Arus Kas  Kumulatif</td>
+                <td><span style="color: grey"> Arus Kas  Kumulatif </span></td>
 
                 <!-- tahun 1 -->
                  <td> <?php $totalInvestasi_tahun1 = 0 ;?>
@@ -323,12 +323,25 @@
             <!-- payback period (pp) -->
             <th> 8 </th>
             <th> <span style="color: blue;"> Payback Period (PP) </span></th>
-            <?php $pp =0 ;?>
-            <?php $totalCash = ($aruskas1)+($aruskas2)+($aruskas3)+($aruskas4)+($aruskas5);?>
+        
 
             <!-- rumus pp = [ total investasi / total arus kas] tahun -->
-            <?php $pp = ($totalInvestasi_tahun1) / (($totalCash) /5); ?>
-            <th> <span style="color: blue;"> <?php echo round($pp,2) ?> Tahun </span></th>
+            <?php
+            $totalCash = ($aruskas1) + ($aruskas2) + ($aruskas3) + ($aruskas4) + ($aruskas5);
+            $pp = 0; // Inisialisasi $pp dengan nilai default
+
+            if ($totalCash !== 0) {
+            $pp = ($totalInvestasi_tahun1) / (($totalCash) / 5);
+            }
+
+            echo '<th>';
+            if ($totalCash !== 0) {
+            echo '<span style="color: blue;">' . round($pp, 2) . ' Tahun</span>';
+            } else {
+            echo '<span style="color: blue;">- Tahun</span>';
+            }
+            echo '</th>';
+            ?>
             <th> </th>
             <th> </th>
             <th> </th>
@@ -339,12 +352,23 @@
             <!-- roi = ((Pendapatan - Biaya) / Biaya) x 100% -->
             <th>9 </th>
             <th> <span style="color: purple;"> Return on Investment (ROI) </span></th>
-            <?php $roi =0;?>
-            <?php $totalKeuntungan = ($keuntungan_bersih1)+($keuntungan_bersih2)+($keuntungan_bersih3)+($keuntungan_bersih4)+($keuntungan_bersih5);?>
-            <?php $totalBiaya = ($biaya_tahun1)+($biaya_tahun2)+($biaya_tahun3)+($biaya_tahun4)+($biaya_tahun5) ; ?>
-            <?php $roi = ((($totalKeuntungan)-($totalBiaya)) / ($totalBiaya))  ?>
+            <?php
+            $totalKeuntungan = ($keuntungan_bersih1)+($keuntungan_bersih2)+($keuntungan_bersih3)+($keuntungan_bersih4)+($keuntungan_bersih5);
+            $totalBiaya = ($biaya_tahun1)+($biaya_tahun2)+($biaya_tahun3)+($biaya_tahun4)+($biaya_tahun5) ;
+            $roi = 0; // Inisialisasi $pp dengan nilai default
 
-            <th><span style="color: purple;"><?php echo round($roi,2); ?> % </span></th>
+            if ($totalBiaya !== 0) {
+                $roi = ((($totalKeuntungan)-($totalBiaya)) / ($totalBiaya));
+            }
+
+            echo '<th>';
+            if ($totalBiaya !== 0) {
+            echo '<span style="color: purple;">' . round($roi, 2) . ' %</span>';
+            } else {
+            echo '<span style="color: purple;">- %</span>';
+            }
+            echo '</th>';
+            ?>
             <th> </th>
             <th> </th>
             <th> </th>

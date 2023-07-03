@@ -13,7 +13,8 @@ class keuntungan extends CI_Controller {
 	public function index()
 	{
 		$data['judul']="Halaman Data Keuntungan";
-		$data['economic_keuntungan']=$this->economic_keuntungan->get();
+		$data['economic_keuntungan'] = $this->economic_keuntungan->getKeuntunganId($this->session->userdata('id_public'));
+		// $data['economic_keuntungan']=$this->economic_keuntungan->get();
 		$this->load->view('user/header');
 		$this->load->view('user/keuntungan/vw_keuntungan',$data);
 		$this->load->view('user/footer');
@@ -27,6 +28,7 @@ class keuntungan extends CI_Controller {
 	}
 	function tambah()
 	{
+		$data['economic_keuntungan'] = $this->economic_keuntungan->get2($this->session->userdata('id_public')); 
 		$data['judul'] = "Halaman Tambah Data Keuntungan";
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -63,6 +65,7 @@ class keuntungan extends CI_Controller {
 				'keuntungan_tahun3' => $this->input->post('keuntungan_tahun3'),
 				'keuntungan_tahun4' => $this->input->post('keuntungan_tahun4'),
 				'keuntungan_tahun5' => $this->input->post('keuntungan_tahun5'),
+				'id_public' => $this->session->userdata('id_public'),
 				
 			];
 			$this-> economic_keuntungan->insert($data);

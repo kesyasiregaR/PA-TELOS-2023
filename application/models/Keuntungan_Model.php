@@ -21,6 +21,20 @@ class Keuntungan_Model extends CI_Model
         $query = $this->db->get();
         return $query->row_array();
     }
+    public function get2($id)
+    {
+        $this->db->from($this->table);
+        $this->db->where('id_public', $id);
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function getKeuntunganId($id)
+    {
+        $this->db->from($this->table);
+        $this->db->where('id_public', $id);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
     public function update($data, $where)
     {
         $this->db->update($this->table, $data, array('id_economic_keuntungan' => $where));
