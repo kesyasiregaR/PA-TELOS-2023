@@ -29,12 +29,12 @@
                             </select>
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="name_of_activity">Nama Aktivitas</label>
                             <input name="name_of_activity" type="text" value="<?= set_value('name_of_activity'); ?>" class="form-control"
                                 id="name_of_activity" >
                             <?= form_error('name_of_activity', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="start_date">Tanggal Mulai</label>
                             <input name="start_date" type="date" value="<?= set_value('start_date'); ?>"
@@ -47,7 +47,7 @@
                                 class="form-control" id="end_date" >
                             <?= form_error('end_date', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
-
+                        
                        
                         <button type="submit" name="tambah" class="btn btn-info float-right">Simpan</button>
                     </form>

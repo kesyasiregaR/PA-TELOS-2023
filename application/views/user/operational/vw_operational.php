@@ -36,7 +36,6 @@
                                 <td><?= $i; ?></td>
                                 <td><?= $us['name']; ?></td>
                                 <td>
-                                    <!-- untuk kolom Status -->
                                     <?php $description_after_perfomance = $us['description_after_perfomance']. $description_after_information = $us['description_after_information']. $description_after_economic = $us['description_after_economic']. $description_after_control = $us['description_after_control']. $description_after_efficiency = $us['description_after_efficiency']. $description_after_services = $us['description_after_services']; ?>
                                     <?php if ( $description_after_perfomance  !== "Bagus" && $description_after_information !== "Akurat" && $description_after_economic !== "Efisien" && $description_after_control !== "Efektif" && $description_after_efficiency !== "Optimal" && $description_after_services !=="Memuaskan"): ?>
                                     <!-- <p><?php echo ($description_after_perfomance); ?></p> -->

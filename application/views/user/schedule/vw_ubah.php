@@ -30,11 +30,11 @@
 							</select>
 							<?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="name_of_activity">Nama Aktivitas</label>
 							<input name="name_of_activity" value="<?= $schedule['name_of_activity']; ?>" type="text" class="form-control" id="name_of_activity">
 							<?= form_error('name_of_activity', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<label for="start_date">Tanggal Mulai</label>
 							<input name="start_date" value="<?= $schedule['start_date']; ?>" type="date" class="form-control" id="start_date" placeholder="">
@@ -45,6 +45,7 @@
 							<input name="end_date" value="<?= $schedule['end_date']; ?>" type="date" class="form-control" id="end_date" placeholder="">
 							<?= form_error('end_date', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
+						
 
 						<a href="<?= base_url('user/schedule') ?>" class="btn btn-danger">Tutup</a>
 						<button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>
