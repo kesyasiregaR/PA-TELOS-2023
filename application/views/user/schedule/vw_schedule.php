@@ -45,7 +45,7 @@
                                     <?php
                                     $end_date = new DateTime($us['end_date']); // Mengubah string menjadi objek DateTime
                                     $current_date = new DateTime(); // Mendapatkan tanggal saat ini
-                                    $six_months_ago = $current_date->modify('+6 months'); // Mendapatkan tanggal 6 bulan yang lalu
+                                    $six_months_ago = $current_date->modify('+6 months'); // Mendapatkan tanggal 6 bulan
 
                                     if ($end_date > $six_months_ago) {
                                         echo "<p style='color: green;'><b>Layak</p>";
