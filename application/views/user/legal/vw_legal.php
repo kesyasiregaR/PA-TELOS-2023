@@ -8,14 +8,14 @@
             Legalitas
         </li>
     </ol>
-    <h2 class="h3 mb-2 text-gray-800"><?=$judul;?></h2>
+    <h2 class="h3 mb-2 text-gray-800"><?= $judul; ?></h2>
 
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
-        <?= $this->session->flashdata('message');?>
+        <?= $this->session->flashdata('message'); ?>
         <div class="card-header py-3">
-            <a href=<?=base_url('user/Legal/tambah');?> class="btn btn-info">Tambah Data</a>
+            <a href=<?= base_url('user/Legal/tambah'); ?> class="btn btn-info">Tambah Data</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -36,22 +36,29 @@
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach ($legal as $us) : ?>
-                        <tr>
-                            <td><?=$i;?></td>
-                            <td><?= $us['name']; ?></td>
-                            <td><?= $us['jenis'];?></td>
-                            <td><?= $us['nama_jenis_produk'];?></td>
-                            <td><?= $us['description'];?></td>
-                            <td><?= $us['status'];?></td>
-                            <td> 
-                                    <!-- untuk kolom Status -->
-                            </td>
-                            <td>
-                            <a href="<?= base_url('User/legal/hapus/').$us['id_legal'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
-                                <a href="<?= base_url('User/legal/edit/').$us['id_legal'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
-                            </td>
-                        </tr>
-                        <?php $i++;?>
+                            <tr>
+                                <td><?= $i; ?></td>
+                                <td><?= $us['name']; ?></td>
+                                <td><?= $us['jenis']; ?></td>
+                                <td><?= $us['nama_jenis_produk']; ?></td>
+                                <td><?= $us['description']; ?></td>
+                                <td><?= $us['status']; ?></td>
+                                <td>
+                                    <?php $status = $us['status']; ?>
+                                    <?php if ($status == 'Aktif') : ?>
+                                        <!-- <p><?php echo ($status); ?></p> -->
+                                        <p>Layak</p>
+                                    <?php else : ?>
+                                        <!-- <p> <?php echo ($status); ?></p> -->
+                                        <p>Tidak Layak</p>
+                                    <?php endif; ?>
+                                </td>
+                                <td>
+                                    <a href="<?= base_url('User/legal/hapus/') . $us['id_legal']; ?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
+                                    <a href="<?= base_url('User/legal/edit/') . $us['id_legal']; ?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit"><i class="fa fa-edit"></i></a>
+                                </td>
+                            </tr>
+                            <?php $i++; ?>
                         <?php endforeach; ?>
 
 
