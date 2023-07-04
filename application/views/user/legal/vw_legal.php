@@ -24,8 +24,8 @@
                         <tr>
                             <th>No</th>
                             <th>Nama Projek</th>
-                            <th>Jenis</th>
-                            <th>Nama_Jenis_Produk</th>
+                            <th>Kategori</th>
+                            <th>Jenis Kategori</th>
                             <th>Deskripsi</th>
                             <th>Status Legal</th>
                             <th>Status</th>
@@ -47,10 +47,10 @@
                                     <?php $status = $us['status']; ?>
                                     <?php if ($status == 'Aktif') : ?>
                                         <!-- <p><?php echo ($status); ?></p> -->
-                                        <p>Layak</p>
+                                        <p> <span style="color:  green;"> <b> Layak </b> </span> </p>
                                     <?php else : ?>
                                         <!-- <p> <?php echo ($status); ?></p> -->
-                                        <p>Tidak Layak</p>
+                                        <p> <span style="color:  red;"> <b> Tidak Layak </b> </span> </p>
                                     <?php endif; ?>
                                 </td>
                                 <td>

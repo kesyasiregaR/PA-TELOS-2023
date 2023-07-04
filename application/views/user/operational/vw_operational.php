@@ -39,10 +39,10 @@
                                     <?php $description_after_perfomance = $us['description_after_perfomance']. $description_after_information = $us['description_after_information']. $description_after_economic = $us['description_after_economic']. $description_after_control = $us['description_after_control']. $description_after_efficiency = $us['description_after_efficiency']. $description_after_services = $us['description_after_services']; ?>
                                     <?php if ( $description_after_perfomance  !== "Bagus" && $description_after_information !== "Akurat" && $description_after_economic !== "Efisien" && $description_after_control !== "Efektif" && $description_after_efficiency !== "Optimal" && $description_after_services !=="Memuaskan"): ?>
                                     <!-- <p><?php echo ($description_after_perfomance); ?></p> -->
-                                    <p>Tidak Layak</p>
+                                    <p> <span style = "color:  red;"> <b> Tidak Layak </b> </span> </p>
                                 <?php else: ?>
                                     <!-- <p> <?php echo ($description_after_perfomance ); ?></p> -->
-                                    <p>Layak</p>
+                                    <p> <span style = "color:  green;"> <b> Layak </b> </span> </p>
                                 <?php endif; ?>
 
                                 </td>
