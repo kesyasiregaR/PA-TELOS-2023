@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/home'); ?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">
-            Master Data
+            Economic
         </li>
     </ol>
     <h2 class="h3 mb-2 text-gray-800"><?=$judul;?></h2>
@@ -20,16 +20,7 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="1">
-                <div class="form-group">
-                <div class="form-group">
-                            <label for="name">Nama Projek</label>
-                            <select class="form-control" id="exampleFormControlSelect1" name="name">
-                                <?php foreach ($dataproject as $us) : ?>
-                                    <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+
                 <thead>
                 <tr>
                 <th>No</th>
@@ -379,12 +370,20 @@
              <th> </th>
             <th> <span style="color: black;"> Status </span></th>
             <th>
-            <?php if ( $pp <= 5 ): ?>
-                    <span style = "color:  green";> <b> <p>Layak</p> </b> </span> 
-
-            <?php else: ?>
-                <span style = "color: red;"> <b> <p>Tidak Layak </b> </span> </p>
-                <?php endif; ?> </th>
+            <?php
+                if ($npv > 0) {
+                    // Tindakan jika npv lebih dari atau sama dengan 0 (Layak)
+                    echo '<span style="color: green;"><b>Layak</b></span>';
+                } elseif ($pp <= 5 || $roi >0 ) {
+                    // Tindakan jika pp atau roi kurang dari atau sama dengan 5 (Tidak Layak)
+                    echo '<span style="color: red;"><b>Tidak Layak</b></span>';
+                } else {
+                    // Tindakan jika tidak memenuhi kondisi di atas (Tidak Layak)
+                    echo '<span style="color: green;"><b>Layak</b></span>';
+                    echo '<span style="color: red;"><b>Tidak Layak</b></span>';
+                }
+                ?> 
+                </th>
             <th> </th>
             <th> </th>
             <th> </th>
