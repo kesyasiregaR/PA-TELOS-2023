@@ -30,11 +30,11 @@
 							</select>
 							<?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
-						<!-- <div class="form-group">
+						<div class="form-group">
 							<label for="name_of_activity">Nama Aktivitas</label>
 							<input name="name_of_activity" value="<?= $schedule['name_of_activity']; ?>" type="text" class="form-control" id="name_of_activity">
 							<?= form_error('name_of_activity', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div> -->
+						</div>
 						<div class="form-group">
 							<label for="start_date">Tanggal Mulai</label>
 							<input name="start_date" value="<?= $schedule['start_date']; ?>" type="date" class="form-control" id="start_date" placeholder="">

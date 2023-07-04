@@ -15,7 +15,8 @@ class legal extends CI_Controller
     public function index()
     {
         $data['judul'] = "Halaman Data Legal";
-        $data['legal'] = $this->legal->get();
+        $data['legal'] = $this->legal->getLegalId($this->session->userdata('id_public'));
+        // $data['legal'] = $this->legal->get();
         $this->load->view('user/header');
         $this->load->view('user/legal/vw_legal', $data);
         $this->load->view('user/footer');
@@ -29,11 +30,12 @@ class legal extends CI_Controller
     }
     function tambah()
     {
+        $data['legal'] = $this->legal->get2($this->session->userdata('id_public'));
         $data['judul'] = "Halaman Tambah Data Legal";
         $data['dataproject'] = $this->dataproject->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $this->form_validation->set_rules('name', 'Nama technological', 'required', [
+        $this->form_validation->set_rules('name', 'Nama legal', 'required', [
             'required' => 'Nama Wajib di isi'
         ]);
         $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
@@ -56,11 +58,13 @@ class legal extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
+                'id_public' => $this->input->post('id_public'), //ditambah adib
                 'name' => $this->input->post('name'),
                 'jenis' => $this->input->post('jenis'),
                 'nama_jenis_produk' => $this->input->post('nama_jenis_produk'),
                 'description' => $this->input->post('description'),
                 'status' => $this->input->post('status'),
+                'id_public' => $this->session->userdata('id_public'),
 
             ];
             $this->legal->insert($data);

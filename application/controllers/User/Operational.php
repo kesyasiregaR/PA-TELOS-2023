@@ -15,7 +15,8 @@ class operational extends CI_Controller
 	public function index()
 	{
 		$data['judul'] = "Halaman Data operational";
-		$data['operational'] = $this->operational->get();
+		$data['operational'] = $this->operational->getOperationalId($this->session->userdata('id_public'));
+		// $data['operational'] = $this->operational->get();
 		$this->load->view('user/header');
 		$this->load->view('user/operational/vw_operational', $data);
 		$this->load->view('user/footer');
@@ -38,12 +39,12 @@ class operational extends CI_Controller
 	function tambah()
 	{
 		$data['judul'] = "Halaman Tambah Data Operational";
-
+        $data['operational'] = $this->operational->get2($this->session->userdata('id_public')); 
 		$data['dataproject'] = $this->dataproject->get();
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('name', 'Nama technological', 'required', [
+		$this->form_validation->set_rules('name', 'Nama operational', 'required', [
 			'required' => 'Nama Wajib di isi'
 		]);
 		$this->form_validation->set_rules('description_before_perfomance', 'deskripsi_before_perfomance operational', 'required', [
@@ -89,6 +90,7 @@ class operational extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
+				'id_public' => $this->input->post('id_public'), //ditambah adib
 				'name' => $this->input->post('name'),
 				'description_before_perfomance' => $this->input->post('description_before_perfomance'),
 				'description_after_perfomance' => $this->input->post('description_after_perfomance'),
@@ -102,6 +104,7 @@ class operational extends CI_Controller
 				'description_after_efficiency' => $this->input->post('description_after_efficiency'),
 				'description_before_services' => $this->input->post('description_before_services'),
 				'description_after_services' => $this->input->post('description_after_services'),
+				'id_public' => $this->session->userdata('id_public'),
 			];
 			$this->operational->insert($data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data operational Berhasil Ditambah!</div>');
@@ -116,7 +119,7 @@ class operational extends CI_Controller
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('name', 'Nama technological', 'required', [
+		$this->form_validation->set_rules('name', 'Nama operational', 'required', [
 			'required' => 'Nama Wajib di isi'
 		]);
 		$this->form_validation->set_rules('description_before_perfomance', 'deskripsi_before_perfomance operational', 'required', [

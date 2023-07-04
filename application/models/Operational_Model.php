@@ -14,6 +14,13 @@ class Operational_Model extends CI_Model
         $query = $this->db->get();
         return $query->result_array();
     }
+    public function get2($id)
+    {
+        $this->db->from($this->table);
+        $this->db->where('id_public', $id);
+        $query = $this->db->get();
+        return $query->result();
+    }
     public function getOperationalId($id)
     {
         $this->db->from($this->table);
