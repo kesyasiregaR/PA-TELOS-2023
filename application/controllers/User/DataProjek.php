@@ -14,8 +14,7 @@ class dataprojek extends CI_Controller {
 	public function index()
 	{
 		$data['judul']="Halaman Data Project";
-		$data['dataproject']=$this->dataproject->get();
-		$data['public']=$this->public->get();
+		$data['dataproject'] = $this->dataproject->getDataprojectId($this->session->userdata('id_public'));
 		$this->load->view('user/header');
 		$this->load->view('user/dataprojek/vw_dataprojek',$data);
 		$this->load->view('user/footer');
@@ -29,6 +28,7 @@ class dataprojek extends CI_Controller {
 	}
 	function tambah()
 	{
+		$data['dataproject'] = $this->dataproject->get2($this->session->userdata('id_public')); 
 		$data['judul'] = "Halaman Tambah Data Projek";
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -54,6 +54,7 @@ class dataprojek extends CI_Controller {
 				'name' => $this->input->post('name'),
 				'description' => $this->input->post('description'),
 				'team_name' => $this->input->post('team_name'),
+				'id_public' => $this->session->userdata('id_public'),
 		
 			];
 			$this->dataproject->insert($data);

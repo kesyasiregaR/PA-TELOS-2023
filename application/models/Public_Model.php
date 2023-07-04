@@ -49,5 +49,15 @@ class Public_Model extends CI_Model
         $this->db->delete($this->table,);
         return $this->db->affected_rows();
     }
+    public function cetak()
+    {
+        $id = $this->session->userdata('id_public');
+        $this->db->select('c.*, p.alamat as alamat,p.status as status');
+        $this->db->from('calonsiswa c');
+        $this->db->join('pendaftaran p', 'p.id_public = c.id_public');
+        $this->db->where('c.id_public', $id);
+        $query = $this->db->get();
+        return $query->result_array();
+    }
     
 }

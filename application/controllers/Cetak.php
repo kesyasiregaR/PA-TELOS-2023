@@ -11,9 +11,9 @@ class Cetak extends CI_Controller
     {
         parent::__construct();
         // is_logged_in2();
-        $this->load->model('CalonSiswa_Model', 'calonsiswa');
-        $this->load->model('PendaftaranCalonSiswa_Model', 'pendaftaran');
-        $this->load->model('Pembayaran_Model', 'pembayaran');
+        $this->load->model('Public_Model', 'public');
+        // $this->load->model('DataProject_Model', 'dataproject');
+        $this->load->model('Technological_Model', 'technological');
         $this->load->model('Auth_Model', 'calon');
 
     }
@@ -22,7 +22,7 @@ class Cetak extends CI_Controller
     {
        
 		$data['judul']="Bukti Pendaftaran";
-        $data['calonsiswa'] = $this->calonsiswa->cetak();
+        $data['technological'] = $this->technological->getTechnologicalId($this->session->userdata('id_public'));
 
         $this->load->library('pdf');
         $this->pdf->setPaper('A4', 'potrait');

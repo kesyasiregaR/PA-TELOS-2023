@@ -16,6 +16,7 @@
         <?= $this->session->flashdata('message'); ?>
         <div class="card-header py-3">
             <a href=<?= base_url('user/Technological/tambah'); ?> class="btn btn-info">Tambah Data</a>
+            <a href=<?= base_url('cetak'); ?> class="btn btn-success">Export PDF</a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -51,8 +52,10 @@
                                 <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td>
                                 <td> 
                                     <!-- untuk kolom Status -->
-                                    <?php $Date = $us['Date']  ; ?>
-                                    <?php if ( $Date >= '2017'): ?>
+                                    <?php $status;?>
+                                    <?php  $status = 'Date'?>
+                                    <?php $status = $us['Date']  ; ?>
+                                    <?php if ( $status >= '2017'): ?>
                                     <p> <span style = "color:  green;"> <b> Layak </b> </span> </p>
 
                                 <?php else: ?>

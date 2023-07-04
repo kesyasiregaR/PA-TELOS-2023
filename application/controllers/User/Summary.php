@@ -15,6 +15,8 @@ class summary extends CI_Controller
     {
         $data['judul'] = "Halaman Data summary";
         $data['summary'] = $this->summary->get();
+        $data['technological'] = $this->summary->get();
+        $data['economic'] = $this->summary->get();
         $this->load->view('user/header');
         $this->load->view('user/summary/vw_summary', $data);
         $this->load->view('user/footer');

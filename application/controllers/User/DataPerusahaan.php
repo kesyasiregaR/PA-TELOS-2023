@@ -13,7 +13,8 @@ class dataperusahaan extends CI_Controller {
 	public function index()
 	{
 		$data['judul']="Halaman Data Usaha";
-		$data['economic_data_perusahaan']=$this->economic_data_perusahaan->get();
+		$data['economic_data_perusahaan'] = $this->economic_data_perusahaan->getDataPerusahaanId($this->session->userdata('id_public'));
+		// $data['economic_data_perusahaan']=$this->economic_data_perusahaan->get();
 		$this->load->view('user/header');
 		$this->load->view('user/dataperusahaan/vw_dataperusahaan',$data);
 		$this->load->view('user/footer');
@@ -28,6 +29,7 @@ class dataperusahaan extends CI_Controller {
 	function tambah()
 	{
 		$data['judul'] = "Halaman Tambah Data Usaha";
+		$data['economic_data_perusahaan'] = $this->economic_data_perusahaan->get2($this->session->userdata('id_public')); 
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
@@ -46,6 +48,7 @@ class dataperusahaan extends CI_Controller {
 			$data = [
 				'tingkat_pengembalian' => $this->input->post('tingkat_pengembalian'),
 				'tarif_pajak' => $this->input->post('tarif_pajak'),
+				'id_public' => $this->session->userdata('id_public'),
 				// 'team_name' => $this->input->post('team_name'),
 		
 			];

@@ -12,14 +12,10 @@
 </head>
 
 <body>
-    <div style="text-align: center;">
-        <img src="<?= base_url('assets/img/kop.JPG') ?>" width="100%" height="auto" /><br />
-        <!-- <h2 class="logo"><a style="position:absolute;" class="logo"><a href="#hero"><img src="assets\img\Logo MTs Al-Furqon.png" alt="" style="width:50px; margin-right: 30px">MTS Al-FURQON</a></h2> -->
 
-    </div><br />
     <div style="text-align: center;">
         <u>
-            <h3>BUKTI DITERIMA</h3>
+            <h3>BUKTI Dokumen Kelayakan</h3>
         </u>
     </div>
     <p>Berdasarkan hasil peninjaun dan penilaian kami, maka kami menyatakan bahwa data siswa dibawah ini</p><br />
@@ -28,45 +24,34 @@
 
 
             <?php $i = 1; ?>
-            <?php foreach ($calonsiswa as $us): ?>
+            <?php foreach ($technological as $us): ?>
                 <tr>
-                    <td>Nama Lengkap</td>
+                    <td>Nama Projek</td>
                     <td>:</td>
                     <td>
-                        <?= $us['nama_lengkap']; ?>
+                        <?= $us['name']; ?>
                     </td>
                 </tr>
                 <tr>
-                    <td>Alamat</td>
+                    <td>Kategori</td>
                     <td>:</td>
                     <td>
-                        <?= $us['alamat']; ?>
+                        <?= $us['category']; ?>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Status</td>
                     <td>:</td>
                     <td>
                         <?= $us['status']; ?>
                     </td>
-                </tr>
+                </tr> -->
                 <?php $i++; ?>
             <?php endforeach; ?>
 
 
         </tbody>
     </table>
-    <br />
-    <p>Bagi siswa yang telah dinyatakan diterima bisa langsung datang kembali ke sekolah dengan menyerahkan bukti ini
-        kepada pihak sekolah</p><br />
-    <div class="row" style="padding-top:50px">
-        <div class="col-md-6">Kepala Sekolah</div>
-        <div class="col-md-6 text-right"><img src="<?= base_url('assets/img/kop.JPG') ?>" width="30%"
-                height="auto" /><br /></div>
-        <div class="col-md-6"><u>Nama Kepala Sekolah</u></div>
-        <div class="col-md-6">NIP</div>
-
-    </div>
-
-
+   
+    
 </body>

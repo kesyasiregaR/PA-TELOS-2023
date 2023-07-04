@@ -15,7 +15,8 @@
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
-            <a href=<?=base_url('user/Summary/tambah');?> class="btn btn-info">Tambah Data</a>
+            <a href="<?= site_url('cetak');?>" class="btn btn-info">Downloads</a>
+           
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -23,7 +24,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Project</th>
+                            <!-- <th>Nama Project</th> -->
                             <th>Technological</th>
                             <th>Economic</th>
                             <th>Legal</th>
@@ -31,32 +32,59 @@
                             <th>Schedule</th>
                             <th>Hasil Akhir</th>
                             <th>Status</th>
-                            <th>Aksi</th>
+                        
 
                         </tr>
                     </thead>
                     <tbody>
-                        <?php $i = 1; ?>
-                        <?php foreach ($summary as $us) : ?>
+    
                         <tr>
-                            <td><?=$i;?></td>
-                            <td><?= $us['project'];?></td>
-                            <td><?= $us['technological'];?></td>
-                            <td><?= $us['economic'];?></td>
-                            <td><?= $us['legal'];?></td>
-                            <td><?= $us['operational'];?></td>
-                            <td><?= $us['schedule'];?></td>
-                            <td><?= $us['hasil_akhir'];?></td>
-                            <td> 
-                                    <!-- untuk kolom Status -->
-                                </td>
-                            <td>
-                            <a href="<?= base_url('User/summary/hapus/').$us['id_summary'];?>" class="btn btn-xs btn-danger btn-delete"> <i class="fa fa-trash"></i></a>
-                                <a href="<?= base_url('User/summary/edit/').$us['id_summary'];?>" class="btn btn-xs btn-info btn-ed-periode" data-task="edit" ><i class="fa fa-edit"></i></a>
+                            <td>1</td>
+                            <td>  
+                                    <?php $status = ''; ?>
+                                    <?php foreach ($technological as $us) {
+                                        $status = $us['Date'];
+                                    }?>
+                                    <?php if ( $status >= '2017'): ?>
+                                    <p> <span style = "color:  green;"> <b> Layak </b> </span> </p>
+
+                                <?php else: ?>
+                                    <p> <span style = "color:  red;"> <b> Tidak Layak </b> </span> </p>
+                                    <p> Kurun waktu kelayakan = 5 tahun terakhir <p>
+                                <?php endif; ?>
                             </td>
+
+                        <td>
+                        <?php
+                        
+                        foreach ($economic as $us) {
+                            $pp=0;
+                            $npv=0;
+                            $roi=0;
+                        }
+                        ?>
+                        <?php
+                            if ($npv > 0) {
+                                // Tindakan jika npv lebih dari atau sama dengan 0 (Layak)
+                                echo '<span style="color: green;"><b>Layak</b></span>';
+                            } elseif ($pp <= 5 || $roi >0 ) {
+                                // Tindakan jika pp atau roi kurang dari atau sama dengan 5 (Tidak Layak)
+                                echo '<span style="color: red;"><b>Tidak Layak</b></span>';
+                            } else {
+                                // Tindakan jika tidak memenuhi kondisi di atas (Tidak Layak)
+                                echo '<span style="color: green;"><b>Layak</b></span>';
+                                echo '<span style="color: red;"><b>Tidak Layak</b></span>';
+                            }
+                            ?>   
+                            </td>
+
+                        <td> </td>
+                        <td>  </td>
+                        <td> </td>
+                        <td> </td> 
+                        <td> </td> 
                         </tr>
-                        <?php $i++;?>
-                        <?php endforeach; ?>
+
 
 
                     </tbody>

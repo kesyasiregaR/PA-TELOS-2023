@@ -15,7 +15,8 @@ class technological extends CI_Controller
     public function index()
     {
         $data['judul'] = "Halaman Data Technological";
-        $data['technological'] = $this->technological->get();
+        $data['technological'] = $this->technological->getTechnologicalId($this->session->userdata('id_public'));
+        // $data['technological'] = $this->technological->get();
         $this->load->view('user/header');
         $this->load->view('user/technological/vw_technological', $data);
         $this->load->view('user/footer');
@@ -29,6 +30,7 @@ class technological extends CI_Controller
     }
     function tambah()
     {
+        $data['technological'] = $this->technological->get2($this->session->userdata('id_public')); 
         $data['judul'] = "Halaman Tambah Data Technological";
         $data['dataproject'] = $this->dataproject->get();
 
@@ -70,6 +72,7 @@ class technological extends CI_Controller
                 'price' => $this->input->post('price'),
                 'Date' => $this->input->post('Date'),
                 'source' => $this->input->post('source'),
+                'id_public' => $this->session->userdata('id_public'),
 
             ];
             $this->technological->insert($data);
