@@ -58,19 +58,20 @@
                             </td>
 
                         <td>
-                        <?php
-                        
-                        foreach ($economic as $us) {
-                            $pp=0;
-                            $npv=0;
-                            $roi=0;
-                        }
-                        ?>
-                        <?php
+                                                    <?php
+                            $pp = 0;
+                            $npv = 0;
+                            $roi = 0;
+
+                            foreach ($economic as $us) {
+                                // Perform your calculations here
+                                // Update the values of $pp, $npv, and $roi as needed
+                            }
+
                             if ($npv > 0) {
                                 // Tindakan jika npv lebih dari atau sama dengan 0 (Layak)
                                 echo '<span style="color: green;"><b>Layak</b></span>';
-                            } elseif ($pp <= 5 || $roi >0 ) {
+                            } elseif ($pp <= 5 || $roi > 0) {
                                 // Tindakan jika pp atau roi kurang dari atau sama dengan 5 (Tidak Layak)
                                 echo '<span style="color: red;"><b>Tidak Layak</b></span>';
                             } else {
@@ -78,7 +79,7 @@
                                 echo '<span style="color: green;"><b>Layak</b></span>';
                                 echo '<span style="color: red;"><b>Tidak Layak</b></span>';
                             }
-                            ?>   
+                            ?>
                             </td>
 
                         <td> </td>
