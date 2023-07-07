@@ -15,19 +15,23 @@
 
     <div style="text-align: center;">
         <u>
-            <h3>Bukti Dokumen Kelayakan</h3>
+            <h3>BUKTI Dokumen Kelayakan</h3>
         </u>
     </div>
-    <p>Berdasarkan hasil penilaian sistem kelayakan, maka berikut ini adalah dokumen kelayakan dengan rincian di bawah ini, </p><br />
+    <p>Berdasarkan hasil peninjaun dan penilaian kami, maka kami menyatakan bahwa data siswa dibawah ini</p><br />
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tbody>
 
 
             <?php $i = 1; ?>
+<<<<<<< HEAD
             <?php foreach ($dataproject as $us): ?>
                 <tr> 
                     <td><span style = "color: green"><b> [Data Projek] </span></td> </td>
                 </tr>
+=======
+            <?php foreach ($technological as $us): ?>
+>>>>>>> 22c299940798ef63b2f9f6cf96a617212949ebd1
                 <tr>
                     <td>Nama Projek</td>
                     <td>:</td>
@@ -36,6 +40,7 @@
                     </td>
                 </tr>
                 <tr>
+<<<<<<< HEAD
                     <td>Deskripsi</td>
                     <td>:</td>
                     <td>
@@ -59,18 +64,21 @@
                     <td> </td>
                 </tr>
                 <tr>
+=======
+>>>>>>> 22c299940798ef63b2f9f6cf96a617212949ebd1
                     <td>Kategori</td>
                     <td>:</td>
                     <td>
                         <?= $us['category']; ?>
                     </td>
                 </tr>
-                <tr>
-                    <td>Nama Item</td>
+                <!-- <tr>
+                    <td>Status</td>
                     <td>:</td>
                     <td>
-                        <?= $us['item']; ?>
+                        <?= $us['status']; ?>
                     </td>
+<<<<<<< HEAD
                 </tr>
                 <tr>
                     <td>Spesifikasi</td>
@@ -101,6 +109,9 @@
                         echo $status; ?>
                     </td>
                 </tr>
+=======
+                </tr> -->
+>>>>>>> 22c299940798ef63b2f9f6cf96a617212949ebd1
                 <?php $i++; ?>
             <?php endforeach; ?>
             
@@ -129,7 +140,6 @@
             <?php endforeach; ?>
 
         </tbody>
-
     </table>
    
     

@@ -15,8 +15,10 @@
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
+            
             <a href="<?= site_url('cetak');?>" class="btn btn-info">Downloads</a>
-            <a href=<?= base_url('cetak'); ?> class="btn btn-success">Export PDF</a>
+
+            
            
         </div>
         <div class="card-body">
@@ -57,22 +59,18 @@
 
                         <td>
                         <?php
-                            $pp = 0;  // Deklarasi dan inisialisasi variabel di luar loop
-                            $npv = 0;
-                            $roi = 0;
-
-                            foreach ($economic as $us) {
-                                // Perbarui nilai variabel di dalam loop jika diperlukan
-                                $pp = $us['pp'];  // Misalnya, ambil nilai dari array $us
-                                $npv = $us['npv'];
-                                $roi = $us['roi'];
-                            }
-
-                            // Setelah loop, Anda dapat menggunakan variabel dengan aman
+                        
+                        foreach ($economic as $us) {
+                            $pp=0;
+                            $npv=0;
+                            $roi=0;
+                        }
+                        ?>
+                        <?php
                             if ($npv > 0) {
-                                // Tindakan jika npv lebih dari 0 (Layak)
+                                // Tindakan jika npv lebih dari atau sama dengan 0 (Layak)
                                 echo '<span style="color: green;"><b>Layak</b></span>';
-                            } elseif ($pp <= 5 || $roi > 0) {
+                            } elseif ($pp <= 5 || $roi >0 ) {
                                 // Tindakan jika pp atau roi kurang dari atau sama dengan 5 (Tidak Layak)
                                 echo '<span style="color: red;"><b>Tidak Layak</b></span>';
                             } else {
@@ -80,7 +78,7 @@
                                 echo '<span style="color: green;"><b>Layak</b></span>';
                                 echo '<span style="color: red;"><b>Tidak Layak</b></span>';
                             }
-                            ?>
+                            ?>   
                             </td>
 
                         <td> </td>
