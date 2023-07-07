@@ -16,7 +16,7 @@
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
             <a href="<?= site_url('cetak');?>" class="btn btn-info">Downloads</a>
-            <a href=<?= base_url('cetak'); ?> class="btn btn-success">Export PDF</a>
+            <a href=<?= base_url('cetak'); ?> class="btn btn-success">Download PDF</a>
            
         </div>
         <div class="card-body">
