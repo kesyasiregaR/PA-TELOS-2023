@@ -15,16 +15,16 @@
 
     <div style="text-align: center;">
         <u>
-            <h3>BUKTI Dokumen Kelayakan</h3>
+            <h3>Bukti Dokumen Kelayakan</h3>
         </u>
     </div>
-    <p>Berdasarkan hasil peninjaun dan penilaian kami, maka kami menyatakan bahwa data siswa dibawah ini</p><br />
+    <p>Berdasarkan hasil penilaian sistem kelayakan, maka berikut ini adalah dokumen kelayakan dengan rincian di bawah ini, </p><br />
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tbody>
 
 
             <?php $i = 1; ?>
-            <?php foreach ($technological as $us): ?>
+            <?php foreach ($dataproject as $us): ?>
                 <tr>
                     <td>Nama Projek</td>
                     <td>:</td>
@@ -33,24 +33,73 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Deskripsi</td>
+                    <td>:</td>
+                    <td>
+                        <?= $us['description']; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Team</td>
+                    <td>:</td>
+                    <td>
+                        <?= $us['team_name']; ?>
+                    </td>
+                </tr>
+                <?php $i++; ?>
+            <?php endforeach; ?>
+
+            <?php $i = 1; ?>
+            <?php foreach ($technological as $us): ?>
+                <tr> Technological </tr>
+                <tr>
                     <td>Kategori</td>
                     <td>:</td>
                     <td>
                         <?= $us['category']; ?>
                     </td>
                 </tr>
-                <!-- <tr>
-                    <td>Status</td>
+                <tr>
+                    <td>Nama Item</td>
                     <td>:</td>
                     <td>
-                        <?= $us['status']; ?>
+                        <?= $us['item']; ?>
                     </td>
-                </tr> -->
+                </tr>
+                <tr>
+                    <td>Spesifikasi</td>
+                    <td>:</td>
+                    <td>
+                        <?= $us['specification']; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Harga</td>
+                    <td>:</td>
+                    <td>
+                        <?= $us['price']; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal Mulai Pemakaian</td>
+                    <td>:</td>
+                    <td>
+                        <?= $us['Date']; ?>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status Kelayakan</td>
+                    <td>:</td>
+                    <td>
+                        <?= $status; ?>
+                    </td>
+                </tr>
                 <?php $i++; ?>
             <?php endforeach; ?>
 
 
         </tbody>
+
     </table>
    
     
