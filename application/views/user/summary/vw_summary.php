@@ -15,7 +15,10 @@
     <div class="card shadow mb-4">
         <?= $this->session->flashdata('message');?>
         <div class="card-header py-3">
+            
             <a href="<?= site_url('cetak');?>" class="btn btn-info">Downloads</a>
+
+            
            
         </div>
         <div class="card-body">
