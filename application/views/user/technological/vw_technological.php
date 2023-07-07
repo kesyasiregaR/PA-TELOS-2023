@@ -56,7 +56,7 @@
                                     <?php  $status = 'Date'?>
                                     <?php $status = $us['Date']  ; ?>
                                     <?php if ( $status >= '2017'): ?>
-                                    <p> <span style = "color:  green;"> <b> Layak OK </b> </span> </p>
+                                    <p> <span style = "color:  green;"> <b> Layak </b> </span> </p>
 
                                 <?php else: ?>
                                     <p> <span style = "color:  red;"> <b> Tidak Layak </b> </span> </p>
