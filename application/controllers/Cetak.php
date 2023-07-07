@@ -14,6 +14,7 @@ class Cetak extends CI_Controller
         $this->load->model('Public_Model', 'public');
         $this->load->model('DataProjek_Model', 'dataproject');
         $this->load->model('Technological_Model', 'technological');
+        $this->load->model('DataPerusahaan_Model', 'economic_data_perusahaan');
         $this->load->model('Auth_Model', 'calon');
 
     }

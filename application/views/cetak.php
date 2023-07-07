@@ -25,6 +25,9 @@
 
             <?php $i = 1; ?>
             <?php foreach ($dataproject as $us): ?>
+                <tr> 
+                    <td><span style = "color: green"><b> [Data Projek] </span></td> </td>
+                </tr>
                 <tr>
                     <td>Nama Projek</td>
                     <td>:</td>
@@ -51,7 +54,10 @@
 
             <?php $i = 1; ?>
             <?php foreach ($technological as $us): ?>
-                <tr> Technological </tr>
+                <tr> 
+                    <td><span style = "color: green"><b> [Technological] </span></td> </td>
+                    <td> </td>
+                </tr>
                 <tr>
                     <td>Kategori</td>
                     <td>:</td>
@@ -81,7 +87,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Tanggal Mulai Pemakaian</td>
+                    <td>Masa Berlaku</td>
                     <td>:</td>
                     <td>
                         <?= $us['Date']; ?>
@@ -91,12 +97,36 @@
                     <td>Status Kelayakan</td>
                     <td>:</td>
                     <td>
-                        <?= $status; ?>
+                        <?php $status = '';
+                        echo $status; ?>
                     </td>
                 </tr>
                 <?php $i++; ?>
             <?php endforeach; ?>
+            
+            <?php $i = 1; ?>
+            <?php foreach ($economic_data_perusahaan as $us): ?>
+                <tr> 
+                    <td><span style = "color: green"><b> [Laporan Keuangan] </span></td> </td>
+                    <td> Data Perusahaan </td>
+                </tr>
+                <tr>
+                    <td>Tingkat Pengembalian</td>
+                    <td>:</td>
+                    <td>
+                        <?= $us['tingkat_pengembalian']; ?> %
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tarif Pajak </td>
+                    <td>:</td>
+                    <td>
+                        <?= $us['tarif_pajak']; ?> %
+                    </td>
+                </tr>
 
+                <?php $i++; ?>
+            <?php endforeach; ?>
 
         </tbody>
 
