@@ -60,7 +60,19 @@
                             </tr>
                             <?php $i++; ?>
                         <?php endforeach; ?>
-
+                        <tfoot>
+                        <tr>
+                            <th> </th>
+                            <th>Hasil Akhir Kelayakan</th>
+                
+                        <th> </th>
+                        <th>  </th>
+                        <th> </th>
+                        <th> </th>
+                       <th>  </th>
+                        </tr>
+                    </tbody>
+                    </tfoot>
 
                     </tbody>
                 </table>
