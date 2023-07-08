@@ -52,11 +52,11 @@
                             <input name="specification" type="text" value="<?= set_value('specification'); ?>" class="form-control" id="specification" placeholder="">
                             <?= form_error('specification', '<small class="text-danger pl-3">', '</small>'); ?>
                         </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="price">Price</label>
                             <input name="price" type="text" value="<?= set_value('price'); ?>" class="form-control" id="price" placeholder="">
                             <?= form_error('price', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="Date">Awal Tahun Pemakaian </label>
                             <input name="Date" type="date" value="<?= set_value('Date'); ?>" class="form-control" id="Date" placeholder="Tahun-Bulan-Tanggal">

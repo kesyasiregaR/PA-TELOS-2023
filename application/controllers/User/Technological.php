@@ -47,9 +47,9 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('specification', 'specification technological', 'required', [
             'required' => 'Specifikation Wajib di isi'
         ]);
-        $this->form_validation->set_rules('price', 'price technological', 'required', [
-            'required' => 'Price Wajib di isi'
-        ]);
+        // $this->form_validation->set_rules('price', 'price technological', 'required', [
+        //     'required' => 'Price Wajib di isi'
+        // ]);
         $this->form_validation->set_rules('Date', 'Date technological', 'required', [
             'required' => 'Date Wajib di isi'
         ]);
@@ -69,7 +69,7 @@ class technological extends CI_Controller
                 'category' => $this->input->post('category'),
                 'item' => $this->input->post('item'),
                 'specification' => $this->input->post('specification'),
-                'price' => $this->input->post('price'),
+                // 'price' => $this->input->post('price'),
                 'Date' => $this->input->post('Date'),
                 'source' => $this->input->post('source'),
                 'id_public' => $this->session->userdata('id_public'),
@@ -99,9 +99,9 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('specification', 'specification technological', 'required', [
             'required' => 'Specifikation Wajib di isi'
         ]);
-        $this->form_validation->set_rules('price', 'price technological', 'required', [
-            'required' => 'Price Wajib di isi'
-        ]);
+        // $this->form_validation->set_rules('price', 'price technological', 'required', [
+        //     'required' => 'Price Wajib di isi'
+        // ]);
         $this->form_validation->set_rules('Date', 'Date technological', 'required', [
             'required' => 'Date Wajib di isi'
         ]);
@@ -120,7 +120,7 @@ class technological extends CI_Controller
                 'category' => $this->input->post('category'),
                 'item' => $this->input->post('item'),
                 'specification' => $this->input->post('specification'),
-                'price' => $this->input->post('price'),
+                // 'price' => $this->input->post('price'),
                 'Date' => $this->input->post('Date'),
                 'source' => $this->input->post('source'),
                 'id_technological' => $this->input->post('id_technological')

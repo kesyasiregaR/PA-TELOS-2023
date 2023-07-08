@@ -52,11 +52,11 @@
 							<input name="specification" value="<?= $technological['specification']; ?>" type="text" class="form-control" id="specification" placeholder="">
 							<?= form_error('specification', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="source">Price</label>
 							<input name="price" value="<?= $technological['price']; ?>" type="text" class="form-control" id="price" placeholder="">
 							<?= form_error('price', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<label for="Date">Awal Tahun Pemakaian</label>
 							<input name="Date" value="<?= $technological['Date']; ?>" type="date" class="form-control" id="Date" placeholder="Tahun-Bulan-Tanggal">
