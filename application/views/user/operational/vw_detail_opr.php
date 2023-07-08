@@ -15,10 +15,10 @@
                          <tbody>
                              <?php $i = 1; ?>
                              <?php foreach ($operational as $us) : ?>
-                                 <tr>
+                                 <!-- <tr>
                                      <td>Nama Projek</td>
                                      <td><?= $us['name']; ?></td>
-                                 </tr>
+                                 </tr> -->
                                  <tr>
                                      <td colspan="3"><b>Perfomance</b></td>
                                  </tr>
@@ -81,6 +81,7 @@
                                      <td>Deskripsi Sesudah</td>
                                      <td><?= $us['description_after_services']; ?></td>
                                  </tr>
+                                 
                                  <?php $i++; ?>
                              <?php endforeach; ?>
                          </tbody>

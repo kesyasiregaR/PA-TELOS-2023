@@ -20,7 +20,7 @@
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label for="name">name</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
@@ -28,7 +28,7 @@
                                 <?php endforeach; ?>
                             </select>
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
                         <div class="form-group">
                             <label for="category">Category</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="category">

@@ -16,7 +16,7 @@
         <?= $this->session->flashdata('message'); ?>
         <div class="card-header py-3">
             <a href=<?= base_url('user/Technological/tambah'); ?> class="btn btn-info">Tambah Data</a>
-            <a href=<?= base_url('cetak'); ?> class="btn btn-success">Export PDF</a>
+
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -24,12 +24,12 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Projek</th>
+                            <!-- <th>Nama Projek</th> -->
                             <th>Kategori</th>
                             <th>Item</th>
                             <th>Spesifikasi</th>
                             <th>Harga</th>
-                            <th>Awal Tahun Pemakaian</th>
+                            <th>Tanggal Pemakaian</th>
                             <th>Sumber</th>
                             <th>Status</th>
                             <th>Aksi</th>
@@ -40,13 +40,17 @@
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach ($technological as $us) : ?>
+                            <?php function rupiah($angka){
+	                        $hasil_rupiah = "Rp " . number_format($angka,0,',','.');
+	                        return $hasil_rupiah;
+                            }?>    
                             <tr>
                                 <td><?= $i; ?></td>
-                                <td><?= $us['name']; ?></td>
+                                <!-- <td><?= $us['name']; ?></td> -->
                                 <td><?= $us['category']; ?></td>
                                 <td><?= $us['item']; ?></td>
                                 <td><?= $us['specification']; ?></td>
-                                <td><?= $us['price']; ?></td>
+                                <td><?= rupiah($us['price']) ; ?></td>
                                 <td><?= $us['Date']; ?></td>
 
                                 <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td>

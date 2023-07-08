@@ -9,7 +9,7 @@ class operational extends CI_Controller
 		parent::__construct();
 		// is_logged_in2();
 		$this->load->model('Operational_Model', 'operational');
-		$this->load->model('DataProjek_Model', 'dataproject');
+		// $this->load->model('DataProjek_Model', 'dataproject');
 		$this->load->library('form_validation');
 	}
 	public function index()
@@ -40,13 +40,13 @@ class operational extends CI_Controller
 	{
 		$data['judul'] = "Halaman Tambah Data Operational";
 		$data['operational'] = $this->operational->get2($this->session->userdata('id_public'));
-		$data['dataproject'] = $this->dataproject->get();
+		// $data['dataproject'] = $this->dataproject->get();
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('name', 'Nama operational', 'required', [
-			'required' => 'Nama Wajib di isi'
-		]);
+		// $this->form_validation->set_rules('name', 'Nama operational', 'required', [
+		// 	'required' => 'Nama Wajib di isi'
+		// ]);
 		$this->form_validation->set_rules('description_before_perfomance', 'deskripsi_before_perfomance operational', 'required', [
 			'required' => 'deskripsi sesudah operational Wajib di isi'
 		]);
@@ -91,7 +91,7 @@ class operational extends CI_Controller
 		} else {
 			$data = [
 				// 'id_public' => $this->input->post('id_public'), //ditambah adib
-				'name' => $this->input->post('name'),
+				// 'name' => $this->input->post('name'),
 				'description_before_perfomance' => $this->input->post('description_before_perfomance'),
 				'description_after_perfomance' => $this->input->post('description_after_perfomance'),
 				'description_before_information' => $this->input->post('description_before_information'),
@@ -115,13 +115,13 @@ class operational extends CI_Controller
 	{
 		$data['judul'] = "Halaman Ubah";
 		$data['operational'] = $this->operational->getById($id);
-		$data['dataproject'] = $this->dataproject->get();
+		// $data['dataproject'] = $this->dataproject->get();
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('name', 'Nama operational', 'required', [
-			'required' => 'Nama Wajib di isi'
-		]);
+		// $this->form_validation->set_rules('name', 'Nama operational', 'required', [
+		// 	'required' => 'Nama Wajib di isi'
+		// ]);
 		$this->form_validation->set_rules('description_before_perfomance', 'deskripsi_before_perfomance operational', 'required', [
 			'required' => 'deskripsi sesudah operational Wajib di isi'
 		]);
@@ -167,7 +167,7 @@ class operational extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
-				'name' => $this->input->post('name'),
+				// 'name' => $this->input->post('name'),
 				'description_before_perfomance' => $this->input->post('description_before_perfomance'),
 				'description_after_perfomance' => $this->input->post('description_after_perfomance'),
 				'description_before_information' => $this->input->post('description_before_information'),
