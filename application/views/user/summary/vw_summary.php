@@ -40,7 +40,7 @@
                         </tr>
                     </thead>
                     <tbody>
-    
+                        <!-- teknologi -->
                         <tr>
                             <td>1</td>
                             <td>  
@@ -56,9 +56,9 @@
                                     <p> Kurun waktu kelayakan = 5 tahun terakhir <p>
                                 <?php endif; ?>
                             </td>
-
+                            <!-- ekonomi -->
                         <td>
-                                                    <?php
+                    <?php
                             $pp = 0;
                             $npv = 0;
                             $roi = 0;
@@ -81,11 +81,17 @@
                             }
                             ?>
                             </td>
-
-                        <td> </td>
+                        <!-- legal -->
+                        <td>
+                            
+                             </td>
+                        <!-- operational -->
                         <td>  </td>
+                        <!-- skejul -->
                         <td> </td>
+                        <!-- hasil akhir -->
                         <td> </td> 
+                        <!-- status -->
                         <td> </td> 
                         </tr>
 

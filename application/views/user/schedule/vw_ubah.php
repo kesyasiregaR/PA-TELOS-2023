@@ -21,7 +21,7 @@
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_schedule" value="<?= $schedule['id_schedule']; ?>">
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="name">Nama Projek</label>
 							<select class="form-control" id="exampleFormControlSelect1" name="name">
 								<?php foreach ($dataproject as $us) : ?>
@@ -29,7 +29,7 @@
 								<?php endforeach; ?>
 							</select>
 							<?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+						</div> -->
 						<div class="form-group">
 							<label for="name_of_activity">Nama Aktivitas</label>
 							<input name="name_of_activity" value="<?= $schedule['name_of_activity']; ?>" type="text" class="form-control" id="name_of_activity">

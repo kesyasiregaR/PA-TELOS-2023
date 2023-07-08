@@ -34,13 +34,13 @@ class schedule extends CI_Controller
 		$data['dataproject'] = $this->dataproject->get();
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$this->form_validation->set_rules('name', 'name schedule', 'required', [
-			'required' => 'name Wajib di isi'
-		]);
+		// $this->form_validation->set_rules('name', 'name schedule', 'required', [
+		// 	'required' => 'name Wajib di isi'
+		// ]);
 
-		$this->form_validation->set_rules('name_of_activity', 'name_of_activity schedule', 'required', [
-			'required' => 'Name schedule Wajib di isi'
-		]);
+		// $this->form_validation->set_rules('name_of_activity', 'name_of_activity schedule', 'required', [
+		// 	'required' => 'Name schedule Wajib di isi'
+		// ]);
 		$this->form_validation->set_rules('start_date', 'start_date schedule', 'required', [
 			'required' => 'start_date schedule Wajib di isi'
 		]);
@@ -55,7 +55,7 @@ class schedule extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
-				'name' => $this->input->post('name'),
+				// 'name' => $this->input->post('name'),
 				'name_of_activity' => $this->input->post('name_of_activity'),
 				'start_date' => $this->input->post('start_date'),
 				'end_date' => $this->input->post('end_date'),
@@ -75,9 +75,9 @@ class schedule extends CI_Controller
 		$data['dataproject'] = $this->dataproject->get();
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$this->form_validation->set_rules('name', 'name technological', 'required', [
-			'required' => 'name Wajib di isi'
-		]);
+		// $this->form_validation->set_rules('name', 'name technological', 'required', [
+		// 	'required' => 'name Wajib di isi'
+		// ]);
 		$this->form_validation->set_rules('name_of_activity', 'name_of_activity schedule', 'required', [
 			'required' => 'Name schedule Wajib di isi'
 		]);
@@ -96,7 +96,7 @@ class schedule extends CI_Controller
 		} else {
 			$data = [
 				// 'id_public' => $this->input->post('id_public'), //ditambah adib
-				'name' => $this->input->post('name'),
+				// 'name' => $this->input->post('name'),
 				'name_of_activity' => $this->input->post('name_of_activity'),
 				'start_date' => $this->input->post('start_date'),
 				'end_date' => $this->input->post('end_date'),
