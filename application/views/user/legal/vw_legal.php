@@ -25,7 +25,7 @@
                             <th>No</th>
                             <!-- <th>Nama Projek</th> -->
                             <th>Kategori</th>
-                            <th>Jenis Kategori</th>
+                            <th>Jenis Item</th>
                             <th>Deskripsi</th>
                             <th>Status Legal</th>
                             <th>Status</th>
