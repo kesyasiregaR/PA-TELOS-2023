@@ -21,14 +21,15 @@
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
-                            <label for="Nama Projek">Nama Projek</label>
+                            <!-- <label for="Nama Projek">Nama Projek</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
                                     <option value="<?= $us['name']; ?>"><?= $us['name']; ?></option>
                                 <?php endforeach; ?>
                             </select>
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
+                        
                         <div class="form-group">
                             <label for="name_of_activity">Nama Aktivitas</label>
                             <input name="name_of_activity" type="text" value="<?= set_value('name_of_activity'); ?>" class="form-control"

@@ -25,7 +25,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Projek</th>
+                            <!-- <th>Nama Projek</th> -->
                             <th>Nama Aktivitas</th>
                             <th>Tanggal Mulai</th>
                             <th>Tanggal Berakhir</th>
@@ -39,7 +39,7 @@
                         <?php foreach ($schedule as $us) : ?>
                             <tr>
                                 <td><?= $i; ?></td>
-                                <td><?= $us['name']; ?></td>
+                                <!-- <td><?= $us['name']; ?></td> -->
                                 <td><?= $us['name_of_activity']; ?></td>
                                 <td><?= $us['start_date']; ?></td>
                                 <td><?= $us['end_date']; ?></td>
