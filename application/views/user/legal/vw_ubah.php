@@ -21,8 +21,7 @@
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_legal" value="<?= $legal['id_legal']; ?>">
-						
-						<div class="form-group">
+						<!-- <div class="form-group">
                             <label for="name">Nama Projek</label>
                             <select class="form-control" id="exampleFormControlSelect1" name="name">
                                 <?php foreach ($dataproject as $us) : ?>
@@ -30,7 +29,7 @@
                                 <?php endforeach; ?>
                             </select>
                             <?= form_error('name', '<small class="text-danger pl-3">', '</small>'); ?>
-                        </div>
+                        </div> -->
 						<div class="form-group">
                             <label for="jenis">Kategori</label>
                                 <select class="form-control" id="exampleFormControlSelect1" name="jenis">

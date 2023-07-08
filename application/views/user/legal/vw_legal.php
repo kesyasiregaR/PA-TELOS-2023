@@ -23,7 +23,7 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Projek</th>
+                            <!-- <th>Nama Projek</th> -->
                             <th>Kategori</th>
                             <th>Jenis Kategori</th>
                             <th>Deskripsi</th>
@@ -38,7 +38,7 @@
                         <?php foreach ($legal as $us) : ?>
                             <tr>
                                 <td><?= $i; ?></td>
-                                <td><?= $us['name']; ?></td>
+                                <!-- <td><?= $us['name']; ?></td> -->
                                 <td><?= $us['jenis']; ?></td>
                                 <td><?= $us['nama_jenis_produk']; ?></td>
                                 <td><?= $us['description']; ?></td>

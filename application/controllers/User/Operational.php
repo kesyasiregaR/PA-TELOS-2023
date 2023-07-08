@@ -39,7 +39,7 @@ class operational extends CI_Controller
 	function tambah()
 	{
 		$data['judul'] = "Halaman Tambah Data Operational";
-        $data['operational'] = $this->operational->get2($this->session->userdata('id_public')); 
+		$data['operational'] = $this->operational->get2($this->session->userdata('id_public'));
 		$data['dataproject'] = $this->dataproject->get();
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -90,7 +90,7 @@ class operational extends CI_Controller
 			$this->load->view("user/footer");
 		} else {
 			$data = [
-				'id_public' => $this->input->post('id_public'), //ditambah adib
+				// 'id_public' => $this->input->post('id_public'), //ditambah adib
 				'name' => $this->input->post('name'),
 				'description_before_perfomance' => $this->input->post('description_before_perfomance'),
 				'description_after_perfomance' => $this->input->post('description_after_perfomance'),

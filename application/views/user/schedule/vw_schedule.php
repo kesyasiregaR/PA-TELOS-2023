@@ -18,17 +18,6 @@
         <div class="card-header py-3">
             <a href=<?= base_url('user/Schedule/tambah'); ?> class="btn btn-info">Tambah Data</a>
         </div>
-        <div class="col-sm-12 col-md-6">
-            <div class="dt-buttons btn-group flex-wrap">
-                <button class="btn btn-secondary buttons-copy buttons-html5" tabindex="0" aria-controls="table_alumni" type="button"><span>Copy</span></button>
-                <button class="btn btn-secondary buttons-csv buttons-html5" tabindex="0" aria-controls="table_alumni" type="button"><span>CSV</span></button>
-                <button class="btn btn-secondary buttons-excel buttons-html5" tabindex="0" aria-controls="table_alumni" type="button"><span>Excel</span></button>
-                <button class="btn btn-secondary buttons-pdf buttons-html5" tabindex="0" aria-controls="table_alumni" type="button"><span>PDF</span></button>
-                <button class="btn btn-secondary buttons-print" tabindex="0" aria-controls="table_alumni" type="button"><span>Print</span></button>
-                <div class="btn-group"><button class="btn btn-secondary buttons-collection dropdown-toggle buttons-colvis" tabindex="0" aria-controls="table_alumni" type="button" aria-haspopup="true" aria-expanded="false">
-                        <span>Column visibility</span></button></div>
-            </div>
-        </div>
 
         <div class="card-body">
             <div class="table-responsive">

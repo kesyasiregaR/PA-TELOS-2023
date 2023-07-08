@@ -35,9 +35,9 @@ class legal extends CI_Controller
         $data['dataproject'] = $this->dataproject->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-        $this->form_validation->set_rules('name', 'Nama legal', 'required', [
-            'required' => 'Nama Wajib di isi'
-        ]);
+        // $this->form_validation->set_rules('name', 'Nama legal', 'required', [
+        //     'required' => 'Nama Wajib di isi'
+        // ]);
         $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
             'required' => 'Jenis Produk  Wajib di isi'
         ]);
@@ -58,8 +58,8 @@ class legal extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
-                'id_public' => $this->input->post('id_public'), //ditambah adib
-                'name' => $this->input->post('name'),
+               
+                // 'name' => $this->input->post('name'),
                 'jenis' => $this->input->post('jenis'),
                 'nama_jenis_produk' => $this->input->post('nama_jenis_produk'),
                 'description' => $this->input->post('description'),
@@ -79,9 +79,9 @@ class legal extends CI_Controller
         $data['legal'] = $this->legal->getById($id);
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-        $this->form_validation->set_rules('name', 'Nama legal', 'required', [
-            'required' => 'Nama projek Wajib di isi'
-        ]);
+        // $this->form_validation->set_rules('name', 'Nama legal', 'required', [
+        //     'required' => 'Nama projek Wajib di isi'
+        // ]);
         $this->form_validation->set_rules('jenis', 'Jenis legal', 'required', [
             'required' => 'Jenis produk  Wajib di isi'
         ]);
@@ -102,7 +102,7 @@ class legal extends CI_Controller
             $this->load->view("user/footer");
         } else {
             $data = [
-                'name' => $this->input->post('name'),
+                // 'name' => $this->input->post('name'),
                 'jenis' => $this->input->post('jenis'),
                 'nama_jenis_produk' => $this->input->post('nama_jenis_produk'),
                 'description' => $this->input->post('description'),
