@@ -16,7 +16,7 @@
         <?= $this->session->flashdata('message'); ?>
         <div class="card-header py-3">
             <a href=<?= base_url('user/Technological/tambah'); ?> class="btn btn-info">Tambah Data</a>
-
+            
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -27,9 +27,9 @@
                             <!-- <th>Nama Projek</th> -->
                             <th>Kategori</th>
                             <th>Item</th>
-                            <th>Spesifikasi</th>
-                            <th>Harga</th>
-                            <th>Tanggal Pemakaian</th>
+                            <th>Deskripsi</th>
+                            <!-- <th>Harga</th> -->
+                            <th>Awal Tahun Pemakaian</th>
                             <th>Sumber</th>
                             <th>Status</th>
                             <th>Aksi</th>
@@ -40,17 +40,14 @@
                     <tbody>
                         <?php $i = 1; ?>
                         <?php foreach ($technological as $us) : ?>
-                            <?php function rupiah($angka){
-	                        $hasil_rupiah = "Rp " . number_format($angka,0,',','.');
-	                        return $hasil_rupiah;
-                            }?>    
+                            
                             <tr>
                                 <td><?= $i; ?></td>
                                 <!-- <td><?= $us['name']; ?></td> -->
                                 <td><?= $us['category']; ?></td>
                                 <td><?= $us['item']; ?></td>
                                 <td><?= $us['specification']; ?></td>
-                                <td><?= rupiah($us['price']) ; ?></td>
+                                <!-- <td><?= $us['price']; ?></td> -->
                                 <td><?= $us['Date']; ?></td>
 
                                 <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td>
@@ -61,7 +58,7 @@
                                     <?php $status = $us['Date']  ; ?>
                                     <?php if ( $status >= '2017'): ?>
                                     <p> <span style = "color:  green;"> <b> Layak </b> </span> </p>
-
+                                    <p> Item yang digunakan merupakan teknologi terbaru <p>
                                 <?php else: ?>
                                     <p> <span style = "color:  red;"> <b> Tidak Layak </b> </span> </p>
                                     <p> Kurun waktu kelayakan = 5 tahun terakhir <p>
