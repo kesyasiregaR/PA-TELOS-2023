@@ -8,15 +8,14 @@
             <a href="<?= site_url('user/investasi'); ?>">Data Investasi</a>
         </li>
         <li class="breadcrumb-item active">
-            Ubah Data Investasi
-        </li>
+            Ubah Data 
     </ol>
 	<h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
 	<div class="row justify-content-center">
 		<div class="col-md-12 ">
 			<div class="card">
 				<div class="card-header">
-					Form Ubah Data Investasi
+					Form Ubah Data 
 				</div>
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">

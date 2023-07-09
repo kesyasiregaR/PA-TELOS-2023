@@ -22,7 +22,7 @@ class Cetak extends CI_Controller
     public function index()
     {
        
-		$data['judul']="Bukti Pendaftaran";
+		$data['judul']="Bukti Dokumen Kelayakan";
         $data['technological'] = $this->technological->getTechnologicalId($this->session->userdata('id_public'));
 
         $this->load->library('pdf');

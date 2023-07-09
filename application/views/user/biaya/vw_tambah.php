@@ -8,7 +8,7 @@
             <a href="<?= site_url('user/biaya'); ?>">Komponen Biaya</a>
         </li>
         <li class="breadcrumb-item active" >
-            Tambah Data Komponen Biaya
+            Tambah Data 
         </li>
     </ol>
     <h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
@@ -16,7 +16,7 @@
         <div class="col-md-12 ">
             <div class="card">
                 <div class="card-header">
-                    Form Tambah Data Komponen Biaya
+                    Form Tambah Data 
                 </div>
                 <div class="card-body">
                     <form action="" method="POST" enctype="multipart/form-data">

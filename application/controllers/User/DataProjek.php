@@ -13,7 +13,7 @@ class dataprojek extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['judul']="Halaman Data Project";
+		$data['judul']="Data Projek";
 		$data['dataproject'] = $this->dataproject->getDataprojectId($this->session->userdata('id_public'));
 		$this->load->view('user/header');
 		$this->load->view('user/dataprojek/vw_dataprojek',$data);
@@ -23,13 +23,13 @@ class dataprojek extends CI_Controller {
 	public function hapus($id){
 		$this->dataproject->delete($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-			Data data projek Berhasil dihapus!</div>');
+			Data Berhasil dihapus!</div>');
 		redirect('User/dataprojek');
 	}
 	function tambah()
 	{
 		$data['dataproject'] = $this->dataproject->get2($this->session->userdata('id_public')); 
-		$data['judul'] = "Halaman Tambah Data Projek";
+		$data['judul'] = "Tambah Data Projek";
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
@@ -58,7 +58,7 @@ class dataprojek extends CI_Controller {
 		
 			];
 			$this->dataproject->insert($data);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data data projek Berhasil Ditambah!</div>');
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah!</div>');
 			redirect('user/dataprojek');
 		}
 	}
@@ -92,7 +92,7 @@ class dataprojek extends CI_Controller {
 			];
 
 			$this->dataproject->update($data,$data ['id_dataproject']);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data dataproject Berhasil Diubah!</div>');
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Diubah!</div>');
 			redirect('user/dataprojek');
 		}
 	}

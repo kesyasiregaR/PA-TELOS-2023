@@ -12,7 +12,7 @@ class biaya extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['judul']="Halaman Data Komponen Biaya";
+		$data['judul']=" Data Komponen Biaya";
 		$data['economic_komponen_biaya'] = $this->economic_komponen_biaya->getBiayaId($this->session->userdata('id_public'));
 		// $data['economic_komponen_biaya']=$this->economic_komponen_biaya->get();
 		$this->load->view('user/header');
@@ -29,7 +29,7 @@ class biaya extends CI_Controller {
 	function tambah()
 	{
 		$data['economic_komponen_biaya'] = $this->economic_komponen_biaya->get2($this->session->userdata('id_public')); 
-		$data['judul'] = "Halaman Tambah Data Komponen Biaya";
+		$data['judul'] = "Tambah Data ";
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
@@ -80,7 +80,7 @@ class biaya extends CI_Controller {
 	}
 	public function edit($id)
 	{
-		$data['judul'] = "Halaman Ubah";
+		$data['judul'] = " Ubah Data";
 		$data['economic_komponen_biaya'] = $this->economic_komponen_biaya->getById($id);
 
         $this->form_validation->set_rules('komponen_biaya', 'tingkat pengembalian', 'required', [

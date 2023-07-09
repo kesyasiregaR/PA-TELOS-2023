@@ -5,7 +5,7 @@
             <a href="<?= site_url('user/home'); ?>">Dashboard</a>
         </li>
         <li class="breadcrumb-item active">
-            Master Data
+            Data Projek
         </li>
     </ol>
     <h2 class="h3 mb-2 text-gray-800"><?=$judul;?></h2>

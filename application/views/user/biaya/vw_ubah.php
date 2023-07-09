@@ -8,7 +8,7 @@
             <a href="<?= site_url('user/biaya'); ?>">Data Komponen Biaya</a>
         </li>
         <li class="breadcrumb-item active">
-            Ubah Data Komponen Biaya
+            Ubah Data 
         </li>
     </ol>
 	<h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
@@ -16,13 +16,12 @@
 		<div class="col-md-12 ">
 			<div class="card">
 				<div class="card-header">
-					Form Ubah Data Komponen Biaya
-				</div>
+					Form Ubah Data 
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
 						<input type="hidden" name="id_economic_komponen_biaya" value="<?= $economic_komponen_biaya['id_economic_komponen_biaya']; ?>">
 						<div class="form-group">
-							<label for="komponen_biaya">Komponen Biaya iaya</label>
+							<label for="komponen_biaya">Komponen Biaya </label>
 							<input name="komponen_biaya" value="<?= $economic_komponen_biaya['komponen_biaya']; ?>" type="text" class="form-control" id="komponen_biaya" placeholder="">
 							<?= form_error('komponen_biaya', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>

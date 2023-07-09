@@ -12,7 +12,7 @@ class investasi extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['judul']="Halaman Data Investasi";
+		$data['judul']=" Data Investasi";
 		$data['economic_investasi'] = $this->economic_investasi->getInvestasiId($this->session->userdata('id_public'));
 		// $data['economic_investasi']=$this->economic_investasi->get();
 		$this->load->view('user/header');
@@ -29,7 +29,7 @@ class investasi extends CI_Controller {
 	function tambah()
 	{
 		$data['economic_investasi'] = $this->economic_investasi->get2($this->session->userdata('id_public')); 
-		$data['judul'] = "Halaman Tambah Data Investasi";
+		$data['judul'] = "Tambah Data ";
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
@@ -63,7 +63,7 @@ class investasi extends CI_Controller {
 	}
 	public function edit($id)
 	{
-		$data['judul'] = "Halaman Ubah";
+		$data['judul'] = " Ubah Data";
 		$data['economic_investasi'] = $this->economic_investasi->getById($id);
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 

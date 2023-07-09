@@ -18,7 +18,7 @@ class economic extends CI_Controller
     }
     public function index() 
     {
-        $data['judul'] = "Halaman Data Economic";
+        $data['judul'] = "Kalkulasi Keuangan [ 5 Periode ]";
         $data['economic'] = $this->economic->get();
         $data['economic_keuntungan']= $this->economic_keuntungan->get();
         $data['economic_data_perusahaan']= $this->economic_data_perusahaan->get();
@@ -38,7 +38,7 @@ class economic extends CI_Controller
     }
     function tambah()
     {
-        $data['judul'] = "Halaman Tambah Data Economic";
+        $data['judul'] = "Tambah Data";
         $data['dataproject'] = $this->dataproject->get();
         $data['economic_keuntungan'] = $this->economic_keuntungan->get();
         $data['economic_data_perusahaan']= $this->economic_data_perusahaan->get();
@@ -107,7 +107,7 @@ class economic extends CI_Controller
     }
     public function edit($id)
     {
-        $data['judul'] = "Halaman Ubah";
+        $data['judul'] = " Ubah Data";
         $data['economic'] = $this->economic->getById($id);
         $data['dataproject'] = $this->dataproject->get();
         $data['economic_keuntungan'] = $this->economic_keuntungan->get();

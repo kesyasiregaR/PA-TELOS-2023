@@ -8,7 +8,7 @@
 			<a href="<?= site_url('user/dataperusahaan'); ?>">Data Usaha</a>
 		</li>
 		<li class="breadcrumb-item active">
-			Ubah Data Usaha
+			Ubah Data 
 		</li>
 	</ol>
 	<h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
