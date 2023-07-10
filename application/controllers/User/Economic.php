@@ -18,7 +18,7 @@ class economic extends CI_Controller
     }
     public function index() 
     {
-        $data['judul'] = "Kalkulasi Keuangan [ 5 Periode ]";
+        $data['judul'] = "Proyeksi Keuangan [ 5 Periode ]";
         $data['economic'] = $this->economic->get();
         $data['economic_keuntungan']= $this->economic_keuntungan->get();
         $data['economic_data_perusahaan']= $this->economic_data_perusahaan->get();
