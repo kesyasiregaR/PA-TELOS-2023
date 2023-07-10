@@ -8,7 +8,7 @@
 			<a href="<?= site_url('user/technological'); ?>">Technological</a>
 		</li>
 		<li class="breadcrumb-item active">
-			Ubah Data Technologi
+			Ubah Data 
 		</li>
 	</ol>
 	<h1 class="h3 mb-4 text-gray-800"><?php echo $judul; ?></h1>
@@ -16,7 +16,7 @@
 		<div class="col-md-12 ">
 			<div class="card">
 				<div class="card-header">
-					Form Ubah Data Technologi
+					Form Ubah Data 
 				</div>
 				<div class="card-body">
 					<form action="" method="POST" enctype="multipart/form-data">
@@ -48,7 +48,7 @@
 							<?= form_error('item', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
 						<div class="form-group">
-							<label for="specification">Specification</label>
+							<label for="specification">Spesifikasi/Kegunaan</label>
 							<input name="specification" value="<?= $technological['specification']; ?>" type="text" class="form-control" id="specification" placeholder="">
 							<?= form_error('specification', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
@@ -62,11 +62,11 @@
 							<input name="Date" value="<?= $technological['Date']; ?>" type="date" class="form-control" id="Date" placeholder="Tahun-Bulan-Tanggal">
 							<?= form_error('Date', '<small class="text-danger pl-3">', '</small>'); ?>
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label for="source">Source</label>
 							<input name="source" value="<?= $technological['source']; ?>" type="text" class="form-control" id="source" placeholder="">
 							<?= form_error('source', '<small class="text-danger pl-3">', '</small>'); ?>
-						</div>
+						</div> -->
 
 						<a href="<?= base_url('user/technological') ?>" class="btn btn-danger">Tutup</a>
 						<button type="submit" name="tambah" class="btn btn-primary float-right">Simpan</button>

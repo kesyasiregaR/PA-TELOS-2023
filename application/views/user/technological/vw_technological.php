@@ -30,7 +30,7 @@
                             <th>Deskripsi</th>
                             <!-- <th>Harga</th> -->
                             <th>Awal Tahun Pemakaian</th>
-                            <th>Sumber</th>
+                            <!-- <th>Sumber</th> -->
                             <th>Status</th>
                             <th>Aksi</th>
 
@@ -50,7 +50,7 @@
                                 <!-- <td><?= $us['price']; ?></td> -->
                                 <td><?= $us['Date']; ?></td>
 
-                                <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td>
+                                <!-- <td><a href="https://www.google.com/search?q=<?= urlencode($us['source']); ?>" target="_blank"><?= $us['source']; ?></a></td> -->
                                 <td> 
                                     <!-- untuk kolom Status -->
                                     <?php $status;?>

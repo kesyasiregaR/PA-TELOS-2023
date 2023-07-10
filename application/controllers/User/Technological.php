@@ -14,7 +14,7 @@ class technological extends CI_Controller
     }
     public function index()
     {
-        $data['judul'] = "Halaman Data Technological";
+        $data['judul'] = " Data Teknologi";
         $data['technological'] = $this->technological->getTechnologicalId($this->session->userdata('id_public'));
         // $data['technological'] = $this->technological->get();
         $this->load->view('user/header');
@@ -25,13 +25,13 @@ class technological extends CI_Controller
     {
         $this->technological->delete($id);
         $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
-			Data Technological Berhasil dihapus!</div>');
+			Data Berhasil dihapus!</div>');
         redirect('User/technological');
     }
     function tambah()
     {
         $data['technological'] = $this->technological->get2($this->session->userdata('id_public')); 
-        $data['judul'] = "Halaman Tambah Data Technological";
+        $data['judul'] = "Tambah Data ";
         $data['dataproject'] = $this->dataproject->get();
 
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -53,9 +53,9 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('Date', 'Date technological', 'required', [
             'required' => 'Date Wajib di isi'
         ]);
-        $this->form_validation->set_rules('source', 'source technological', 'required', [
-            'required' => 'source Wajib di isi'
-        ]);
+        // $this->form_validation->set_rules('source', 'source technological', 'required', [
+        //     'required' => 'source Wajib di isi'
+        // ]);
 
 
         if ($this->form_validation->run() == false) {
@@ -71,18 +71,18 @@ class technological extends CI_Controller
                 'specification' => $this->input->post('specification'),
                 // 'price' => $this->input->post('price'),
                 'Date' => $this->input->post('Date'),
-                'source' => $this->input->post('source'),
+                // 'source' => $this->input->post('source'),
                 'id_public' => $this->session->userdata('id_public'),
 
             ];
             $this->technological->insert($data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Technological Berhasil Ditambah!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Ditambah!</div>');
             redirect('user/technological');
         }
     }
     public function edit($id)
     {
-        $data['judul'] = "Halaman Ubah";
+        $data['judul'] = " Ubah Data";
         $data['dataproject'] = $this->dataproject->get();
         $data['technological'] = $this->technological->getById($id);
         // $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -105,9 +105,9 @@ class technological extends CI_Controller
         $this->form_validation->set_rules('Date', 'Date technological', 'required', [
             'required' => 'Date Wajib di isi'
         ]);
-        $this->form_validation->set_rules('source', 'source technological', 'required', [
-            'required' => 'source Wajib di isi'
-        ]);
+        // $this->form_validation->set_rules('source', 'source technological', 'required', [
+        //     'required' => 'source Wajib di isi'
+        // ]);
 
 
         if ($this->form_validation->run() == false) {
@@ -122,12 +122,12 @@ class technological extends CI_Controller
                 'specification' => $this->input->post('specification'),
                 // 'price' => $this->input->post('price'),
                 'Date' => $this->input->post('Date'),
-                'source' => $this->input->post('source'),
+                // 'source' => $this->input->post('source'),
                 'id_technological' => $this->input->post('id_technological')
             ];
 
             $this->technological->update($data, $data['id_technological']);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Technological Berhasil Diubah!</div>');
+            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Berhasil Diubah!</div>');
             redirect('user/technological');
         }
     }

@@ -12,7 +12,7 @@ class dataperusahaan extends CI_Controller {
 	}
 	public function index()
 	{
-		$data['judul']="Halaman Data Usaha";
+		$data['judul']=" Data Usaha";
 		$data['economic_data_perusahaan'] = $this->economic_data_perusahaan->getDataPerusahaanId($this->session->userdata('id_public'));
 		// $data['economic_data_perusahaan']=$this->economic_data_perusahaan->get();
 		$this->load->view('user/header');
@@ -28,7 +28,7 @@ class dataperusahaan extends CI_Controller {
 	}
 	function tambah()
 	{
-		$data['judul'] = "Halaman Tambah Data Usaha";
+		$data['judul'] = " Tambah Data ";
 		$data['economic_data_perusahaan'] = $this->economic_data_perusahaan->get2($this->session->userdata('id_public')); 
 
 		// $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
@@ -59,7 +59,7 @@ class dataperusahaan extends CI_Controller {
 	}
 	public function edit($id)
 	{
-		$data['judul'] = "Halaman Ubah";
+		$data['judul'] = " Ubah Data";
 		$data['economic_data_perusahaan'] = $this->economic_data_perusahaan->getById($id);
 
         $this->form_validation->set_rules('tingkat_pengembalian', 'tingkat pengembalian', 'required', [

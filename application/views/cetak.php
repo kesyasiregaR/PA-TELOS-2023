@@ -15,10 +15,10 @@
 
     <div style="text-align: center;">
         <u>
-            <h3>BUKTI Dokumen Kelayakan</h3>
+            <h3>Bukti Dokumen Kelayakan</h3>
         </u>
     </div>
-    <p>Berdasarkan hasil peninjaun dan penilaian kami, maka kami menyatakan bahwa data siswa dibawah ini</p><br />
+    <p>Berdasarkan hasil penilaian sistem, berikut ini merupakan hasil akhir dari nilai kelayakan dengan detail berikut ini: </p><br />
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tbody>
             
