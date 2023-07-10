@@ -73,8 +73,8 @@
                         </tr>
                     </tbody>
                     </tfoot>
-
                     </tbody>
+                    
                 </table>
             </div>
         </div>
